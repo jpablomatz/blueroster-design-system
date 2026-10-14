@@ -1,0 +1,162 @@
+# Blue Roster Design System
+
+> Rules, tokens, components, and screen specs for building Blue Roster UI from the Figma Design System Legacy file. Say Blue Roster, Blue Roster Legacy, or BR and follow the playbook below.
+
+### Playbook
+
+Follow this playbook when the request says **Blue Roster**, **Blue Roster Legacy**, or **BR**.
+
+1. Read `AGENTS.md` and `tokens/` before writing UI (`tokens.css`, `tokens.json`, and the markdown tables).
+2. Map the request to the closest spec in `screens/` and state which file you are following. Use the keyword table. If several rows match, pick one view and say why.
+3. Build mobile first: **390**, then **768**, then **desktop**. Admin specs are drawn at 1440×900. If the chosen spec has no 390 or 768 frame, flag that gap instead of inventing a layout.
+4. Colors use only `br/*` tokens, through the CSS variables in `tokens/tokens.css` (`--br-...`, slash becomes hyphen). Spacing, radius, and type use the variables in that same file (`--spacing`, `--radius-*`, `--text-*`, `--font-weight-*`). No hard-coded hex, rgb, or px where a token exists.
+5. Use only components documented in `components/`. Calendars, timelines, agenda, and schedulers use Mobiscroll (`br-mobiscroll` and `br-mobiscroll-*`).
+6. Filters: **1–3** stay inline (one row on desktop). **4+** go in one `br-filter-dialog`, opened by `br-filter-button`.
+7. Deliver **Light and Dark**. Light is `:root`; Dark is `[data-theme="dark"]`.
+8. Flag gaps instead of inventing components, tokens, states, copy, or behavior. Unknown items stay `TBD`.
+9. Build **one view first** and ask for review before the next view.
+
+#### Keyword → spec
+
+Keywords are request language. Each spec path is a file in `screens/`.
+
+| Keywords | Spec |
+|---|---|
+| screen index, list of screens, qué pantallas | `screens/README.md` |
+| action center, action center live, centro de acción | `screens/admin/action-center.md` |
+| action center requests, requests tab | `screens/admin/action-center-requests.md` |
+| catalogs user, user catalog, usuarios | `screens/admin/catalogs-user.md` |
+| gantt production, production schedule, producción | `screens/admin/gantt-production-schedule.md` |
+| gantt, projection, gantt projection | `screens/admin/gantt.md` |
+| history, assignment history, historial de asignaciones | `screens/admin/history-assignments.md` |
+| roles, roles management | `screens/admin/roles.md` |
+| base model, modelo base, roster catalogs base model | `screens/admin/roster-catalogs-base-model.md` |
+| model catalog, roster catalogs model | `screens/admin/roster-catalogs-model.md` |
+| pattern catalog, patrón, roster catalogs pattern | `screens/admin/roster-catalogs-pattern.md` |
+| shift catalog, turno, roster catalogs shift | `screens/admin/roster-catalogs-shift.md` |
+| rosters list, rosters tab | `screens/admin/rosters-rosters.md` |
+| rosters assignment, assignment planning | `screens/admin/rosters.md` |
+| sign in, login, iniciar sesión | `screens/admin/sign-in.md` |
+| workload engine | `screens/admin/workload-engine.md` |
+| workload template, plantilla | `screens/admin/workload-template.md` |
+| employee profile, perfil, profile desktop | `screens/employee-desktop/employee-profile-desktop.md` |
+| my schedule desktop, agenda desktop, schedule desktop | `screens/employee-desktop/my-schedule-desktop-proposal.md` |
+| overtime desktop, overtime filters desktop | `screens/employee-desktop/overtime-opportunities-desktop-filters.md` |
+| avatar, language, notifications, nav drawer, idioma, notificaciones, menú | `screens/employee-mobile/global-overlays-avatar-menu-language-notifications-nav-drawer.md` |
+| agenda, schedule, my schedule, day, día, calendario | `screens/employee-mobile/my-schedule-day.md` |
+| my schedule month, month, mes | `screens/employee-mobile/my-schedule-month.md` |
+| my schedule week, week, semana | `screens/employee-mobile/my-schedule-week.md` |
+| overtime approvals | `screens/employee-mobile/overtime-approvals.md` |
+| overtime, overtime opportunities, horas extra | `screens/employee-mobile/overtime-opportunities.md` |
+| sick time history, sick history | `screens/employee-mobile/sick-time-history.md` |
+| sick time, sick request | `screens/employee-mobile/sick-time-request.md` |
+| time off approvals | `screens/employee-mobile/time-off-approvals.md` |
+| time off, time off request | `screens/employee-mobile/time-off-request.md` |
+
+Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+
+### Token summary
+
+Colors below are the key semantic `br/*` tokens. CSS variable = `--` plus the token name with `/` replaced by `-`. Dark cells say "same" when `[data-theme="dark"]` does not override the Light value. Event tokens that alias another `br/*` token follow that variable, including its Dark value.
+
+| Token | CSS variable | Light | Dark |
+|---|---|---|---|
+| `br/primary` | `--br-primary` | `#1e75f6` | `#6ea3ff` |
+| `br/primary-dark` | `--br-primary-dark` | `#064db7` | `#4e81da` |
+| `br/primary-darkest` | `--br-primary-darkest` | `#002458` | `#345287` |
+| `br/primary-light` | `--br-primary-light` | `#8ebafa` | same |
+| `br/primary-lightest` | `--br-primary-lightest` | `#c7ddfd` | same |
+| `br/on-primary` | `--br-on-primary` | `#ffffff` | same |
+| `br/contrast` | `--br-contrast` | `#ffffff` | `#121621` |
+| `br/contrast-inverted` | `--br-contrast-inverted` | `#000000` | `#ffffff` |
+| `br/neutral` | `--br-neutral` | `#535353` | `#b4b4b9` |
+| `br/neutral-dark` | `--br-neutral-dark` | `#111827` | `#c8cdd7` |
+| `br/neutral-darkest` | `--br-neutral-darkest` | `#121212` | `#f5f6f8` |
+| `br/neutral-light` | `--br-neutral-light` | `#d1d5db` | `#373c4b` |
+| `br/neutral-lightest` | `--br-neutral-lightest` | `#f2f4f8` | `#1e2230` |
+| `br/neutral-white` | `--br-neutral-white` | `#f9f9f9` | `#161a26` |
+| `br/component-fill` | `--br-component-fill` | `#f5f5f5` | `#1e2230` |
+| `br/divider` | `--br-divider` | `#00000000` | `#ffffff1f` |
+| `br/semantic1` | `--br-semantic1` | `#1c9646` | same |
+| `br/semantic2` | `--br-semantic2` | `#ef4444` | same |
+| `br/semantic3` | `--br-semantic3` | `#f59e0b` | same |
+| `br/event-shift` | `--br-event-shift` | `var(--br-primary)` | `var(--br-primary)` (`#6ea3ff`) |
+| `br/event-task` | `--br-event-task` | `var(--br-primary-light)` | `var(--br-primary-light)` (`#8ebafa`) |
+| `br/event-overtime` | `--br-event-overtime` | `var(--br-semantic1)` | `var(--br-semantic1)` (`#1c9646`) |
+| `br/event-leave` | `--br-event-leave` | `var(--br-semantic2)` | `var(--br-semantic2)` (`#ef4444`) |
+| `br/event-shift-soft` | `--br-event-shift-soft` | `#1e75f61f` | `#6ea3ff29` |
+| `br/event-task-soft` | `--br-event-task-soft` | `#1e75f614` | `#6ea3ff1f` |
+| `br/event-overtime-soft` | `--br-event-overtime-soft` | `var(--br-semantic1-3)` (`#1c96461f`) | same |
+| `br/event-leave-soft` | `--br-event-leave-soft` | `var(--br-semantic2-3)` (`#ef44441f`) | same |
+| `br/event-shift-neutral` | `--br-event-shift-neutral` | `var(--br-neutral-light)` | `var(--br-neutral-light)` (`#373c4b`) |
+
+Type scale (Light = Dark): `--text-xs` 12px, `--text-sm` 14px, `--text-base` 16px, `--text-lg` 18px, `--text-xl` 20px, `--text-2xl` 24px, `--text-5xl` 48px. Weights: `--font-weight-normal` 400, `--font-weight-medium` 500, `--font-weight-semibold` 600, `--font-weight-bold` 700, `--font-weight-extrabold` 800.
+
+Spacing: `--spacing` 4px. That is the only spacing step in `tokens/spacing.md`.
+
+Radius (Light = Dark): `--radius-md` 6px, `--radius-lg` 8px, `--radius-2xl` 16px.
+
+## Rules
+
+- [AGENTS.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/AGENTS.md): Build rules and the playbook for Blue Roster, Blue Roster Legacy, and BR.
+
+## Tokens
+
+- [tokens/radius.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/radius.md): Radius tokens radius/md, radius/lg, radius/2xl.
+- [tokens/semantic-br.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/semantic-br.md): Semantic br/* colors with Light and Dark values.
+- [tokens/spacing.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/spacing.md): Spacing base unit and related layout tokens.
+- [tokens/tokens.css](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/tokens.css): CSS variables. Light on :root, Dark on [data-theme=dark].
+- [tokens/tokens.json](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/tokens.json): All Figma variables from collection s2d, with aliases and resolved values.
+- [tokens/typography.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/typography.md): Type scale and font weights.
+
+## Components
+
+- [components/README.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/README.md): Component inventory index.
+- [components/components.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/components.md): Components page.
+- [components/employee-app-mobile.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/employee-app-mobile.md): Employee app mobile components.
+- [components/form-components.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/form-components.md): Form components.
+- [components/mobiscroll.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/mobiscroll.md): Mobiscroll calendars, timelines, agenda, and schedulers.
+- [components/my-schedule-proposal.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/my-schedule-proposal.md): My schedule proposal components.
+- [components/page-2.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/page-2.md): Page 2 components.
+- [components/render-components.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/render-components.md): Render components.
+- [components/services.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/services.md): Dialog, drawer, toast, and confirmation services.
+- [components/storybook-examples.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/storybook-examples.md): Storybook examples.
+- [components/styleguide.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/styleguide.md): Styleguide components.
+- [components/toolkit.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/components/toolkit.md): Toolkit components.
+
+## Screens
+
+- [screens/README.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/README.md): Screen index.
+- [screens/admin/action-center-requests.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/action-center-requests.md): Action Center requests tab.
+- [screens/admin/action-center.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/action-center.md): Action Center live view.
+- [screens/admin/catalogs-user.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/catalogs-user.md): User catalog.
+- [screens/admin/gantt-production-schedule.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/gantt-production-schedule.md): Gantt production schedule.
+- [screens/admin/gantt.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/gantt.md): Gantt projection.
+- [screens/admin/history-assignments.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/history-assignments.md): Assignment history.
+- [screens/admin/roles.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/roles.md): Roles management.
+- [screens/admin/roster-catalogs-base-model.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/roster-catalogs-base-model.md): Roster catalogs, base model.
+- [screens/admin/roster-catalogs-model.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/roster-catalogs-model.md): Roster catalogs, model.
+- [screens/admin/roster-catalogs-pattern.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/roster-catalogs-pattern.md): Roster catalogs, pattern.
+- [screens/admin/roster-catalogs-shift.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/roster-catalogs-shift.md): Roster catalogs, shift.
+- [screens/admin/rosters-rosters.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/rosters-rosters.md): Rosters list tab.
+- [screens/admin/rosters.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/rosters.md): Rosters assignment planning.
+- [screens/admin/sign-in.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/sign-in.md): Admin sign in.
+- [screens/admin/workload-engine.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/workload-engine.md): Workload engine.
+- [screens/admin/workload-template.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/admin/workload-template.md): Workload templates.
+- [screens/employee-desktop/employee-profile-desktop.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-desktop/employee-profile-desktop.md): Employee profile, desktop.
+- [screens/employee-desktop/my-schedule-desktop-proposal.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-desktop/my-schedule-desktop-proposal.md): My schedule, desktop proposal.
+- [screens/employee-desktop/overtime-opportunities-desktop-filters.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-desktop/overtime-opportunities-desktop-filters.md): Overtime opportunities, desktop filters.
+- [screens/employee-mobile/global-overlays-avatar-menu-language-notifications-nav-drawer.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/global-overlays-avatar-menu-language-notifications-nav-drawer.md): Avatar menu, language, notifications, and nav drawer.
+- [screens/employee-mobile/my-schedule-day.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/my-schedule-day.md): My Schedule day (agenda).
+- [screens/employee-mobile/my-schedule-month.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/my-schedule-month.md): My Schedule month.
+- [screens/employee-mobile/my-schedule-week.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/my-schedule-week.md): My Schedule week.
+- [screens/employee-mobile/overtime-approvals.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/overtime-approvals.md): Overtime approvals.
+- [screens/employee-mobile/overtime-opportunities.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/overtime-opportunities.md): Overtime opportunities.
+- [screens/employee-mobile/sick-time-history.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/sick-time-history.md): Sick time history.
+- [screens/employee-mobile/sick-time-request.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/sick-time-request.md): Sick time request.
+- [screens/employee-mobile/time-off-approvals.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/time-off-approvals.md): Time off approvals.
+- [screens/employee-mobile/time-off-request.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/time-off-request.md): Time off request.
+
+## Optional
+
+- [llms-full.txt](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt): Concatenated AGENTS.md, tokens/*.md, components/*.md, and screens/**/*.md.

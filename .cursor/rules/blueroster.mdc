@@ -1,0 +1,6 @@
+---
+description: Blue Roster design system rules for any UI work
+alwaysApply: true
+---
+
+Follow @AGENTS.md for all UI work. Use tokens from @tokens/tokens.css, components listed in @components/README.md, and the screen specs in @screens/README.md.

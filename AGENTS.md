@@ -1,0 +1,109 @@
+# AGENTS.md — Blue Roster Design System rules
+
+This file is the single source of rules for every AI coding agent (Cursor, Claude Code, Codex, others) building Blue Roster UI. `CLAUDE.md` and `.cursor/rules/blueroster.mdc` point here. `.cursor/rules/blueroster-build.mdc` repeats the Playbook. Read this file, then `tokens/`, `components/` and the relevant `screens/` spec before writing UI code. Requests that say **Blue Roster**, **Blue Roster Legacy**, or **BR** follow the Playbook at the end of this file.
+
+Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy (fileKey `k05NWBKMjsvo5hEugQc2Tq`).
+
+## 1. Reuse, never redraw
+- Build every screen from existing components. Look up `components/` first; if a `br-*`, `br-m-*` or `ms-*` component covers the need, use it.
+- **Storybook is the source of truth for code.** The Angular `br-*` components in Storybook are what you import. Figma names match Storybook names (`br-button`, `br-input`, `br-table`, ...).
+- Never re-implement a component with raw HTML/CSS. If something is genuinely missing, say so in the PR and propose a new component instead of inlining a one-off.
+
+## 2. Tokens, not hex
+- Every color, spacing, radius and typography value comes from `tokens/tokens.css` (CSS variables) or `tokens/tokens.json`.
+- Prefer semantic `br/*` tokens (`--br-...`, including `br/event-*` for schedule events) over raw `mat/*` palette tokens.
+- No hard-coded hex, rgb or px values where a token exists.
+
+## 3. Light and Dark
+- Every screen and component must work in both themes. Themes switch with `[data-theme="dark"]` on a root element; Light is the default (`:root`).
+- Verify both themes before finishing.
+
+## 4. Icons
+- Use **Material Icons Outlined** only. Do not mix icon sets.
+
+## 5. Platforms and layout
+- **Employee app is mobile first** (390 wide reference; tablet 768 reference exists for Overtime). Desktop (1440) uses `br-app-shell` with `App=Employee`.
+- **Admin app** is desktop web (1440×900) with `br-app-shell` `App=Admin`.
+- App shell variants: `br-app-shell` → `App=Admin | Employee`. Employee sidebar: My Schedule, Overtime, Time Off, Sick Time, Logout. Mobile uses `br-m-app-bar` + `br-m-nav-drawer`.
+- Page content components are named `br-content-<section>-<tab>` (e.g. `br-content-rosters-assignment`, `br-content-roster-catalogs-shift`). Follow that naming for new screens.
+- Page header + tabs: `br-page-header` with `br-page-tab`.
+
+## 6. Filter pattern
+- **1–3 filters:** inline. On desktop they sit in **one row**.
+- **4+ filters:** collapse them into a single dialog (`br-filter-dialog`, `Device=Mobile|Desktop`) opened by `br-filter-button` (shows a badge with the active filter count). One dialog for all filters, not one dialog per filter.
+- Mobile dialog: full screen with Clear all / Apply pinned at the bottom. Desktop dialog: centered, 560 wide.
+
+## 7. Calendars and dates
+- Use **Mobiscroll** (`br-mobiscroll` and `br-mobiscroll-*`) for calendars, timelines, agenda and schedulers. Date inputs use `br-single-datepicker`, `br-range-datepicker`, `br-inline-datepicker` and the `br-linear-*-selector` components.
+
+## 8. Tables, empty states, services
+- Tables: `br-table` (+ `br-table-row`, `br-table-cell`, `br-table-header-cell`, `br-paginator`). Responsive data: `br-responsive-table`.
+- Empty states: `br-empty-state-panel` (desktop) / `br-m-empty-state` (mobile).
+- Dialogs, drawers, toasts and confirmations go through the services on the Figma *Services* page (dialog, drawer, confirmationDialogService, result dialog, toast). Do not hand-build modals.
+
+## 9. Data honesty
+- Text and numbers in Figma frames are illustrative. Do not copy them as real data, API fields or business rules.
+- Specs in `screens/` must not contain invented data or behavior. If a requirement is unknown, write "TBD" and ask.
+
+## 10. Known gaps (do not silently invent)
+Loading / error / skeleton states, formal breakpoints, avatar initials variant, `br-textarea` variant in `br-input`, Planned overtime token, accent palette update, unpublished Figma library. See README. When you hit one, flag it in your PR.
+
+## Definition of done for UI work
+- Uses existing components and tokens only (or flags the gap).
+- Works in Light and Dark.
+- Employee screens verified at 390 first, then desktop.
+- Filter count follows the 1–3 / 4+ rule.
+- Links the Figma node it implements in the PR description.
+
+## Playbook
+
+Follow this playbook when the request says **Blue Roster**, **Blue Roster Legacy**, or **BR**.
+
+1. Read `AGENTS.md` and `tokens/` before writing UI (`tokens.css`, `tokens.json`, and the markdown tables).
+2. Map the request to the closest spec in `screens/` and state which file you are following. Use the keyword table. If several rows match, pick one view and say why.
+3. Build mobile first: **390**, then **768**, then **desktop**. Admin specs are drawn at 1440×900. If the chosen spec has no 390 or 768 frame, flag that gap instead of inventing a layout.
+4. Colors use only `br/*` tokens, through the CSS variables in `tokens/tokens.css` (`--br-...`, slash becomes hyphen). Spacing, radius, and type use the variables in that same file (`--spacing`, `--radius-*`, `--text-*`, `--font-weight-*`). No hard-coded hex, rgb, or px where a token exists.
+5. Use only components documented in `components/`. Calendars, timelines, agenda, and schedulers use Mobiscroll (`br-mobiscroll` and `br-mobiscroll-*`).
+6. Filters: **1–3** stay inline (one row on desktop). **4+** go in one `br-filter-dialog`, opened by `br-filter-button`.
+7. Deliver **Light and Dark**. Light is `:root`; Dark is `[data-theme="dark"]`.
+8. Flag gaps instead of inventing components, tokens, states, copy, or behavior. Unknown items stay `TBD`.
+9. Build **one view first** and ask for review before the next view.
+
+### Keyword → spec
+
+Keywords are request language. Each spec path is a file in `screens/`.
+
+| Keywords | Spec |
+|---|---|
+| screen index, list of screens, qué pantallas | `screens/README.md` |
+| action center, action center live, centro de acción | `screens/admin/action-center.md` |
+| action center requests, requests tab | `screens/admin/action-center-requests.md` |
+| catalogs user, user catalog, usuarios | `screens/admin/catalogs-user.md` |
+| gantt production, production schedule, producción | `screens/admin/gantt-production-schedule.md` |
+| gantt, projection, gantt projection | `screens/admin/gantt.md` |
+| history, assignment history, historial de asignaciones | `screens/admin/history-assignments.md` |
+| roles, roles management | `screens/admin/roles.md` |
+| base model, modelo base, roster catalogs base model | `screens/admin/roster-catalogs-base-model.md` |
+| model catalog, roster catalogs model | `screens/admin/roster-catalogs-model.md` |
+| pattern catalog, patrón, roster catalogs pattern | `screens/admin/roster-catalogs-pattern.md` |
+| shift catalog, turno, roster catalogs shift | `screens/admin/roster-catalogs-shift.md` |
+| rosters list, rosters tab | `screens/admin/rosters-rosters.md` |
+| rosters assignment, assignment planning | `screens/admin/rosters.md` |
+| sign in, login, iniciar sesión | `screens/admin/sign-in.md` |
+| workload engine | `screens/admin/workload-engine.md` |
+| workload template, plantilla | `screens/admin/workload-template.md` |
+| employee profile, perfil, profile desktop | `screens/employee-desktop/employee-profile-desktop.md` |
+| my schedule desktop, agenda desktop, schedule desktop | `screens/employee-desktop/my-schedule-desktop-proposal.md` |
+| overtime desktop, overtime filters desktop | `screens/employee-desktop/overtime-opportunities-desktop-filters.md` |
+| avatar, language, notifications, nav drawer, idioma, notificaciones, menú | `screens/employee-mobile/global-overlays-avatar-menu-language-notifications-nav-drawer.md` |
+| agenda, schedule, my schedule, day, día, calendario | `screens/employee-mobile/my-schedule-day.md` |
+| my schedule month, month, mes | `screens/employee-mobile/my-schedule-month.md` |
+| my schedule week, week, semana | `screens/employee-mobile/my-schedule-week.md` |
+| overtime approvals | `screens/employee-mobile/overtime-approvals.md` |
+| overtime, overtime opportunities, horas extra | `screens/employee-mobile/overtime-opportunities.md` |
+| sick time history, sick history | `screens/employee-mobile/sick-time-history.md` |
+| sick time, sick request | `screens/employee-mobile/sick-time-request.md` |
+| time off approvals | `screens/employee-mobile/time-off-approvals.md` |
+| time off, time off request | `screens/employee-mobile/time-off-request.md` |
+
+Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
