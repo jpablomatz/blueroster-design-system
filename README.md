@@ -10,12 +10,21 @@ Source of truth for AI coding agents (Cursor, Claude Code, Codex) to build Blue 
 | `.cursor/rules/blueroster.mdc` | Always-on Cursor rule → `AGENTS.md`. |
 | `.cursor/rules/blueroster-build.mdc` | Always-on build playbook. Triggers: Blue Roster, Blue Roster Legacy, BR. |
 | `llms.txt` | llmstxt.org index: playbook, token summary, and raw links to every source file. |
-| `llms-full.txt` | `AGENTS.md` plus every `tokens/*.md`, `components/*.md`, and `screens/**/*.md`, concatenated. |
+| `llms-full.txt` | Concatenated context: `AGENTS.md`, `tokens/*.md`, `tokens/tokens.css`, `patterns/*.md`, `assets/README.md`, `fixtures/schedule.json`, `components/*.md`, `screens/**/*.md` (images as absolute raw URLs), `starter/br-m.css`, `starter/my-schedule-day.html`. |
 | `tokens/tokens.json` | All 777 Figma variables from collection `s2d` with Light / Dark / Default values and aliases (plus resolved values). |
 | `tokens/tokens.css` | Same tokens as CSS custom properties. Light on `:root`, Dark overrides on `[data-theme="dark"]`. |
 | `tokens/*.md` | Readable tables: `semantic-br.md` (br/*), `typography.md`, `spacing.md`, `radius.md`. |
 | `components/` | Inventory of Figma components per page (`br-*`, `br-m-*`, `ms-*`) with node links and props/variants. |
 | `screens/` | One spec per screen: admin (desktop), employee mobile, employee desktop. Figma links, purpose, components, designed states. |
+| `tokens/events.md` | Event type → background / text / border tokens and hex, Light and Dark, as used on screen. |
+| `patterns/formats.md` | Date, time and copy formats as drawn (12h `6 AM`, `Thu 8 Oct 2026`, plurals). |
+| `patterns/calendar-layout.md` | Calendar geometry: 48px/hour, side-by-side overlaps, week strip, month grid, scroll. |
+| `screens/*/img/` | Light and Dark PNG of every frame referenced by a spec (embedded in the spec). |
+| `screens/*/json/` | Trimmed Figma node tree per frame (names, layout, sizes, token bindings). |
+| `screens/_TEMPLATE.md` | Template for new specs (anatomy, token table, formats, images). |
+| `assets/` | `br-logo` SVGs (isotype + full, Light/Dark/tokens), avatar-initials and badge specs, reference PNGs. |
+| `fixtures/schedule.json` | Sample shifts, tasks, overtime cards copied from the Figma mockups. Mockups only. |
+| `starter/` | Plain HTML/CSS snippets for `br-m-*` components and a `my-schedule-day.html` page verified against Figma. |
 
 ## How to use it
 - **Cursor:** open this repo (or add it to your app workspace). `.cursor/rules/blueroster.mdc` and `.cursor/rules/blueroster-build.mdc` load automatically. With the Figma MCP connected, the agent can also open linked nodes.
@@ -33,7 +42,7 @@ Tokens and the inventory were generated from Figma via the Plugin API (read-only
 - No formal breakpoints (only 390 / 768 / 1440 reference frames).
 - Avatar has no initials variant.
 - `br-input` has no textarea variant (there is a separate `br-textarea`).
-- No dedicated token for **Planned overtime** (`br-m-event-block` has the variant, but no `br/event-*` token).
+- No `br/event-planned-overtime` alias: the design colors Planned overtime with `br/special-4` (`#5a2ead`), documented in `tokens/events.md`.
 - Accent palette update pending (Matz's Gantt variant component is the reference).
 - The Figma library is not published, so Figma MCP search cannot find its components yet.
 - No Code Connect mappings yet between Figma components and Storybook code.
@@ -51,3 +60,8 @@ Ejemplos:
 - `Overtime Opportunities en desktop usando Blue Roster Legacy` → `screens/employee-desktop/overtime-opportunities-desktop-filters.md`
 
 Para Claude/ChatGPT: pásale https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt
+
+## Regenerating `llms.txt` / `llms-full.txt`
+`llms.txt` is the llmstxt.org index: inline playbook, token summary, and a raw GitHub link for every file, including `tokens/events.md`, `patterns/`, `assets/`, `fixtures/`, `starter/`, and the screen PNGs.
+
+`llms-full.txt` concatenates, in this order: `AGENTS.md`, `tokens/*.md`, `tokens/tokens.css` (verbatim, in a css code block), `patterns/*.md`, `assets/README.md`, `fixtures/schedule.json`, `components/*.md`, every `screens/**/*.md` with image links rewritten to absolute `https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/...` URLs, `starter/br-m.css`, and `starter/my-schedule-day.html`.

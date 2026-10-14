@@ -1,0 +1,248 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "373:6634",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Time Off · Request · Light",
+  "type": "FRAM",
+  "x": 1000,
+  "y": 11921,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 715,
+    "layout": "V gap16 p16,16,32,16 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 16,
+      "y": 16,
+      "w": 358,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 95,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Time Off",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 358,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Balance",
+      "type": "INST",
+      "x": 16,
+      "y": 117,
+      "w": 358,
+      "h": 178,
+      "component": "br-m-balance-card",
+      "layout": "V gap4 p16,16,12,16 MM",
+      "fill": "#f9f9f9 {br/neutral-white}",
+      "stroke": "#0000001f {br/component-border} w1",
+      "radius": "8",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 17,
+        "y": 17,
+        "w": 121,
+        "h": 19,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Time off balance",
+        "font": "Roboto Medium 16/auto L"
+       },
+       {
+        "name": "Subtitle",
+        "type": "TEXT",
+        "x": 17,
+        "y": 40,
+        "w": 324,
+        "h": 14,
+        "fill": "#00000099 {br/text-label}",
+        "text": "Remaining time off you are entitled to for the year.",
+        "font": "Roboto Regular 12/auto L"
+       },
+       {
+        "name": "Rows",
+        "type": "FRAM",
+        "x": 17,
+        "y": 58,
+        "w": 324,
+        "h": 107,
+        "layout": "V gap0 p8,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Form",
+      "type": "FRAM",
+      "x": 16,
+      "y": 311,
+      "w": 358,
+      "h": 372,
+      "layout": "V gap12 p16,16,16,16 MM",
+      "fill": "#f9f9f9 {br/neutral-white}",
+      "stroke": "#0000001f {br/component-border} w1",
+      "radius": "8",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 17,
+        "y": 17,
+        "w": 120,
+        "h": 19,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Request time off",
+        "font": "Roboto Medium 16/auto L"
+       },
+       {
+        "name": "Subtitle",
+        "type": "TEXT",
+        "x": 17,
+        "y": 48,
+        "w": 324,
+        "h": 15,
+        "fill": "#00000099 {br/text-label}",
+        "text": "Choose the type of time off and the dates you need.",
+        "font": "Roboto Regular 13/auto L"
+       },
+       {
+        "name": "Type",
+        "type": "INST",
+        "x": 17,
+        "y": 75,
+        "w": 324,
+        "h": 56,
+        "component": "br-select-field",
+        "layout": "H gap8 p0,8,0,12 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Dates",
+        "type": "INST",
+        "x": 17,
+        "y": 143,
+        "w": 324,
+        "h": 56,
+        "component": "br-select-field",
+        "layout": "H gap8 p0,8,0,12 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Note",
+        "type": "INST",
+        "x": 17,
+        "y": 211,
+        "w": 324,
+        "h": 96,
+        "component": "br-input / appearance=outline,disabled=false,invalid=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       },
+       {
+        "name": "Submit",
+        "type": "INST",
+        "x": 17,
+        "y": 319,
+        "w": 324,
+        "h": 36,
+        "component": "br-button / buttonType=flat, disabled=true",
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

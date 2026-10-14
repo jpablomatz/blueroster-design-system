@@ -1,6 +1,6 @@
 # AGENTS.md — Blue Roster Design System rules
 
-This file is the single source of rules for every AI coding agent (Cursor, Claude Code, Codex, others) building Blue Roster UI. `CLAUDE.md` and `.cursor/rules/blueroster.mdc` point here. `.cursor/rules/blueroster-build.mdc` repeats the Playbook. Read this file, then `tokens/`, `components/` and the relevant `screens/` spec before writing UI code. Requests that say **Blue Roster**, **Blue Roster Legacy**, or **BR** follow the Playbook at the end of this file.
+This file is the single source of rules for every AI coding agent (Cursor, Claude Code, Codex, others) building Blue Roster UI. `CLAUDE.md` and `.cursor/rules/blueroster.mdc` point here. `.cursor/rules/blueroster-build.mdc` repeats the Playbook. Read this file, then `tokens/` (including `tokens/events.md` and `tokens/typography.md`), `patterns/`, `components/` and the relevant `screens/` spec (with its PNGs in `img/` and node tree in `json/`) before writing UI code. Requests that say **Blue Roster**, **Blue Roster Legacy**, or **BR** follow the Playbook at the end of this file.
 
 Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy (fileKey `k05NWBKMjsvo5hEugQc2Tq`).
 
@@ -43,10 +43,19 @@ Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKM
 
 ## 9. Data honesty
 - Text and numbers in Figma frames are illustrative. Do not copy them as real data, API fields or business rules.
+- **Mockups may use sample data from `fixtures/`** (copied verbatim from the Figma frames and labelled sample). Use it for visual prototypes and mockups only; label it as sample data and never treat it as an API contract. Do not invent other data; if `fixtures/` has nothing that fits, reuse the closest sample and say so.
 - Specs in `screens/` must not contain invented data or behavior. If a requirement is unknown, write "TBD" and ask.
 
+## 9b. Match the Figma reference
+- Each spec embeds Light and Dark PNGs exported from Figma (`screens/<group>/img/`). Compare your result against them before finishing.
+- Event colors come from `tokens/events.md` (Shift = neutral gray `--br-event-shift-neutral`, Tasks = solid `--br-event-shift` with white text, Overtime `--br-event-overtime`, Planned overtime `--br-special-4`, Leave `--br-event-leave`).
+- Type is **Roboto** (see `tokens/typography.md`); icons are Material Icons Outlined.
+- Time/date formats and copy: `patterns/formats.md` (12-hour `6 AM` labels, `Thu 8 Oct 2026`). Calendar geometry: `patterns/calendar-layout.md` (48px per hour, overlapping events side by side).
+- Logo and avatar/badge specs: `assets/`. Never redraw the logo.
+- For non-Angular mockups (Claude, Figma Make, plain HTML) start from `starter/` (`br-m.css`, `components.html`, `my-schedule-day.html`).
+
 ## 10. Known gaps (do not silently invent)
-Loading / error / skeleton states, formal breakpoints, avatar initials variant, `br-textarea` variant in `br-input`, Planned overtime token, accent palette update, unpublished Figma library. See README. When you hit one, flag it in your PR.
+Loading / error / skeleton states, formal breakpoints, avatar initials variant (see `assets/README.md` for how the app bar draws it), `br-textarea` variant in `br-input`, no `br/event-planned-overtime` alias (the design uses `br/special-4`, see `tokens/events.md`), accent palette update, sticky behaviour of page header/tabs on My Schedule, multi-employee mobile calendar, unpublished Figma library. See README. When you hit one, flag it in your PR.
 
 ## Definition of done for UI work
 - Uses existing components and tokens only (or flags the gap).
@@ -96,6 +105,7 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | my schedule desktop, agenda desktop, schedule desktop | `screens/employee-desktop/my-schedule-desktop-proposal.md` |
 | overtime desktop, overtime filters desktop | `screens/employee-desktop/overtime-opportunities-desktop-filters.md` |
 | avatar, language, notifications, nav drawer, idioma, notificaciones, menú | `screens/employee-mobile/global-overlays-avatar-menu-language-notifications-nav-drawer.md` |
+| multi-employee calendar, team calendar on mobile, team schedule mobile, ver empleados en móvil, calendario de empleados móvil, calendario del equipo | **No spec yet. Stop and ask the user.** Offer `screens/admin/gantt.md` / `screens/admin/gantt-production-schedule.md` (desktop admin Gantt) as reference and the My Schedule mobile specs for styling; do not invent the layout. |
 | agenda, schedule, my schedule, day, día, calendario | `screens/employee-mobile/my-schedule-day.md` |
 | my schedule month, month, mes | `screens/employee-mobile/my-schedule-month.md` |
 | my schedule week, week, semana | `screens/employee-mobile/my-schedule-week.md` |
@@ -107,3 +117,5 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | time off, time off request | `screens/employee-mobile/time-off-request.md` |
 
 Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+
+"My schedule" means the signed-in employee's own calendar. A request to see **several employees** (team, crew, roster, empleados) on mobile has **no spec**: say so, ask, and offer the Gantt desktop spec as reference.

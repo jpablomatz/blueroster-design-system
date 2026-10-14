@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- Blue Roster · My Schedule · Day (mobile 390). Matches Figma 372:5392 (Light) / 372:6394 (Dark).
+     Sample content from fixtures/schedule.json. Add ?theme=dark to the URL for Dark. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<title>My Schedule · Day — Blue Roster</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+<link rel="stylesheet" href="br-m.css">
+<script>if (/theme=dark/.test(location.search)) document.documentElement.setAttribute('data-theme','dark');</script>
+<style>html,body{margin:0;background:var(--br-contrast);}</style>
+</head>
+<body class="br">
+<div class="br-m-screen">
+  <header class="br-m-app-bar">
+    <div class="br-m-app-bar__row">
+      <button class="br-m-app-bar__btn" aria-label="Menu"><span class="mi">menu</span></button>
+      <span class="br-m-app-bar__logo">
+        <img class="br-logo-light" src="../assets/br-logo-isotype-light.svg" width="32" height="34" alt="Blue Roster">
+        <img class="br-logo-dark" src="../assets/br-logo-isotype-dark.svg" width="32" height="34" alt="Blue Roster">
+      </span>
+      <div class="br-m-app-bar__trailing">
+        <button class="br-m-app-bar__btn" aria-label="Notifications"><span class="mi">notifications</span><span class="br-m-badge">2</span></button>
+        <button class="br-m-app-bar__btn" aria-label="Account"><span class="br-m-avatar">JM</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="br-m-body">
+    <section class="br-m-page-header">
+      <h1 class="br-m-page-header__title">My Schedule</h1>
+      <nav class="br-m-tabs">
+        <button class="br-page-tab is-active"><span class="mi">view_day</span>Day</button>
+        <button class="br-page-tab"><span class="mi">view_week</span>Week</button>
+        <button class="br-page-tab"><span class="mi">calendar_view_month</span>Month</button>
+      </nav>
+    </section>
+
+    <div class="br-m-legend">
+      <span class="br-m-legend__item"><i class="br-dot br-dot--shift"></i>Shift</span>
+      <span class="br-m-legend__item"><i class="br-dot br-dot--task"></i>Tasks</span>
+      <span class="br-m-legend__item"><i class="br-dot br-dot--overtime"></i>Overtime</span>
+      <span class="br-m-legend__item"><i class="br-dot br-dot--planned"></i>Planned overtime</span>
+      <span class="br-m-legend__item"><i class="br-dot br-dot--leave"></i>Leave</span>
+    </div>
+
+    <div class="br-m-date-nav">
+      <span class="br-m-date-nav__label">Thu 8 Oct 2026</span>
+      <button class="br-m-date-nav__arrow" aria-label="Previous day"><span class="mi">chevron_left</span></button>
+      <button class="br-m-date-nav__today">Today</button>
+      <button class="br-m-date-nav__arrow" aria-label="Next day"><span class="mi">chevron_right</span></button>
+    </div>
+
+    <div class="br-m-timeline" id="timeline" data-first-hour="5" data-last-hour="16">
+      <div class="br-m-timeline__events" id="events"></div>
+    </div>
+  </main>
+</div>
+
+<script>
+// Geometry from patterns/calendar-layout.md: 48px/hour, top = (start-first)*48+4, height = dur*48-8,
+// overlapping events in equal side-by-side columns: width = (310-4-6*(n-1))/n, gap 6.
+const HOUR = 48, AREA = 310, GAP = 6, RIGHT = 4;
+const tl = document.getElementById('timeline'), ev = document.getElementById('events');
+const first = +tl.dataset.firstHour, last = +tl.dataset.lastHour;
+const label = h => (h % 12 || 12) + (h < 12 ? ' AM' : ' PM');
+for (let h = first; h <= last; h++) {
+  const row = document.createElement('div'); row.className = 'br-m-hour-row';
+  row.innerHTML = `<span class="br-m-hour-row__label">${label(h)}</span><span class="br-m-hour-row__line"></span>`;
+  tl.insertBefore(row, ev);
+}
+// SAMPLE DATA (fixtures/schedule.json → day.events)
+const events = [
+  { type: 'shift', title: '0600 10-Hr w/ Lunch - 60S', start: 6, end: 16, time: '6:00 am - 4:00 pm' },
+  { type: 'task',  title: 'Shipping/Outside',          start: 6, end: 16, time: '6:00 am - 4:00 pm' },
+];
+const n = events.length, w = (AREA - RIGHT - GAP * (n - 1)) / n; // all overlap in this sample
+events.forEach((e, i) => {
+  const b = document.createElement('div');
+  b.className = `br-m-event-block br-m-event-block--${e.type}`;
+  Object.assign(b.style, { top: ((e.start - first) * HOUR + 4) + 'px', height: ((e.end - e.start) * HOUR - 8) + 'px', left: (i * (w + GAP)) + 'px', width: w + 'px' });
+  b.innerHTML = `<span class="br-m-event-block__title">${e.title}</span><span class="br-m-event-block__time">${e.time}</span>`;
+  ev.appendChild(b);
+});
+</script>
+</body>
+</html>

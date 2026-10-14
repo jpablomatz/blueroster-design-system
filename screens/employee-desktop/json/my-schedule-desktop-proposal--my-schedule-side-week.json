@@ -1,0 +1,216 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "336:23525",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "My schedule · Side · Week · Light",
+  "type": "FRAM",
+  "x": 15400,
+  "y": 2700,
+  "w": 1440,
+  "h": 1170,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#f9f9f9 {br/neutral-white}",
+  "children": [
+   {
+    "name": "Employee header",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 64,
+    "component": "ms-employee-header / Active=My schedule",
+    "layout": "H gap0 p0,24,0,24 SC",
+    "fill": "#ffffff {br/contrast}",
+    "stroke": "#0000001f {br/component-border} w0,0,1,0",
+    "children": [
+     {
+      "name": "Employee",
+      "type": "FRAM",
+      "x": 24,
+      "y": 12,
+      "w": 178,
+      "h": 40,
+      "layout": "H gap12 p0,0,0,0 MC",
+      "children": [
+       {
+        "name": "Avatar",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 40,
+        "layout": "H gap0 p0,0,0,0 CC",
+        "fill": "#f66c1e {br/component-secondary-highlight}",
+        "radius": "20"
+       },
+       {
+        "name": "Name",
+        "type": "TEXT",
+        "x": 52,
+        "y": 9,
+        "w": 126,
+        "h": 22,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Sergio Moreno",
+        "font": "Inter Medium 18/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Employee nav",
+      "type": "FRAM",
+      "x": 990,
+      "y": 8,
+      "w": 426,
+      "h": 48,
+      "layout": "H gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "General",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 116,
+        "h": 48,
+        "component": "br-page-tab / State=Default",
+        "layout": "H gap8 p0,16,0,16 MC"
+       },
+       {
+        "name": "Assignment",
+        "type": "INST",
+        "x": 124,
+        "y": 0,
+        "w": 145,
+        "h": 48,
+        "component": "br-page-tab / State=Default",
+        "layout": "H gap8 p0,16,0,16 MC"
+       },
+       {
+        "name": "My schedule",
+        "type": "INST",
+        "x": 277,
+        "y": 0,
+        "w": 149,
+        "h": 48,
+        "component": "br-page-tab / State=Active",
+        "layout": "H gap8 p0,16,0,16 MC",
+        "stroke": "#064db7 {br/primary-dark} w0,0,2,0"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 64,
+    "w": 1440,
+    "h": 1106,
+    "layout": "V gap12 p16,0,48,0 MC",
+    "children": [
+     {
+      "name": "Toolbar",
+      "type": "FRAM",
+      "x": 73,
+      "y": 16,
+      "w": 1295,
+      "h": 38,
+      "layout": "H gap0 p0,0,0,0 SC",
+      "children": [
+       {
+        "name": "Layout toggle",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 398,
+        "h": 38,
+        "component": "ms-layout-toggle / Selected=Side",
+        "layout": "H gap0 p0,0,0,0 MM",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "6"
+       },
+       {
+        "name": "Range toggle",
+        "type": "INST",
+        "x": 1107,
+        "y": 0,
+        "w": 188,
+        "h": 38,
+        "component": "ms-range-toggle / Selected=Week",
+        "layout": "H gap0 p0,0,0,0 MM",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "6"
+       }
+      ]
+     },
+     {
+      "name": "Schedule panel",
+      "type": "FRAM",
+      "x": 73,
+      "y": 66,
+      "w": 1295,
+      "h": 992,
+      "layout": "V gap0 p0,0,0,0 MM",
+      "fill": "#ffffff {br/contrast}",
+      "stroke": "#0000001f {br/component-border} w1",
+      "radius": "8",
+      "children": [
+       {
+        "name": "Date nav",
+        "type": "INST",
+        "x": 1,
+        "y": 1,
+        "w": 1293,
+        "h": 56,
+        "component": "ms-date-nav",
+        "layout": "H gap0 p0,12,0,16 SC"
+       },
+       {
+        "name": "Divider",
+        "type": "RECT",
+        "x": 1,
+        "y": 57,
+        "w": 1293,
+        "h": 1,
+        "fill": "#0000001f {br/component-border}"
+       },
+       {
+        "name": "Legend",
+        "type": "INST",
+        "x": 1,
+        "y": 58,
+        "w": 1293,
+        "h": 28,
+        "component": "ms-legend / Mode=Grid",
+        "layout": "H gap16 p0,16,0,16 MC",
+        "fill": "#f9f9f9 {br/neutral-white}"
+       },
+       {
+        "name": "Divider",
+        "type": "RECT",
+        "x": 1,
+        "y": 86,
+        "w": 1293,
+        "h": 1,
+        "fill": "#0000001f {br/component-border}"
+       },
+       {
+        "name": "Time grid · Side",
+        "type": "FRAM",
+        "x": 1,
+        "y": 87,
+        "w": 1295,
+        "h": 904,
+        "fill": "#ffffff {br/contrast}"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,265 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "394:9222",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Overtime · Desktop · 4+ filters dialog · Light",
+  "type": "FRAM",
+  "x": 3080,
+  "y": 8937,
+  "w": 1440,
+  "h": 900,
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "br-app-shell · Employee",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 900,
+    "component": "br-app-shell / App=Employee",
+    "layout": "H gap0 p0,0,0,0 MM",
+    "fill": "#f9f9f9 {br/neutral-white}",
+    "children": [
+     {
+      "name": "Sidebar",
+      "type": "INST",
+      "x": 0,
+      "y": 0,
+      "w": 232,
+      "h": 900,
+      "component": "br-app-sidebar / Collapsed=False",
+      "layout": "V gap0 p16,12,16,12 MM",
+      "fill": "#ffffff {br/contrast}",
+      "stroke": "#0000001f {mat/sidenav-container-divider-color} w0,1,0,0",
+      "children": [
+       {
+        "name": "Brand",
+        "type": "FRAM",
+        "x": 12,
+        "y": 16,
+        "w": 202,
+        "h": 59,
+        "layout": "V gap4 p0,0,0,0 MM"
+       },
+       {
+        "name": "Spacer",
+        "type": "FRAM",
+        "x": 12,
+        "y": 75,
+        "w": 10,
+        "h": 24,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Nav",
+        "type": "FRAM",
+        "x": 12,
+        "y": 99,
+        "w": 208,
+        "h": 232,
+        "layout": "V gap8 p0,0,0,0 MM"
+       },
+       {
+        "name": "Fill",
+        "type": "FRAM",
+        "x": 12,
+        "y": 331,
+        "w": 207,
+        "h": 473,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Feedback",
+        "type": "FRAM",
+        "x": 12,
+        "y": 804,
+        "w": 207,
+        "h": 40,
+        "layout": "H gap8 p8,0,8,0 MC"
+       },
+       {
+        "name": "Controls",
+        "type": "FRAM",
+        "x": 12,
+        "y": 844,
+        "w": 207,
+        "h": 40,
+        "layout": "H gap0 p16,4,0,4 SC"
+       }
+      ]
+     },
+     {
+      "name": "Main",
+      "type": "FRAM",
+      "x": 232,
+      "y": 0,
+      "w": 1208,
+      "h": 900,
+      "layout": "V gap0 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Topbar",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 1208,
+        "h": 64,
+        "component": "br-app-topbar",
+        "layout": "H gap0 p8,16,8,32 SC"
+       },
+       {
+        "name": "Content",
+        "type": "FRAM",
+        "x": 0,
+        "y": 64,
+        "w": 1208,
+        "h": 836,
+        "layout": "V gap24 p16,32,32,32 MM"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "br-overlay-backdrop",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 900,
+    "component": "br-overlay-backdrop",
+    "layout": "H gap0 p0,0,0,0 CC",
+    "fill": "#00000080 {br/overlay-2}"
+   },
+   {
+    "name": "br-filter-dialog",
+    "type": "INST",
+    "x": 440,
+    "y": 112,
+    "w": 560,
+    "h": 677,
+    "component": "br-filter-dialog / Device=Desktop",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#f9f9f9 {br/neutral-white}",
+    "radius": "8",
+    "effects": "DROP_SHADOW 0,8 b24 #0000003d",
+    "children": [
+     {
+      "name": "Header",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 560,
+      "h": 48,
+      "layout": "H gap8 p20,16,0,24 MC",
+      "children": [
+       {
+        "name": "br-dialog-header",
+        "type": "INST",
+        "x": 24,
+        "y": 20,
+        "w": 488,
+        "h": 28,
+        "component": "br-dialog-header",
+        "layout": "V gap8 p0,0,0,0 MM"
+       },
+       {
+        "name": "Close",
+        "type": "TEXT",
+        "x": 520,
+        "y": 22,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "close",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Body",
+      "type": "FRAM",
+      "x": 0,
+      "y": 48,
+      "w": 560,
+      "h": 558,
+      "layout": "V gap16 p16,24,20,24 MM",
+      "children": [
+       {
+        "name": "Skills",
+        "type": "FRAM",
+        "x": 24,
+        "y": 16,
+        "w": 512,
+        "h": 46,
+        "layout": "V gap4 p0,0,0,0 MM"
+       },
+       {
+        "name": "Date range",
+        "type": "FRAM",
+        "x": 24,
+        "y": 78,
+        "w": 512,
+        "h": 330,
+        "layout": "V gap4 p0,0,0,0 MM"
+       },
+       {
+        "name": "Row",
+        "type": "FRAM",
+        "x": 24,
+        "y": 424,
+        "w": 512,
+        "h": 74,
+        "layout": "H gap16 p0,0,0,0 MM"
+       },
+       {
+        "name": "Applicable",
+        "type": "FRAM",
+        "x": 24,
+        "y": 514,
+        "w": 512,
+        "h": 24,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Footer",
+      "type": "FRAM",
+      "x": 0,
+      "y": 606,
+      "w": 560,
+      "h": 71,
+      "layout": "H gap12 p16,24,16,24 MM",
+      "fill": "#f9f9f9 {br/neutral-white}",
+      "stroke": "#00000000 {br/divider} w1,0,0,0",
+      "children": [
+       {
+        "name": "Clear all",
+        "type": "INST",
+        "x": 358,
+        "y": 17,
+        "w": 93,
+        "h": 38,
+        "component": "br-button / buttonType=stroked, disabled=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       },
+       {
+        "name": "Apply",
+        "type": "INST",
+        "x": 463,
+        "y": 17,
+        "w": 73,
+        "h": 36,
+        "component": "br-button / buttonType=raised, disabled=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

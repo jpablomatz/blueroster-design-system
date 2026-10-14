@@ -1,0 +1,243 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "373:7522",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Notifications open · Light",
+  "type": "FRAM",
+  "x": 2000,
+  "y": 13921,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 473,
+    "layout": "V gap16 p16,16,32,16 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 16,
+      "y": 16,
+      "w": 358,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Overtime",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 358,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Empty state",
+      "type": "INST",
+      "x": 16,
+      "y": 117,
+      "w": 358,
+      "h": 324,
+      "component": "br-m-empty-state",
+      "layout": "V gap12 p32,24,32,24 MC",
+      "stroke": "#00000099 {br/component-field-label} w1",
+      "radius": "8",
+      "children": [
+       {
+        "name": "Illustration",
+        "type": "FRAM",
+        "x": 99,
+        "y": 33,
+        "w": 160,
+        "h": 160
+       },
+       {
+        "name": "Heading",
+        "type": "TEXT",
+        "x": 25,
+        "y": 205,
+        "w": 308,
+        "h": 42,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "You don't have any request pending to be approved",
+        "font": "Roboto Bold 18/auto C"
+       },
+       {
+        "name": "Body",
+        "type": "TEXT",
+        "x": 25,
+        "y": 259,
+        "w": 308,
+        "h": 32,
+        "fill": "#00000099 {br/text-label}",
+        "text": "You can apply to an overtime opportunity in opportunities tab",
+        "font": "Roboto Regular 14/auto C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "br-m-notifications-sheet",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 844,
+    "component": "br-m-notifications-sheet",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "absolute": true,
+    "children": [
+     {
+      "name": "Header",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap16 p0,16,0,16 MC",
+      "stroke": "#00000000 {br/divider} w0,0,1,0",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 16,
+        "y": 17,
+        "w": 318,
+        "h": 21,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Notifications",
+        "font": "Roboto Medium 18/auto L"
+       },
+       {
+        "name": "Close",
+        "type": "TEXT",
+        "x": 350,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "close",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Body",
+      "type": "FRAM",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 88,
+      "layout": "V gap16 p16,16,0,16 MM",
+      "children": [
+       {
+        "name": "Categories",
+        "type": "FRAM",
+        "x": 16,
+        "y": 16,
+        "w": 162,
+        "h": 38,
+        "layout": "H gap0 p0,0,0,0 MM",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Empty",
+        "type": "FRAM",
+        "x": 16,
+        "y": 70,
+        "w": 141,
+        "h": 18,
+        "layout": "H gap8 p0,0,0,0 MC"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

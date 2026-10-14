@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Blue Roster · br-m-* snippet gallery (plain HTML/CSS). Copy the markup blocks you need.
+     ?theme=dark for Dark. Sample text from fixtures/schedule.json. -->
+<html lang="en"><head><meta charset="utf-8"><title>br-m-* snippets</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Inter:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+<link rel="stylesheet" href="br-m.css">
+<script>if (/theme=dark/.test(location.search)) document.documentElement.setAttribute('data-theme','dark');</script>
+<style>body{margin:0;padding:24px;display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;background:var(--br-contrast)} section{width:390px} h2{font:500 12px Roboto;color:var(--br-text-label);margin:0 0 8px}</style>
+</head><body class="br">
+
+<section><h2>br-m-app-bar</h2>
+<header class="br-m-app-bar"><div class="br-m-app-bar__row">
+  <button class="br-m-app-bar__btn"><span class="mi">menu</span></button>
+  <span class="br-m-app-bar__logo"><img class="br-logo-light" src="../assets/br-logo-isotype-light.svg" width="32" height="34" alt=""><img class="br-logo-dark" src="../assets/br-logo-isotype-dark.svg" width="32" height="34" alt=""></span>
+  <div class="br-m-app-bar__trailing"><button class="br-m-app-bar__btn"><span class="mi">notifications</span><span class="br-m-badge">2</span></button><button class="br-m-app-bar__btn"><span class="br-m-avatar">JM</span></button></div>
+</div></header></section>
+
+<section style="padding:0 16px"><h2>br-m-page-header + br-page-tab</h2>
+<div class="br-m-page-header"><h1 class="br-m-page-header__title">My Schedule</h1>
+<nav class="br-m-tabs"><button class="br-page-tab is-active"><span class="mi">view_day</span>Day</button><button class="br-page-tab"><span class="mi">view_week</span>Week</button><button class="br-page-tab"><span class="mi">calendar_view_month</span>Month</button></nav></div></section>
+
+<section style="padding:0 16px"><h2>br-m-legend</h2>
+<div class="br-m-legend"><span class="br-m-legend__item"><i class="br-dot br-dot--shift"></i>Shift</span><span class="br-m-legend__item"><i class="br-dot br-dot--task"></i>Tasks</span><span class="br-m-legend__item"><i class="br-dot br-dot--overtime"></i>Overtime</span><span class="br-m-legend__item"><i class="br-dot br-dot--planned"></i>Planned overtime</span><span class="br-m-legend__item"><i class="br-dot br-dot--leave"></i>Leave</span></div></section>
+
+<section style="padding:0 16px"><h2>br-m-date-nav</h2>
+<div class="br-m-date-nav"><span class="br-m-date-nav__label">Thu 8 Oct 2026</span><button class="br-m-date-nav__arrow"><span class="mi">chevron_left</span></button><button class="br-m-date-nav__today">Today</button><button class="br-m-date-nav__arrow"><span class="mi">chevron_right</span></button></div></section>
+
+<section style="padding:0 16px"><h2>br-m-hour-row</h2>
+<div class="br-m-hour-row"><span class="br-m-hour-row__label">6 AM</span><span class="br-m-hour-row__line"></span></div></section>
+
+<section style="padding:0 16px;display:flex;flex-direction:column;gap:6px"><h2>br-m-event-block (Type=Shift / Task / Overtime / Planned overtime / Leave)</h2>
+<div class="br-m-event-block br-m-event-block--shift"><span class="br-m-event-block__title">0600 10-Hr w/ Lunch - 60S</span><span class="br-m-event-block__time">6:00 am - 4:00 pm</span></div>
+<div class="br-m-event-block br-m-event-block--task"><span class="br-m-event-block__title">Shipping/Outside</span><span class="br-m-event-block__time">6:00 am - 4:00 pm</span></div>
+<div class="br-m-event-block br-m-event-block--overtime"><span class="br-m-event-block__title">0600 10-Hr w/ Lunch - 60S</span><span class="br-m-event-block__time">6:00 am - 4:00 pm</span></div>
+<div class="br-m-event-block br-m-event-block--planned"><span class="br-m-event-block__title">0600 10-Hr w/ Lunch - 60S</span><span class="br-m-event-block__time">6:00 am - 4:00 pm</span></div>
+<div class="br-m-event-block br-m-event-block--leave"><span class="br-m-event-block__title">0600 10-Hr w/ Lunch - 60S</span><span class="br-m-event-block__time">6:00 am - 4:00 pm</span></div></section>
+
+<section style="padding:0 16px"><h2>br-m-week-day (Default / Today / Selected)</h2>
+<div class="br-m-week-strip" style="justify-content:flex-start;gap:16px">
+<div class="br-m-week-day"><span class="br-m-week-day__weekday">Thu</span><span class="br-m-week-day__circle">8</span><span class="br-m-dots"><i class="br-dot br-dot--sm br-dot--shift"></i><i class="br-dot br-dot--sm br-dot--task"></i></span></div>
+<div class="br-m-week-day is-today"><span class="br-m-week-day__weekday">Fri</span><span class="br-m-week-day__circle">9</span><span class="br-m-dots"></span></div>
+<div class="br-m-week-day is-selected"><span class="br-m-week-day__weekday">Fri</span><span class="br-m-week-day__circle">9</span><span class="br-m-dots"></span></div></div></section>
+
+<section style="padding:0 16px"><h2>br-m-month-cell (Default / Today / Outside / Selected)</h2>
+<div class="br-m-month__week" style="width:204px;grid-template-columns:repeat(4,51px)">
+<div class="br-m-month-cell"><span class="br-m-month-cell__circle">8</span><span class="br-m-dots"><i class="br-dot br-dot--sm br-dot--shift"></i><i class="br-dot br-dot--sm br-dot--task"></i></span></div>
+<div class="br-m-month-cell is-today"><span class="br-m-month-cell__circle">9</span><span class="br-m-dots"></span></div>
+<div class="br-m-month-cell is-outside"><span class="br-m-month-cell__circle">27</span><span class="br-m-dots"></span></div>
+<div class="br-m-month-cell is-selected"><span class="br-m-month-cell__circle">9</span><span class="br-m-dots"></span></div></div></section>
+
+<section style="padding:0 16px"><h2>br-m-status-pill</h2>
+<span class="br-m-status-pill br-m-status-pill--pending"><span class="mi">schedule</span>Pending</span>
+<span class="br-m-status-pill br-m-status-pill--approved"><span class="mi">check_circle</span>Approved</span>
+<span class="br-m-status-pill br-m-status-pill--rejected"><span class="mi">cancel</span>Rejected</span></section>
+
+<section style="padding:0 16px"><h2>br-m-request-card</h2>
+<div class="br-card br-m-request-card"><div class="br-m-request-card__top"><span class="mi">more_time</span><span class="br-m-request-card__title">Overtime</span><span class="br-m-status-pill br-m-status-pill--pending"><span class="mi">schedule</span>Pending</span></div>
+<div class="br-m-request-card__dates">Thu 8 Oct · 5:00 pm - 7:00 pm</div><div class="br-m-request-card__detail">Weld · Sku 1 hola</div><div class="br-m-request-card__meta">Requested Mon 5 Oct</div></div></section>
+
+<section style="padding:0 16px"><h2>br-overtime-card (Type=Available)</h2>
+<div class="br-card br-overtime-card"><div class="br-overtime-card__type"><span class="mi">more_time</span>Overtime</div>
+<div class="br-overtime-card__deadline">Request before Thu 8 Oct</div>
+<div><div class="br-overtime-card__date">Thu 8 Oct</div><div class="br-overtime-card__time">5:00 pm - 7:00 pm</div></div>
+<div style="display:flex;gap:16px"><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span class="br-field-caption">SKU</span><span class="br-field-value">Sku 1 hola</span></div><div style="flex:1;display:flex;flex-direction:column;gap:2px"><span class="br-field-caption">Position</span><span class="br-field-value">Weld</span></div></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span class="br-field-caption">Skills</span><div style="display:flex;gap:8px"><span class="br-chip"><span class="mi">check</span>Weld</span><span class="br-chip"><span class="mi">check</span>Package methods</span></div></div>
+<div style="padding-top:4px"><button class="br-btn-flat" style="width:100%">Request</button></div></div></section>
+
+<section style="padding:0 16px"><h2>br-m-balance-card</h2>
+<div class="br-card br-m-balance-card"><div style="font:500 16px/19px Roboto">Time off balance</div><div style="font:400 12px/14px Roboto;color:var(--br-text-label)">Remaining time off you are entitled to for the year.</div>
+<div style="padding-top:8px"><div class="br-m-balance-row"><span>Vacation</span><span>10.00 days</span></div></div></div></section>
+
+<section style="padding:0 16px"><h2>br-filter-button (No filters / Active)</h2>
+<button class="br-filter-button"><span class="mi">filter_alt</span>Filters</button>
+<button class="br-filter-button is-active"><span class="mi">filter_alt</span>Filters<span class="br-filter-button__count">3</span></button></section>
+
+<section style="padding:0 16px"><h2>br-m-filter-bar (Collapsed)</h2>
+<div class="br-m-filter-bar__collapsed"><button class="br-filter-button" style="height:48px"><span class="mi">filter_alt</span>Filters<span class="mi" style="font-size:20px">expand_more</span></button><span class="br-m-filter-bar__summary">Earliest first · All skills</span></div></section>
+
+<section><h2>br-filter-dialog (Device=Mobile)</h2>
+<div class="br-filter-dialog" style="height:520px"><div class="br-filter-dialog__header"><span class="mi">close</span>Filters</div>
+<div class="br-filter-dialog__body">
+<div class="br-filter-dialog__group"><span class="br-field-caption">Skills</span><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="br-chip"><span class="mi">check</span>Weld</span><span class="br-chip"><span class="mi">check</span>Package methods</span><span class="br-chip">Forklift</span><span class="br-chip">Quality check</span></div></div>
+<div class="br-filter-dialog__group"><span class="br-field-caption">Date range</span><div class="br-select-field"><span>Oct 14 - Oct 18</span><span class="mi">calendar_today</span></div></div>
+<div class="br-filter-dialog__group"><span class="br-field-caption">Sort by date</span><div class="br-select-field"><span>Earliest first</span><span class="mi">arrow_drop_down</span></div></div>
+</div>
+<div class="br-filter-dialog__footer"><button class="br-btn-stroked">Clear all</button><button class="br-btn-flat">Apply</button></div></div></section>
+</body></html>

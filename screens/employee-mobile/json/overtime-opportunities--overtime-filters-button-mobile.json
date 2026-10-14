@@ -1,0 +1,231 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "394:8715",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Overtime · Filters button · Mobile · Light",
+  "type": "FRAM",
+  "x": 0,
+  "y": 7837,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 1449,
+    "layout": "V gap16 p16,16,32,16 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 16,
+      "y": 16,
+      "w": 358,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Overtime",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 358,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Filter button",
+      "type": "INST",
+      "x": 16,
+      "y": 117,
+      "w": 118,
+      "h": 40,
+      "component": "br-filter-button / State=Active",
+      "layout": "H gap8 p0,8,0,12 MC",
+      "fill": "#ffffff {br/contrast}",
+      "stroke": "#1e75f6 {br/primary} w1",
+      "radius": "4",
+      "children": [
+       {
+        "name": "Icon",
+        "type": "TEXT",
+        "x": 13,
+        "y": 10,
+        "w": 20,
+        "h": 20,
+        "fill": "#1e75f6 {br/primary}",
+        "text": "filter_alt",
+        "font": "Material Icons Outlined Regular 20/auto L"
+       },
+       {
+        "name": "Label",
+        "type": "TEXT",
+        "x": 41,
+        "y": 12,
+        "w": 40,
+        "h": 16,
+        "fill": "#1e75f6 {br/primary}",
+        "text": "Filters",
+        "font": "Roboto Medium 14/auto L"
+       },
+       {
+        "name": "Badge",
+        "type": "FRAM",
+        "x": 89,
+        "y": 10,
+        "w": 20,
+        "h": 20,
+        "layout": "H gap0 p0,0,0,0 CC",
+        "fill": "#1e75f6 {br/primary}",
+        "radius": "10"
+       }
+      ]
+     },
+     {
+      "name": "Cards",
+      "type": "FRAM",
+      "x": 16,
+      "y": 173,
+      "w": 358,
+      "h": 1244,
+      "layout": "V gap12 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 7:00 pm",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 297,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 7:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 594,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Sun 11 Oct 12:00 am - 9:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 891,
+        "w": 358,
+        "h": 353,
+        "component": "br-overtime-card / Type=Not available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

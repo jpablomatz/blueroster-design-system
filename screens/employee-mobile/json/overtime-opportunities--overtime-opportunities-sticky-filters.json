@@ -1,0 +1,180 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "341:677",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Overtime · Opportunities · Sticky filters · Light",
+  "type": "FRAM",
+  "x": 1000,
+  "y": 1500,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Sticky · collapsed filters",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 65,
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Inner",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 64,
+      "layout": "V gap0 p8,16,8,16 MM",
+      "children": [
+       {
+        "name": "Filter bar",
+        "type": "INST",
+        "x": 16,
+        "y": 8,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-filter-bar / State=Collapsed",
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 64,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 122,
+    "w": 390,
+    "h": 991,
+    "layout": "V gap16 p12,16,32,16 MM",
+    "children": [
+     {
+      "name": "Cards",
+      "type": "FRAM",
+      "x": 16,
+      "y": 12,
+      "w": 358,
+      "h": 947,
+      "layout": "V gap12 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 7:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 297,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Sun 11 Oct 12:00 am - 9:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 594,
+        "w": 358,
+        "h": 353,
+        "component": "br-overtime-card / Type=Not available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

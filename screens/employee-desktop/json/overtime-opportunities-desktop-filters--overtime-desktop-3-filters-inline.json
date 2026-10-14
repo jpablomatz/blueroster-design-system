@@ -1,0 +1,127 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "394:8954",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Overtime · Desktop · 3 filters inline · Light",
+  "type": "FRAM",
+  "x": 0,
+  "y": 8937,
+  "w": 1440,
+  "h": 900,
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "br-app-shell · Employee",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 900,
+    "component": "br-app-shell / App=Employee",
+    "layout": "H gap0 p0,0,0,0 MM",
+    "fill": "#f9f9f9 {br/neutral-white}",
+    "children": [
+     {
+      "name": "Sidebar",
+      "type": "INST",
+      "x": 0,
+      "y": 0,
+      "w": 232,
+      "h": 900,
+      "component": "br-app-sidebar / Collapsed=False",
+      "layout": "V gap0 p16,12,16,12 MM",
+      "fill": "#ffffff {br/contrast}",
+      "stroke": "#0000001f {mat/sidenav-container-divider-color} w0,1,0,0",
+      "children": [
+       {
+        "name": "Brand",
+        "type": "FRAM",
+        "x": 12,
+        "y": 16,
+        "w": 202,
+        "h": 59,
+        "layout": "V gap4 p0,0,0,0 MM"
+       },
+       {
+        "name": "Spacer",
+        "type": "FRAM",
+        "x": 12,
+        "y": 75,
+        "w": 10,
+        "h": 24,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Nav",
+        "type": "FRAM",
+        "x": 12,
+        "y": 99,
+        "w": 208,
+        "h": 232,
+        "layout": "V gap8 p0,0,0,0 MM"
+       },
+       {
+        "name": "Fill",
+        "type": "FRAM",
+        "x": 12,
+        "y": 331,
+        "w": 207,
+        "h": 473,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Feedback",
+        "type": "FRAM",
+        "x": 12,
+        "y": 804,
+        "w": 207,
+        "h": 40,
+        "layout": "H gap8 p8,0,8,0 MC"
+       },
+       {
+        "name": "Controls",
+        "type": "FRAM",
+        "x": 12,
+        "y": 844,
+        "w": 207,
+        "h": 40,
+        "layout": "H gap0 p16,4,0,4 SC"
+       }
+      ]
+     },
+     {
+      "name": "Main",
+      "type": "FRAM",
+      "x": 232,
+      "y": 0,
+      "w": 1208,
+      "h": 900,
+      "layout": "V gap0 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Topbar",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 1208,
+        "h": 64,
+        "component": "br-app-topbar",
+        "layout": "H gap0 p8,16,8,32 SC"
+       },
+       {
+        "name": "Content",
+        "type": "FRAM",
+        "x": 0,
+        "y": 64,
+        "w": 1208,
+        "h": 836,
+        "layout": "V gap24 p16,32,32,32 MM"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

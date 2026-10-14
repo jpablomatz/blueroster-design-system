@@ -1,0 +1,378 @@
+{
+  "_sampleData": "SAMPLE DATA copied verbatim from the Figma mockups (Design System Legacy, k05NWBKMjsvo5hEugQc2Tq). Use ONLY for mockups and visual prototypes. Not real data, not an API contract, not business rules.",
+  "user": {
+    "initials": "JM",
+    "notificationCount": 2,
+    "_source": "br-m-app-bar 341:26"
+  },
+  "legend": [
+    "Shift",
+    "Tasks",
+    "Overtime",
+    "Planned overtime",
+    "Leave"
+  ],
+  "today": "2026-10-09",
+  "day": {
+    "_source": "My Schedule · Day 372:5392",
+    "date": "2026-10-08",
+    "dateNavLabel": "Thu 8 Oct 2026",
+    "visibleHours": {
+      "first": "5 AM",
+      "last": "4 PM"
+    },
+    "events": [
+      {
+        "type": "shift",
+        "title": "0600 10-Hr w/ Lunch - 60S",
+        "start": "06:00",
+        "end": "16:00",
+        "timeLabel": "6:00 am - 4:00 pm"
+      },
+      {
+        "type": "task",
+        "title": "Shipping/Outside",
+        "start": "06:00",
+        "end": "16:00",
+        "timeLabel": "6:00 am - 4:00 pm"
+      }
+    ]
+  },
+  "week": {
+    "_source": "My Schedule · Week 372:5508",
+    "dateNavLabel": "Sun 4 Oct - Sat 10 Oct 2026",
+    "days": [
+      {
+        "date": "2026-10-04",
+        "weekday": "Sun",
+        "day": 4,
+        "state": "Default",
+        "dots": []
+      },
+      {
+        "date": "2026-10-05",
+        "weekday": "Mon",
+        "day": 5,
+        "state": "Default",
+        "dots": [
+          "shift",
+          "task"
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "weekday": "Tue",
+        "day": 6,
+        "state": "Default",
+        "dots": [
+          "shift",
+          "task"
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "weekday": "Wed",
+        "day": 7,
+        "state": "Default",
+        "dots": [
+          "shift",
+          "task"
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "weekday": "Thu",
+        "day": 8,
+        "state": "Default",
+        "dots": [
+          "shift",
+          "task"
+        ]
+      },
+      {
+        "date": "2026-10-09",
+        "weekday": "Fri",
+        "day": 9,
+        "state": "Today",
+        "dots": []
+      },
+      {
+        "date": "2026-10-10",
+        "weekday": "Sat",
+        "day": 10,
+        "state": "Default",
+        "dots": []
+      }
+    ],
+    "agenda": [
+      {
+        "date": "2026-10-05",
+        "label": "Mon 5 Oct",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          },
+          {
+            "type": "task",
+            "title": "Shipping/Outside",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "date": "2026-10-06",
+        "label": "Tue 6 Oct",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          },
+          {
+            "type": "task",
+            "title": "Shipping/Outside",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "date": "2026-10-07",
+        "label": "Wed 7 Oct",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          },
+          {
+            "type": "task",
+            "title": "Shipping/Outside",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "date": "2026-10-08",
+        "label": "Thu 8 Oct",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          },
+          {
+            "type": "task",
+            "title": "Shipping/Outside",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      }
+    ]
+  },
+  "month": {
+    "_source": "My Schedule · Month 372:5618",
+    "dateNavLabel": "October 2026",
+    "weekStartsOn": "Sunday",
+    "today": 9,
+    "daysWithEvents": {
+      "5": [
+        "shift",
+        "task"
+      ],
+      "6": [
+        "shift",
+        "task"
+      ],
+      "7": [
+        "shift",
+        "task"
+      ],
+      "8": [
+        "shift",
+        "task"
+      ],
+      "12": [
+        "shift",
+        "task"
+      ],
+      "13": [
+        "shift",
+        "task"
+      ],
+      "14": [
+        "shift",
+        "task"
+      ],
+      "15": [
+        "shift",
+        "task"
+      ],
+      "19": [
+        "shift",
+        "task"
+      ],
+      "20": [
+        "shift",
+        "task"
+      ],
+      "21": [
+        "shift",
+        "task"
+      ],
+      "22": [
+        "shift",
+        "task"
+      ],
+      "26": [
+        "shift",
+        "task"
+      ],
+      "27": [
+        "shift",
+        "task"
+      ],
+      "28": [
+        "shift",
+        "task"
+      ],
+      "29": [
+        "shift",
+        "task"
+      ]
+    },
+    "selectedAgenda": {
+      "date": "2026-10-08",
+      "label": "Thu 8 Oct",
+      "events": [
+        {
+          "type": "shift",
+          "title": "0600 10-Hr w/ Lunch - 60S",
+          "start": "06:00",
+          "end": "16:00",
+          "timeLabel": "6:00 am - 4:00 pm"
+        },
+        {
+          "type": "task",
+          "title": "Shipping/Outside",
+          "start": "06:00",
+          "end": "16:00",
+          "timeLabel": "6:00 am - 4:00 pm"
+        }
+      ]
+    }
+  },
+  "eventBlockVariants": {
+    "_source": "br-m-event-block 371:5384 (all variants use the same sample text)",
+    "types": [
+      "Shift",
+      "Task",
+      "Overtime",
+      "Planned overtime",
+      "Leave"
+    ],
+    "title": "0600 10-Hr w/ Lunch - 60S",
+    "timeLabel": "6:00 am - 4:00 pm"
+  },
+  "overtimeOpportunities": {
+    "_source": "Overtime · Opportunities 341:331",
+    "cards": [
+      {
+        "type": "Overtime",
+        "deadline": "Request before Thu 8 Oct",
+        "date": "Thu 8 Oct",
+        "time": "5:00 pm - 7:00 pm",
+        "sku": "Sku 1 hola",
+        "position": "Weld",
+        "skills": [
+          "Weld",
+          "Package methods"
+        ],
+        "action": "Request",
+        "available": true
+      },
+      {
+        "type": "Overtime",
+        "deadline": "Request before Thu 8 Oct",
+        "date": "Thu 8 Oct",
+        "time": "5:00 pm - 12:00 am",
+        "sku": "Sku 1 hola",
+        "position": "Weld",
+        "skills": [
+          "Weld",
+          "Package methods"
+        ],
+        "action": "Request",
+        "available": true
+      },
+      {
+        "type": "Overtime",
+        "deadline": "Request before Thu 8 Oct",
+        "date": "Thu 8 Oct",
+        "time": "7:00 pm - 12:00 am",
+        "sku": "Sku 1 hola",
+        "position": "Weld",
+        "skills": [
+          "Weld",
+          "Package methods"
+        ],
+        "action": "Request",
+        "available": true
+      },
+      {
+        "type": "Overtime",
+        "deadline": "Request before Sun 11 Oct",
+        "date": "Sun 11 Oct",
+        "time": "12:00 am - 9:00 am",
+        "sku": "Sku 2",
+        "position": "Package",
+        "skills": [
+          "Weld",
+          "Package methods",
+          "Skill 2"
+        ],
+        "action": "Request",
+        "available": false,
+        "hint": "Get the locked skills to request this overtime"
+      }
+    ]
+  },
+  "requestCard": {
+    "_source": "br-m-request-card 371:5471",
+    "typeIcon": "more_time",
+    "title": "Overtime",
+    "status": "Pending",
+    "dates": "Thu 8 Oct · 5:00 pm - 7:00 pm",
+    "detail": "Weld · Sku 1 hola",
+    "meta": "Requested Mon 5 Oct"
+  },
+  "balanceCard": {
+    "_source": "br-m-balance-card 371:5484",
+    "title": "Time off balance",
+    "subtitle": "Remaining time off you are entitled to for the year.",
+    "rows": [
+      {
+        "label": "Vacation",
+        "value": "10.00 days"
+      }
+    ]
+  },
+  "_notInFigma": "No sample exists in Figma for Overtime, Planned overtime or Leave blocks placed on a timeline, nor for multi-employee calendars. Do not invent them; if a mockup needs them, reuse the eventBlockVariants text and say so."
+}

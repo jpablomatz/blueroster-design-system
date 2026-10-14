@@ -1,0 +1,341 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "304:17492",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Roster Catalogs · Shift · Light",
+  "type": "INST",
+  "x": 3200,
+  "y": 6808,
+  "w": 1440,
+  "h": 900,
+  "component": "br-app-shell / App=Admin",
+  "layout": "H gap0 p0,0,0,0 MM",
+  "fill": "#f9f9f9 {br/neutral-white}",
+  "children": [
+   {
+    "name": "Sidebar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 232,
+    "h": 900,
+    "component": "br-app-sidebar / Collapsed=False",
+    "layout": "V gap0 p16,12,16,12 MM",
+    "fill": "#ffffff {br/contrast}",
+    "stroke": "#0000001f {mat/sidenav-container-divider-color} w0,1,0,0",
+    "children": [
+     {
+      "name": "Brand",
+      "type": "FRAM",
+      "x": 12,
+      "y": 16,
+      "w": 202,
+      "h": 59,
+      "layout": "V gap4 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "br-logo",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 202,
+        "h": 41,
+        "component": "br-logo / Type=Full"
+       },
+       {
+        "name": "Version",
+        "type": "TEXT",
+        "x": 0,
+        "y": 45,
+        "w": 84,
+        "h": 14,
+        "fill": "#00000054 {br/component-disabled}",
+        "text": "Version 3.02.03",
+        "font": "Roboto Regular 12/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Spacer",
+      "type": "FRAM",
+      "x": 12,
+      "y": 75,
+      "w": 10,
+      "h": 24,
+      "layout": "H gap0 p0,0,0,0 MC"
+     },
+     {
+      "name": "Nav",
+      "type": "FRAM",
+      "x": 12,
+      "y": 99,
+      "w": 208,
+      "h": 424,
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Action Center",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "Gantt",
+        "type": "INST",
+        "x": 0,
+        "y": 48,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "Workload",
+        "type": "INST",
+        "x": 0,
+        "y": 96,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "Roster Catalogs",
+        "type": "INST",
+        "x": 0,
+        "y": 144,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Active, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "fill": "#d1d5db {br/neutral-light}",
+        "radius": "6"
+       },
+       {
+        "name": "Rosters",
+        "type": "INST",
+        "x": 0,
+        "y": 192,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "Catalogs",
+        "type": "INST",
+        "x": 0,
+        "y": 240,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "History",
+        "type": "INST",
+        "x": 0,
+        "y": 288,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "Roles",
+        "type": "INST",
+        "x": 0,
+        "y": 336,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       },
+       {
+        "name": "Logout",
+        "type": "INST",
+        "x": 0,
+        "y": 384,
+        "w": 208,
+        "h": 40,
+        "component": "br-nav-item / State=Default, Mode=Expanded",
+        "layout": "H gap12 p8,12,8,12 MC",
+        "radius": "6"
+       }
+      ]
+     },
+     {
+      "name": "Fill",
+      "type": "FRAM",
+      "x": 12,
+      "y": 523,
+      "w": 207,
+      "h": 281,
+      "layout": "H gap0 p0,0,0,0 MC"
+     },
+     {
+      "name": "Feedback",
+      "type": "FRAM",
+      "x": 12,
+      "y": 804,
+      "w": 207,
+      "h": 40,
+      "layout": "H gap8 p8,0,8,0 MC",
+      "children": [
+       {
+        "name": "Icon",
+        "type": "TEXT",
+        "x": 105,
+        "y": 8,
+        "w": 24,
+        "h": 24,
+        "fill": "#000000de {mat/app-text-color}",
+        "text": "maps_ugc",
+        "font": "Material Icons Outlined Regular 24/24 C"
+       },
+       {
+        "name": "Label",
+        "type": "TEXT",
+        "x": 137,
+        "y": 11,
+        "w": 70,
+        "h": 19,
+        "fill": "#000000de {mat/app-text-color}",
+        "text": "Feedback",
+        "font": "Roboto Medium 16/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Controls",
+      "type": "FRAM",
+      "x": 12,
+      "y": 844,
+      "w": 207,
+      "h": 40,
+      "layout": "H gap0 p16,4,0,4 SC",
+      "children": [
+       {
+        "name": "Collapse",
+        "type": "TEXT",
+        "x": 4,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "fill": "#064db7 {br/primary-dark}",
+        "text": "chevron_left",
+        "font": "Material Icons Outlined Regular 24/24 C"
+       },
+       {
+        "name": "Close",
+        "type": "TEXT",
+        "x": 179,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "fill": "#064db7 {br/primary-dark}",
+        "text": "close",
+        "font": "Material Icons Outlined Regular 24/24 C"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Main",
+    "type": "FRAM",
+    "x": 232,
+    "y": 0,
+    "w": 1208,
+    "h": 900,
+    "layout": "V gap0 p0,0,0,0 MM",
+    "children": [
+     {
+      "name": "Topbar",
+      "type": "INST",
+      "x": 0,
+      "y": 0,
+      "w": 1208,
+      "h": 64,
+      "component": "br-app-topbar",
+      "layout": "H gap0 p8,16,8,32 SC",
+      "children": [
+       {
+        "name": "Left",
+        "type": "FRAM",
+        "x": 32,
+        "y": 8,
+        "w": 120,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "br-logo",
+        "type": "INST",
+        "x": 596,
+        "y": 15,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Actions",
+        "type": "FRAM",
+        "x": 1072,
+        "y": 8,
+        "w": 120,
+        "h": 48,
+        "layout": "H gap8 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Content",
+      "type": "FRAM",
+      "x": 0,
+      "y": 64,
+      "w": 1208,
+      "h": 836,
+      "layout": "V gap24 p16,32,32,32 MM",
+      "children": [
+       {
+        "name": "Page header",
+        "type": "INST",
+        "x": 32,
+        "y": 16,
+        "w": 1144,
+        "h": 48,
+        "component": "br-page-header",
+        "layout": "V gap24 p0,0,0,0 MM"
+       },
+       {
+        "name": "Content slot",
+        "type": "INST",
+        "x": 32,
+        "y": 88,
+        "w": 1144,
+        "h": 716,
+        "component": "br-content-roster-catalogs-shift",
+        "layout": "V gap20 p32,24,32,24 MM",
+        "fill": "#f2f4f8 {br/neutral-lightest}",
+        "radius": "8"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

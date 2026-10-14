@@ -1,0 +1,3171 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "372:5618",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "My Schedule · Month · Light",
+  "type": "FRAM",
+  "x": 2000,
+  "y": 10921,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Menu button",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 CC",
+          "children": [
+           {
+            "name": "Icon",
+            "type": "TEXT",
+            "x": 12,
+            "y": 12,
+            "w": 24,
+            "h": 24,
+            "fill": "#121212 {br/neutral-darkest}",
+            "text": "menu",
+            "font": "Material Icons Outlined Regular 24/auto L"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype",
+        "children": [
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 14,
+          "y": 15,
+          "w": 9,
+          "h": 15,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 14,
+          "y": 14,
+          "w": 10,
+          "h": 16,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 22,
+          "y": 21,
+          "w": 10,
+          "h": 13,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 21,
+          "y": 20,
+          "w": 11,
+          "h": 14,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 7,
+          "y": 20,
+          "w": 18,
+          "h": 3,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 22,
+          "y": 10,
+          "w": 3,
+          "h": 14,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 22,
+          "y": 20,
+          "w": 3,
+          "h": 3,
+          "fill": "#c7ddfd {br/illustration-primary-lightest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 21,
+          "y": 0,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 1,
+          "y": 18,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 4,
+          "y": 9,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 12,
+          "y": 2,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         }
+        ]
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Notifications",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 CC",
+          "children": [
+           {
+            "name": "Icon",
+            "type": "TEXT",
+            "x": 12,
+            "y": 12,
+            "w": 24,
+            "h": 24,
+            "fill": "#121212 {br/neutral-darkest}",
+            "text": "notifications",
+            "font": "Material Icons Outlined Regular 24/auto L"
+           },
+           {
+            "name": "Badge",
+            "type": "FRAM",
+            "x": 26,
+            "y": 6,
+            "w": 17,
+            "h": 18,
+            "layout": "H gap0 p0,5,0,5 CC",
+            "fill": "#1e75f6 {br/primary}",
+            "radius": "9",
+            "absolute": true,
+            "children": [
+             {
+              "name": "Count",
+              "type": "TEXT",
+              "x": 5,
+              "y": 3,
+              "w": 7,
+              "h": 13,
+              "fill": "#ffffff {br/on-primary}",
+              "text": "2",
+              "font": "Roboto Bold 11/auto L"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Account",
+          "type": "FRAM",
+          "x": 48,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 CC",
+          "children": [
+           {
+            "name": "Avatar",
+            "type": "FRAM",
+            "x": 8,
+            "y": 8,
+            "w": 32,
+            "h": 32,
+            "layout": "H gap0 p0,0,0,0 CC",
+            "fill": "#d1d5db {br/neutral-light}",
+            "radius": "16",
+            "children": [
+             {
+              "name": "Initials",
+              "type": "TEXT",
+              "x": 7,
+              "y": 9,
+              "w": 19,
+              "h": 15,
+              "fill": "#121212 {br/neutral-darkest}",
+              "text": "JM",
+              "font": "Roboto Medium 13/auto L"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 685,
+    "layout": "V gap16 p16,16,32,16 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 16,
+      "y": 16,
+      "w": 358,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 140,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "My Schedule",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 358,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Tab strip",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 358,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Tab 1",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 119,
+            "h": 48,
+            "component": "br-page-tab / State=Default",
+            "layout": "H gap8 p0,16,0,16 MC",
+            "children": [
+             {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 16,
+              "y": 12,
+              "w": 24,
+              "h": 24,
+              "fill": "#00000099 {br/text-label}",
+              "text": "view_day",
+              "font": "Material Icons Outlined Regular 24/24 C"
+             },
+             {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 48,
+              "y": 15,
+              "w": 26,
+              "h": 18,
+              "fill": "#00000099 {br/text-label}",
+              "text": "Day",
+              "font": "Roboto Medium 15/auto L"
+             }
+            ]
+           },
+           {
+            "name": "Tab 2",
+            "type": "INST",
+            "x": 119,
+            "y": 0,
+            "w": 119,
+            "h": 48,
+            "component": "br-page-tab / State=Default",
+            "layout": "H gap8 p0,16,0,16 MC",
+            "children": [
+             {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 16,
+              "y": 12,
+              "w": 24,
+              "h": 24,
+              "fill": "#00000099 {br/text-label}",
+              "text": "view_week",
+              "font": "Material Icons Outlined Regular 24/24 C"
+             },
+             {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 48,
+              "y": 15,
+              "w": 37,
+              "h": 18,
+              "fill": "#00000099 {br/text-label}",
+              "text": "Week",
+              "font": "Roboto Medium 15/auto L"
+             }
+            ]
+           },
+           {
+            "name": "Tab 3",
+            "type": "INST",
+            "x": 239,
+            "y": 0,
+            "w": 119,
+            "h": 48,
+            "component": "br-page-tab / State=Active",
+            "layout": "H gap8 p0,16,0,16 MC",
+            "stroke": "#064db7 {br/primary-dark} w0,0,2,0",
+            "children": [
+             {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 16,
+              "y": 11,
+              "w": 24,
+              "h": 24,
+              "fill": "#064db7 {br/primary-dark}",
+              "text": "calendar_view_month",
+              "font": "Material Icons Outlined Regular 24/24 C"
+             },
+             {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 48,
+              "y": 14,
+              "w": 44,
+              "h": 18,
+              "fill": "#064db7 {br/primary-dark}",
+              "text": "Month",
+              "font": "Roboto Medium 15/auto L"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Divider",
+          "type": "RECT",
+          "x": 0,
+          "y": 48,
+          "w": 358,
+          "h": 1,
+          "fill": "#0000001f {br/component-border}"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Legend",
+      "type": "INST",
+      "x": 16,
+      "y": 117,
+      "w": 358,
+      "h": 14,
+      "component": "br-m-legend",
+      "layout": "H gap12 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Shift",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 37,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#d1d5db {br/event-shift-neutral}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 25,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Shift",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Tasks",
+        "type": "FRAM",
+        "x": 49,
+        "y": 0,
+        "w": 44,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#1e75f6 {br/event-shift}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 32,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Tasks",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Overtime",
+        "type": "FRAM",
+        "x": 105,
+        "y": 0,
+        "w": 61,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#1c9646 {br/event-overtime}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 49,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Overtime",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Planned overtime",
+        "type": "FRAM",
+        "x": 178,
+        "y": 0,
+        "w": 106,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#5a2ead {br/special-4}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 94,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Planned overtime",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Leave",
+        "type": "FRAM",
+        "x": 296,
+        "y": 0,
+        "w": 44,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#ef4444 {br/event-leave}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 32,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Leave",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Date nav",
+      "type": "INST",
+      "x": 16,
+      "y": 147,
+      "w": 358,
+      "h": 40,
+      "component": "br-m-date-nav",
+      "layout": "H gap4 p0,0,0,4 MC",
+      "children": [
+       {
+        "name": "Label",
+        "type": "TEXT",
+        "x": 4,
+        "y": 12,
+        "w": 236,
+        "h": 16,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "October 2026",
+        "font": "Roboto Medium 14/auto L"
+       },
+       {
+        "name": "Prev",
+        "type": "TEXT",
+        "x": 244,
+        "y": 8,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "chevron_left",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       },
+       {
+        "name": "Today",
+        "type": "FRAM",
+        "x": 272,
+        "y": 6,
+        "w": 58,
+        "h": 29,
+        "layout": "H gap0 p6,10,6,10 MM",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "16",
+        "children": [
+         {
+          "name": "Today label",
+          "type": "TEXT",
+          "x": 11,
+          "y": 7,
+          "w": 36,
+          "h": 15,
+          "fill": "#121212 {br/neutral-darkest}",
+          "text": "Today",
+          "font": "Roboto Medium 13/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Next",
+        "type": "TEXT",
+        "x": 334,
+        "y": 8,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "chevron_right",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Calendar",
+      "type": "FRAM",
+      "x": 16,
+      "y": 203,
+      "w": 358,
+      "h": 325,
+      "layout": "V gap0 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Weekdays",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 358,
+        "h": 13,
+        "layout": "H gap0 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "S",
+          "font": "Roboto Medium 11/auto C"
+         },
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 51,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "M",
+          "font": "Roboto Medium 11/auto C"
+         },
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 102,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "T",
+          "font": "Roboto Medium 11/auto C"
+         },
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 153,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "W",
+          "font": "Roboto Medium 11/auto C"
+         },
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 204,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "T",
+          "font": "Roboto Medium 11/auto C"
+         },
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 255,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "F",
+          "font": "Roboto Medium 11/auto C"
+         },
+         {
+          "name": "Weekday",
+          "type": "TEXT",
+          "x": 306,
+          "y": 0,
+          "w": 51,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "S",
+          "font": "Roboto Medium 11/auto C"
+         }
+        ]
+       },
+       {
+        "name": "Month grid",
+        "type": "FRAM",
+        "x": 0,
+        "y": 13,
+        "w": 358,
+        "h": 312,
+        "layout": "V gap0 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Week 1",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 358,
+          "h": 52,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Day 27",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "27",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 28",
+            "type": "INST",
+            "x": 51,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "28",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 29",
+            "type": "INST",
+            "x": 102,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "29",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 30",
+            "type": "INST",
+            "x": 153,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "30",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 1",
+            "type": "INST",
+            "x": 205,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "1",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 2",
+            "type": "INST",
+            "x": 256,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "2",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 3",
+            "type": "INST",
+            "x": 307,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "3",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Week 2",
+          "type": "FRAM",
+          "x": 0,
+          "y": 52,
+          "w": 358,
+          "h": 52,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Day 4",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "4",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 5",
+            "type": "INST",
+            "x": 51,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "5",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 6",
+            "type": "INST",
+            "x": 102,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "6",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 7",
+            "type": "INST",
+            "x": 153,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "7",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 8",
+            "type": "INST",
+            "x": 205,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "8",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 9",
+            "type": "INST",
+            "x": 256,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Today",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "fill": "#1e75f6 {br/primary}",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#ffffff {br/on-primary}",
+                "text": "9",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 10",
+            "type": "INST",
+            "x": 307,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "10",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Week 3",
+          "type": "FRAM",
+          "x": 0,
+          "y": 104,
+          "w": 358,
+          "h": 52,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Day 11",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "11",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 12",
+            "type": "INST",
+            "x": 51,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "12",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 13",
+            "type": "INST",
+            "x": 102,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "13",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 14",
+            "type": "INST",
+            "x": 153,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "14",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 15",
+            "type": "INST",
+            "x": 205,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "15",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 16",
+            "type": "INST",
+            "x": 256,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "16",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 17",
+            "type": "INST",
+            "x": 307,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "17",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Week 4",
+          "type": "FRAM",
+          "x": 0,
+          "y": 156,
+          "w": 358,
+          "h": 52,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Day 18",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "18",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 19",
+            "type": "INST",
+            "x": 51,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "19",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 20",
+            "type": "INST",
+            "x": 102,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "20",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 21",
+            "type": "INST",
+            "x": 153,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "21",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 22",
+            "type": "INST",
+            "x": 205,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "22",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 23",
+            "type": "INST",
+            "x": 256,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "23",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 24",
+            "type": "INST",
+            "x": 307,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "24",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Week 5",
+          "type": "FRAM",
+          "x": 0,
+          "y": 208,
+          "w": 358,
+          "h": 52,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Day 25",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "25",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 26",
+            "type": "INST",
+            "x": 51,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "26",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 27",
+            "type": "INST",
+            "x": 102,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "27",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 28",
+            "type": "INST",
+            "x": 153,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "28",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 29",
+            "type": "INST",
+            "x": 205,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "29",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 19,
+              "y": 35,
+              "w": 13,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM",
+              "children": [
+               {
+                "name": "Shift dot",
+                "type": "ELLI",
+                "x": 0,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#d1d5db {br/event-shift-neutral}"
+               },
+               {
+                "name": "Task dot",
+                "type": "ELLI",
+                "x": 8,
+                "y": 0,
+                "w": 5,
+                "h": 5,
+                "fill": "#1e75f6 {br/event-shift}"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "name": "Day 30",
+            "type": "INST",
+            "x": 256,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "30",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 31",
+            "type": "INST",
+            "x": 307,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Default",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 6,
+                "y": 6,
+                "w": 15,
+                "h": 15,
+                "fill": "#121212 {br/neutral-darkest}",
+                "text": "31",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Week 6",
+          "type": "FRAM",
+          "x": 0,
+          "y": 260,
+          "w": 358,
+          "h": 52,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Day 1",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "1",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 2",
+            "type": "INST",
+            "x": 51,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "2",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 3",
+            "type": "INST",
+            "x": 102,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "3",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 4",
+            "type": "INST",
+            "x": 153,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "4",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 5",
+            "type": "INST",
+            "x": 205,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "5",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 6",
+            "type": "INST",
+            "x": 256,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "6",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           },
+           {
+            "name": "Day 7",
+            "type": "INST",
+            "x": 307,
+            "y": 0,
+            "w": 51,
+            "h": 52,
+            "component": "br-m-month-cell / State=Outside",
+            "layout": "V gap4 p4,0,0,0 MC",
+            "stroke": "#00000000 {br/divider} w1,0,0,0",
+            "children": [
+             {
+              "name": "Day circle",
+              "type": "FRAM",
+              "x": 13,
+              "y": 5,
+              "w": 26,
+              "h": 26,
+              "layout": "H gap0 p0,0,0,0 CC",
+              "radius": "13",
+              "children": [
+               {
+                "name": "Day",
+                "type": "TEXT",
+                "x": 9,
+                "y": 6,
+                "w": 8,
+                "h": 15,
+                "fill": "#00000054 {br/component-disabled}",
+                "text": "7",
+                "font": "Roboto Regular 13/auto L"
+               }
+              ]
+             },
+             {
+              "name": "Dots",
+              "type": "FRAM",
+              "x": 23,
+              "y": 35,
+              "w": 5,
+              "h": 6,
+              "layout": "H gap3 p0,0,0,0 MM"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Thu 8 Oct",
+      "type": "FRAM",
+      "x": 16,
+      "y": 544,
+      "w": 358,
+      "h": 109,
+      "layout": "V gap6 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Day heading",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 57,
+        "h": 15,
+        "fill": "#00000099 {br/text-label}",
+        "text": "Thu 8 Oct",
+        "font": "Roboto Medium 13/auto L"
+       },
+       {
+        "name": "Shift",
+        "type": "INST",
+        "x": 0,
+        "y": 21,
+        "w": 358,
+        "h": 41,
+        "component": "br-m-event-block / Type=Shift",
+        "layout": "V gap2 p6,8,6,8 MM",
+        "fill": "#d1d5db {br/event-shift-neutral}",
+        "radius": "4",
+        "children": [
+         {
+          "name": "Title",
+          "type": "TEXT",
+          "x": 8,
+          "y": 6,
+          "w": 342,
+          "h": 14,
+          "fill": "#121212 {br/neutral-darkest}",
+          "text": "0600 10-Hr w/ Lunch - 60S",
+          "font": "Roboto Medium 12/auto L"
+         },
+         {
+          "name": "Time",
+          "type": "TEXT",
+          "x": 8,
+          "y": 22,
+          "w": 88,
+          "h": 13,
+          "fill": "#121212 {br/neutral-darkest}",
+          "text": "6:00 am - 4:00 pm",
+          "font": "Roboto Regular 11/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Task",
+        "type": "INST",
+        "x": 0,
+        "y": 68,
+        "w": 358,
+        "h": 41,
+        "component": "br-m-event-block / Type=Task",
+        "layout": "V gap2 p6,8,6,8 MM",
+        "fill": "#1e75f6 {br/event-shift}",
+        "radius": "4",
+        "children": [
+         {
+          "name": "Title",
+          "type": "TEXT",
+          "x": 8,
+          "y": 6,
+          "w": 342,
+          "h": 14,
+          "fill": "#ffffff {br/on-primary}",
+          "text": "Shipping/Outside",
+          "font": "Roboto Medium 12/auto L"
+         },
+         {
+          "name": "Time",
+          "type": "TEXT",
+          "x": 8,
+          "y": 22,
+          "w": 88,
+          "h": 13,
+          "fill": "#ffffff {br/on-primary}",
+          "text": "6:00 am - 4:00 pm",
+          "font": "Roboto Regular 11/auto L"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

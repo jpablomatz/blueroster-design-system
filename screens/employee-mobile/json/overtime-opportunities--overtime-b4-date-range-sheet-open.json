@@ -1,0 +1,410 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "368:29380",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Overtime · B4 · Date range sheet open · Light",
+  "type": "FRAM",
+  "x": 0,
+  "y": 6800,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 1449,
+    "layout": "V gap16 p16,16,32,16 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 16,
+      "y": 16,
+      "w": 358,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Overtime",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 358,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Compact filters",
+      "type": "INST",
+      "x": 16,
+      "y": 117,
+      "w": 358,
+      "h": 40,
+      "component": "br-m-filter-compact",
+      "layout": "H gap6 p0,0,0,0 MC",
+      "children": [
+       {
+        "name": "Filter field",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 50,
+        "h": 40,
+        "component": "br-m-icon-field",
+        "layout": "H gap0 p0,2,0,8 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Date range field",
+        "type": "INST",
+        "x": 56,
+        "y": 0,
+        "w": 50,
+        "h": 40,
+        "component": "br-m-icon-field",
+        "layout": "H gap0 p0,2,0,8 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Sort field",
+        "type": "INST",
+        "x": 112,
+        "y": 0,
+        "w": 50,
+        "h": 40,
+        "component": "br-m-icon-field",
+        "layout": "H gap0 p0,2,0,8 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Department field",
+        "type": "INST",
+        "x": 168,
+        "y": 0,
+        "w": 50,
+        "h": 40,
+        "component": "br-m-icon-field",
+        "layout": "H gap0 p0,2,0,8 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Spacer",
+        "type": "FRAM",
+        "x": 224,
+        "y": 20,
+        "w": 4,
+        "h": 1
+       },
+       {
+        "name": "Applicable switch",
+        "type": "INST",
+        "x": 234,
+        "y": 8,
+        "w": 124,
+        "h": 24,
+        "component": "br-slide-toggle / State=On",
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Cards",
+      "type": "FRAM",
+      "x": 16,
+      "y": 173,
+      "w": 358,
+      "h": 1244,
+      "layout": "V gap12 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 7:00 pm",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 297,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 7:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 594,
+        "w": 358,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Sun 11 Oct 12:00 am - 9:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 891,
+        "w": 358,
+        "h": 353,
+        "component": "br-overtime-card / Type=Not available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Date range sheet",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 844,
+    "component": "br-m-date-range-sheet",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "absolute": true,
+    "children": [
+     {
+      "name": "Header",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap16 p0,16,0,16 MC",
+      "stroke": "#00000000 {br/divider} w0,0,1,0",
+      "children": [
+       {
+        "name": "Close",
+        "type": "TEXT",
+        "x": 16,
+        "y": 16,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "close",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       },
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 56,
+        "y": 17,
+        "w": 88,
+        "h": 21,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Date range",
+        "font": "Roboto Medium 18/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Summary",
+      "type": "FRAM",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 79,
+      "layout": "H gap12 p16,16,8,16 MM",
+      "children": [
+       {
+        "name": "Start",
+        "type": "FRAM",
+        "x": 16,
+        "y": 16,
+        "w": 172,
+        "h": 53,
+        "layout": "V gap2 p8,12,8,12 MM",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "End",
+        "type": "FRAM",
+        "x": 200,
+        "y": 16,
+        "w": 174,
+        "h": 55,
+        "layout": "V gap2 p8,12,8,12 MM",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#1e75f6 {br/primary} w2",
+        "radius": "4"
+       }
+      ]
+     },
+     {
+      "name": "Calendar",
+      "type": "INST",
+      "x": 0,
+      "y": 135,
+      "w": 390,
+      "h": 312,
+      "component": "br-mobiscroll-calendar",
+      "layout": "H gap0 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Background",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 312,
+        "layout": "V gap0 p0,0,0,0 MM",
+        "fill": "#f2f4f8 {br/neutral-lightest}"
+       }
+      ]
+     },
+     {
+      "name": "Spacer",
+      "type": "FRAM",
+      "x": 0,
+      "y": 447,
+      "w": 1,
+      "h": 318
+     },
+     {
+      "name": "Footer",
+      "type": "FRAM",
+      "x": 0,
+      "y": 765,
+      "w": 390,
+      "h": 79,
+      "layout": "H gap12 p16,16,24,16 MM",
+      "stroke": "#00000000 {br/divider} w1,0,0,0",
+      "children": [
+       {
+        "name": "Clear",
+        "type": "INST",
+        "x": 16,
+        "y": 17,
+        "w": 173,
+        "h": 38,
+        "component": "br-button / buttonType=stroked, disabled=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       },
+       {
+        "name": "Apply",
+        "type": "INST",
+        "x": 201,
+        "y": 17,
+        "w": 173,
+        "h": 36,
+        "component": "br-button / buttonType=raised, disabled=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

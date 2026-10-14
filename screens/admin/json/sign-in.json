@@ -1,0 +1,127 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "234:21",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Sign in · Light",
+  "type": "FRAM",
+  "x": 0,
+  "y": 248,
+  "w": 1440,
+  "h": 900,
+  "layout": "H gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "Illustration panel",
+    "type": "FRAM",
+    "x": 0,
+    "y": 0,
+    "w": 792,
+    "h": 900,
+    "layout": "V gap0 p0,0,0,0 CC",
+    "fill": "#c7ddfd {br/illustration-primary-lightest}",
+    "children": [
+     {
+      "name": "Sign in illustration",
+      "type": "FRAM",
+      "x": 116,
+      "y": 170,
+      "w": 560,
+      "h": 560,
+      "children": [
+       {
+        "name": "Backdrop",
+        "type": "VEC",
+        "x": 32,
+        "y": 20,
+        "w": 508,
+        "h": 520,
+        "fill": "#ffffff {br/contrast}"
+       },
+       {
+        "name": "Frame 1",
+        "type": "FRAM",
+        "x": 153,
+        "y": 7,
+        "w": 100,
+        "h": 100
+       },
+       {
+        "name": "br-blue-men",
+        "type": "INST",
+        "x": 70,
+        "y": 62,
+        "w": 420,
+        "h": 420,
+        "component": "br-blue-men / Pose=Team high five"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Form panel",
+    "type": "FRAM",
+    "x": 792,
+    "y": 0,
+    "w": 648,
+    "h": 900,
+    "layout": "V gap0 p24,24,24,24 MC",
+    "children": [
+     {
+      "name": "Tools",
+      "type": "FRAM",
+      "x": 24,
+      "y": 24,
+      "w": 600,
+      "h": 48,
+      "layout": "H gap0 p0,0,0,0 MC",
+      "children": [
+       {
+        "name": "Theme",
+        "type": "INST",
+        "x": 504,
+        "y": 0,
+        "w": 48,
+        "h": 48,
+        "component": "br-button / buttonType=icon, disabled=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       },
+       {
+        "name": "Language",
+        "type": "INST",
+        "x": 552,
+        "y": 0,
+        "w": 48,
+        "h": 48,
+        "component": "br-button / buttonType=icon, disabled=false",
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Center",
+      "type": "FRAM",
+      "x": 24,
+      "y": 72,
+      "w": 600,
+      "h": 804,
+      "layout": "V gap0 p0,0,0,0 CC",
+      "children": [
+       {
+        "name": "Form",
+        "type": "FRAM",
+        "x": 84,
+        "y": 203,
+        "w": 432,
+        "h": 398,
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

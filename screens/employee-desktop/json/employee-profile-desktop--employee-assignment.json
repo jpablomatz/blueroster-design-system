@@ -1,0 +1,185 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "336:24649",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Employee · Assignment · Light",
+  "type": "FRAM",
+  "x": 9240,
+  "y": 7402,
+  "w": 1440,
+  "h": 900,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#f9f9f9 {br/neutral-white}",
+  "children": [
+   {
+    "name": "Employee header",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 64,
+    "component": "ms-employee-header / Active=Assignment",
+    "layout": "H gap0 p0,24,0,24 SC",
+    "fill": "#ffffff {br/contrast}",
+    "stroke": "#0000001f {br/component-border} w0,0,1,0",
+    "children": [
+     {
+      "name": "Employee",
+      "type": "FRAM",
+      "x": 24,
+      "y": 12,
+      "w": 178,
+      "h": 40,
+      "layout": "H gap12 p0,0,0,0 MC",
+      "children": [
+       {
+        "name": "Avatar",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 40,
+        "layout": "H gap0 p0,0,0,0 CC",
+        "fill": "#f66c1e {br/component-secondary-highlight}",
+        "radius": "20"
+       },
+       {
+        "name": "Name",
+        "type": "TEXT",
+        "x": 52,
+        "y": 9,
+        "w": 126,
+        "h": 22,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Sergio Moreno",
+        "font": "Inter Medium 18/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Employee nav",
+      "type": "FRAM",
+      "x": 990,
+      "y": 8,
+      "w": 426,
+      "h": 48,
+      "layout": "H gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "General",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 116,
+        "h": 48,
+        "component": "br-page-tab / State=Default",
+        "layout": "H gap8 p0,16,0,16 MC"
+       },
+       {
+        "name": "Assignment",
+        "type": "INST",
+        "x": 124,
+        "y": 0,
+        "w": 145,
+        "h": 48,
+        "component": "br-page-tab / State=Active",
+        "layout": "H gap8 p0,16,0,16 MC",
+        "stroke": "#064db7 {br/primary-dark} w0,0,2,0"
+       },
+       {
+        "name": "My schedule",
+        "type": "INST",
+        "x": 277,
+        "y": 0,
+        "w": 149,
+        "h": 48,
+        "component": "br-page-tab / State=Default",
+        "layout": "H gap8 p0,16,0,16 MC"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 64,
+    "w": 1440,
+    "h": 276,
+    "layout": "V gap12 p16,0,48,0 MC",
+    "children": [
+     {
+      "name": "Assignment card",
+      "type": "INST",
+      "x": 432,
+      "y": 16,
+      "w": 576,
+      "h": 212,
+      "component": "ms-definition-card",
+      "layout": "V gap0 p0,0,0,0 MM",
+      "fill": "#ffffff {br/contrast}",
+      "stroke": "#0000001f {br/component-border} w1",
+      "radius": "8",
+      "children": [
+       {
+        "name": "Title row",
+        "type": "FRAM",
+        "x": 1,
+        "y": 1,
+        "w": 574,
+        "h": 46,
+        "layout": "H gap0 p14,16,14,16 MM"
+       },
+       {
+        "name": "Row 1",
+        "type": "INST",
+        "x": 1,
+        "y": 47,
+        "w": 574,
+        "h": 41,
+        "component": "ms-definition-row",
+        "layout": "H gap16 p12,16,12,16 MM",
+        "stroke": "#0000001f {br/component-border} w1,0,0,0"
+       },
+       {
+        "name": "Row 2",
+        "type": "INST",
+        "x": 1,
+        "y": 88,
+        "w": 574,
+        "h": 41,
+        "component": "ms-definition-row",
+        "layout": "H gap16 p12,16,12,16 MM",
+        "stroke": "#0000001f {br/component-border} w1,0,0,0"
+       },
+       {
+        "name": "Row 3",
+        "type": "INST",
+        "x": 1,
+        "y": 129,
+        "w": 574,
+        "h": 41,
+        "component": "ms-definition-row",
+        "layout": "H gap16 p12,16,12,16 MM",
+        "stroke": "#0000001f {br/component-border} w1,0,0,0"
+       },
+       {
+        "name": "Row 4",
+        "type": "INST",
+        "x": 1,
+        "y": 170,
+        "w": 574,
+        "h": 41,
+        "component": "ms-definition-row",
+        "layout": "H gap16 p12,16,12,16 MM",
+        "stroke": "#0000001f {br/component-border} w1,0,0,0"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

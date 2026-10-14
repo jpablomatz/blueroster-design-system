@@ -1,0 +1,1156 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "372:5392",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "My Schedule · Day · Light",
+  "type": "FRAM",
+  "x": 0,
+  "y": 10921,
+  "w": 390,
+  "h": 844,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 390,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Menu button",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 CC",
+          "children": [
+           {
+            "name": "Icon",
+            "type": "TEXT",
+            "x": 12,
+            "y": 12,
+            "w": 24,
+            "h": 24,
+            "fill": "#121212 {br/neutral-darkest}",
+            "text": "menu",
+            "font": "Material Icons Outlined Regular 24/auto L"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 153,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype",
+        "children": [
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 14,
+          "y": 15,
+          "w": 9,
+          "h": 15,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 14,
+          "y": 14,
+          "w": 10,
+          "h": 16,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 22,
+          "y": 21,
+          "w": 10,
+          "h": 13,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 21,
+          "y": 20,
+          "w": 11,
+          "h": 14,
+          "fill": "#064db7 {br/illustration-primary-dark}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 7,
+          "y": 20,
+          "w": 18,
+          "h": 3,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 22,
+          "y": 10,
+          "w": 3,
+          "h": 14,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 22,
+          "y": 20,
+          "w": 3,
+          "h": 3,
+          "fill": "#c7ddfd {br/illustration-primary-lightest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 21,
+          "y": 0,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 1,
+          "y": 18,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 4,
+          "y": 9,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         },
+         {
+          "name": "Vector",
+          "type": "VEC",
+          "x": 12,
+          "y": 2,
+          "w": 5,
+          "h": 5,
+          "fill": "#002458 {br/illustration-primary-darkest}"
+         }
+        ]
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 286,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Notifications",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 CC",
+          "children": [
+           {
+            "name": "Icon",
+            "type": "TEXT",
+            "x": 12,
+            "y": 12,
+            "w": 24,
+            "h": 24,
+            "fill": "#121212 {br/neutral-darkest}",
+            "text": "notifications",
+            "font": "Material Icons Outlined Regular 24/auto L"
+           },
+           {
+            "name": "Badge",
+            "type": "FRAM",
+            "x": 26,
+            "y": 6,
+            "w": 17,
+            "h": 18,
+            "layout": "H gap0 p0,5,0,5 CC",
+            "fill": "#1e75f6 {br/primary}",
+            "radius": "9",
+            "absolute": true,
+            "children": [
+             {
+              "name": "Count",
+              "type": "TEXT",
+              "x": 5,
+              "y": 3,
+              "w": 7,
+              "h": 13,
+              "fill": "#ffffff {br/on-primary}",
+              "text": "2",
+              "font": "Roboto Bold 11/auto L"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Account",
+          "type": "FRAM",
+          "x": 48,
+          "y": 0,
+          "w": 48,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 CC",
+          "children": [
+           {
+            "name": "Avatar",
+            "type": "FRAM",
+            "x": 8,
+            "y": 8,
+            "w": 32,
+            "h": 32,
+            "layout": "H gap0 p0,0,0,0 CC",
+            "fill": "#d1d5db {br/neutral-light}",
+            "radius": "16",
+            "children": [
+             {
+              "name": "Initials",
+              "type": "TEXT",
+              "x": 7,
+              "y": 9,
+              "w": 19,
+              "h": 15,
+              "fill": "#121212 {br/neutral-darkest}",
+              "text": "JM",
+              "font": "Roboto Medium 13/auto L"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 390,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 811,
+    "layout": "V gap16 p16,16,32,16 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 16,
+      "y": 16,
+      "w": 358,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 140,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "My Schedule",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 358,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Tab strip",
+          "type": "FRAM",
+          "x": 0,
+          "y": 0,
+          "w": 358,
+          "h": 48,
+          "layout": "H gap0 p0,0,0,0 MM",
+          "children": [
+           {
+            "name": "Tab 1",
+            "type": "INST",
+            "x": 0,
+            "y": 0,
+            "w": 119,
+            "h": 48,
+            "component": "br-page-tab / State=Active",
+            "layout": "H gap8 p0,16,0,16 MC",
+            "stroke": "#064db7 {br/primary-dark} w0,0,2,0",
+            "children": [
+             {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 16,
+              "y": 11,
+              "w": 24,
+              "h": 24,
+              "fill": "#064db7 {br/primary-dark}",
+              "text": "view_day",
+              "font": "Material Icons Outlined Regular 24/24 C"
+             },
+             {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 48,
+              "y": 14,
+              "w": 26,
+              "h": 18,
+              "fill": "#064db7 {br/primary-dark}",
+              "text": "Day",
+              "font": "Roboto Medium 15/auto L"
+             }
+            ]
+           },
+           {
+            "name": "Tab 2",
+            "type": "INST",
+            "x": 119,
+            "y": 0,
+            "w": 119,
+            "h": 48,
+            "component": "br-page-tab / State=Default",
+            "layout": "H gap8 p0,16,0,16 MC",
+            "children": [
+             {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 16,
+              "y": 12,
+              "w": 24,
+              "h": 24,
+              "fill": "#00000099 {br/text-label}",
+              "text": "view_week",
+              "font": "Material Icons Outlined Regular 24/24 C"
+             },
+             {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 48,
+              "y": 15,
+              "w": 37,
+              "h": 18,
+              "fill": "#00000099 {br/text-label}",
+              "text": "Week",
+              "font": "Roboto Medium 15/auto L"
+             }
+            ]
+           },
+           {
+            "name": "Tab 3",
+            "type": "INST",
+            "x": 239,
+            "y": 0,
+            "w": 119,
+            "h": 48,
+            "component": "br-page-tab / State=Default",
+            "layout": "H gap8 p0,16,0,16 MC",
+            "children": [
+             {
+              "name": "Icon",
+              "type": "TEXT",
+              "x": 16,
+              "y": 12,
+              "w": 24,
+              "h": 24,
+              "fill": "#00000099 {br/text-label}",
+              "text": "calendar_view_month",
+              "font": "Material Icons Outlined Regular 24/24 C"
+             },
+             {
+              "name": "Label",
+              "type": "TEXT",
+              "x": 48,
+              "y": 15,
+              "w": 44,
+              "h": 18,
+              "fill": "#00000099 {br/text-label}",
+              "text": "Month",
+              "font": "Roboto Medium 15/auto L"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "name": "Divider",
+          "type": "RECT",
+          "x": 0,
+          "y": 48,
+          "w": 358,
+          "h": 1,
+          "fill": "#0000001f {br/component-border}"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Legend",
+      "type": "INST",
+      "x": 16,
+      "y": 117,
+      "w": 358,
+      "h": 14,
+      "component": "br-m-legend",
+      "layout": "H gap12 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Shift",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 37,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#d1d5db {br/event-shift-neutral}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 25,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Shift",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Tasks",
+        "type": "FRAM",
+        "x": 49,
+        "y": 0,
+        "w": 44,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#1e75f6 {br/event-shift}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 32,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Tasks",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Overtime",
+        "type": "FRAM",
+        "x": 105,
+        "y": 0,
+        "w": 61,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#1c9646 {br/event-overtime}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 49,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Overtime",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Planned overtime",
+        "type": "FRAM",
+        "x": 178,
+        "y": 0,
+        "w": 106,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#5a2ead {br/special-4}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 94,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Planned overtime",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Leave",
+        "type": "FRAM",
+        "x": 296,
+        "y": 0,
+        "w": 44,
+        "h": 14,
+        "layout": "H gap4 p0,0,0,0 MC",
+        "children": [
+         {
+          "name": "Dot",
+          "type": "ELLI",
+          "x": 0,
+          "y": 3,
+          "w": 8,
+          "h": 8,
+          "fill": "#ef4444 {br/event-leave}"
+         },
+         {
+          "name": "Label",
+          "type": "TEXT",
+          "x": 12,
+          "y": 0,
+          "w": 32,
+          "h": 14,
+          "fill": "#00000099 {br/text-label}",
+          "text": "Leave",
+          "font": "Roboto Regular 12/auto L"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "name": "Date nav",
+      "type": "INST",
+      "x": 16,
+      "y": 147,
+      "w": 358,
+      "h": 40,
+      "component": "br-m-date-nav",
+      "layout": "H gap4 p0,0,0,4 MC",
+      "children": [
+       {
+        "name": "Label",
+        "type": "TEXT",
+        "x": 4,
+        "y": 12,
+        "w": 236,
+        "h": 16,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Thu 8 Oct 2026",
+        "font": "Roboto Medium 14/auto L"
+       },
+       {
+        "name": "Prev",
+        "type": "TEXT",
+        "x": 244,
+        "y": 8,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "chevron_left",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       },
+       {
+        "name": "Today",
+        "type": "FRAM",
+        "x": 272,
+        "y": 6,
+        "w": 58,
+        "h": 29,
+        "layout": "H gap0 p6,10,6,10 MM",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "16",
+        "children": [
+         {
+          "name": "Today label",
+          "type": "TEXT",
+          "x": 11,
+          "y": 7,
+          "w": 36,
+          "h": 15,
+          "fill": "#121212 {br/neutral-darkest}",
+          "text": "Today",
+          "font": "Roboto Medium 13/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Next",
+        "type": "TEXT",
+        "x": 334,
+        "y": 8,
+        "w": 24,
+        "h": 24,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "chevron_right",
+        "font": "Material Icons Outlined Regular 24/auto L"
+       }
+      ]
+     },
+     {
+      "name": "Timeline",
+      "type": "FRAM",
+      "x": 16,
+      "y": 203,
+      "w": 358,
+      "h": 576,
+      "children": [
+       {
+        "name": "Hour 5 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "5 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 6 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 48,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "6 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 7 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 96,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "7 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 8 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 144,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "8 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 9 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 192,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "9 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 10 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 240,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "10 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 11 AM",
+        "type": "INST",
+        "x": 0,
+        "y": 288,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "11 AM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 12 PM",
+        "type": "INST",
+        "x": 0,
+        "y": 336,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "12 PM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 1 PM",
+        "type": "INST",
+        "x": 0,
+        "y": 384,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "1 PM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 2 PM",
+        "type": "INST",
+        "x": 0,
+        "y": 432,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "2 PM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 3 PM",
+        "type": "INST",
+        "x": 0,
+        "y": 480,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "3 PM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Hour 4 PM",
+        "type": "INST",
+        "x": 0,
+        "y": 528,
+        "w": 358,
+        "h": 48,
+        "component": "br-m-hour-row",
+        "layout": "H gap8 p0,0,0,0 MM",
+        "children": [
+         {
+          "name": "Hour",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 13,
+          "fill": "#00000099 {br/text-label}",
+          "text": "4 PM",
+          "font": "Roboto Regular 11/auto R"
+         },
+         {
+          "name": "Line",
+          "type": "RECT",
+          "x": 48,
+          "y": 0,
+          "w": 310,
+          "h": 1,
+          "fill": "#00000000 {br/divider}"
+         }
+        ]
+       },
+       {
+        "name": "Shift",
+        "type": "INST",
+        "x": 48,
+        "y": 52,
+        "w": 150,
+        "h": 472,
+        "component": "br-m-event-block / Type=Shift",
+        "layout": "V gap2 p6,8,6,8 MM",
+        "fill": "#d1d5db {br/event-shift-neutral}",
+        "radius": "4",
+        "children": [
+         {
+          "name": "Title",
+          "type": "TEXT",
+          "x": 8,
+          "y": 6,
+          "w": 134,
+          "h": 28,
+          "fill": "#121212 {br/neutral-darkest}",
+          "text": "0600 10-Hr w/ Lunch - 60S",
+          "font": "Roboto Medium 12/auto L"
+         },
+         {
+          "name": "Time",
+          "type": "TEXT",
+          "x": 8,
+          "y": 36,
+          "w": 88,
+          "h": 13,
+          "fill": "#121212 {br/neutral-darkest}",
+          "text": "6:00 am - 4:00 pm",
+          "font": "Roboto Regular 11/auto L"
+         }
+        ]
+       },
+       {
+        "name": "Task",
+        "type": "INST",
+        "x": 204,
+        "y": 52,
+        "w": 150,
+        "h": 472,
+        "component": "br-m-event-block / Type=Task",
+        "layout": "V gap2 p6,8,6,8 MM",
+        "fill": "#1e75f6 {br/event-shift}",
+        "radius": "4",
+        "children": [
+         {
+          "name": "Title",
+          "type": "TEXT",
+          "x": 8,
+          "y": 6,
+          "w": 134,
+          "h": 14,
+          "fill": "#ffffff {br/on-primary}",
+          "text": "Shipping/Outside",
+          "font": "Roboto Medium 12/auto L"
+         },
+         {
+          "name": "Time",
+          "type": "TEXT",
+          "x": 8,
+          "y": 22,
+          "w": 88,
+          "h": 13,
+          "fill": "#ffffff {br/on-primary}",
+          "text": "6:00 am - 4:00 pm",
+          "font": "Roboto Regular 11/auto L"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

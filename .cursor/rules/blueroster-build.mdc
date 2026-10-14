@@ -44,6 +44,7 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | my schedule desktop, agenda desktop, schedule desktop | `screens/employee-desktop/my-schedule-desktop-proposal.md` |
 | overtime desktop, overtime filters desktop | `screens/employee-desktop/overtime-opportunities-desktop-filters.md` |
 | avatar, language, notifications, nav drawer, idioma, notificaciones, menú | `screens/employee-mobile/global-overlays-avatar-menu-language-notifications-nav-drawer.md` |
+| multi-employee calendar, team calendar on mobile, team schedule mobile, ver empleados en móvil, calendario de empleados móvil, calendario del equipo | **No spec yet. Stop and ask the user.** Offer `screens/admin/gantt.md` / `screens/admin/gantt-production-schedule.md` (desktop admin Gantt) as reference and the My Schedule mobile specs for styling; do not invent the layout. |
 | agenda, schedule, my schedule, day, día, calendario | `screens/employee-mobile/my-schedule-day.md` |
 | my schedule month, month, mes | `screens/employee-mobile/my-schedule-month.md` |
 | my schedule week, week, semana | `screens/employee-mobile/my-schedule-week.md` |
@@ -55,3 +56,5 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | time off, time off request | `screens/employee-mobile/time-off-request.md` |
 
 Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+
+"My schedule" means the signed-in employee's own calendar. A request to see **several employees** (team, crew, roster, empleados) on mobile has **no spec**: say so, ask, and offer the Gantt desktop spec as reference.

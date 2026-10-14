@@ -1,0 +1,239 @@
+{
+ "_note": "Trimmed Figma node tree (read-only export). Text is sample content, not real data.",
+ "nodeId": "341:26535",
+ "fileKey": "k05NWBKMjsvo5hEugQc2Tq",
+ "tree": {
+  "name": "Overtime · Opportunities · Tablet 768 · Light",
+  "type": "FRAM",
+  "x": 0,
+  "y": 3400,
+  "w": 768,
+  "h": 1154,
+  "layout": "V gap0 p0,0,0,0 MM",
+  "fill": "#ffffff {br/contrast}",
+  "children": [
+   {
+    "name": "App bar",
+    "type": "INST",
+    "x": 0,
+    "y": 0,
+    "w": 768,
+    "h": 57,
+    "component": "br-m-app-bar",
+    "layout": "V gap0 p0,0,0,0 MM",
+    "fill": "#ffffff {br/contrast}",
+    "children": [
+     {
+      "name": "Row",
+      "type": "FRAM",
+      "x": 0,
+      "y": 0,
+      "w": 768,
+      "h": 56,
+      "layout": "H gap0 p0,8,0,4 SC",
+      "children": [
+       {
+        "name": "Leading",
+        "type": "FRAM",
+        "x": 4,
+        "y": 4,
+        "w": 48,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       },
+       {
+        "name": "Logo mark",
+        "type": "INST",
+        "x": 342,
+        "y": 11,
+        "w": 32,
+        "h": 34,
+        "component": "br-logo / Type=Isotype"
+       },
+       {
+        "name": "Trailing",
+        "type": "FRAM",
+        "x": 664,
+        "y": 4,
+        "w": 96,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 MC"
+       }
+      ]
+     },
+     {
+      "name": "Divider",
+      "type": "RECT",
+      "x": 0,
+      "y": 56,
+      "w": 768,
+      "h": 1,
+      "fill": "#0000001f {br/component-border}"
+     }
+    ]
+   },
+   {
+    "name": "Body",
+    "type": "FRAM",
+    "x": 0,
+    "y": 57,
+    "w": 768,
+    "h": 1097,
+    "layout": "V gap16 p24,24,32,24 MM",
+    "children": [
+     {
+      "name": "Page header",
+      "type": "INST",
+      "x": 24,
+      "y": 24,
+      "w": 720,
+      "h": 85,
+      "component": "br-m-page-header",
+      "layout": "V gap8 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Title",
+        "type": "TEXT",
+        "x": 0,
+        "y": 0,
+        "w": 100,
+        "h": 28,
+        "fill": "#121212 {br/neutral-darkest}",
+        "text": "Overtime",
+        "font": "Roboto Bold 24/auto L"
+       },
+       {
+        "name": "Tabs",
+        "type": "FRAM",
+        "x": 0,
+        "y": 36,
+        "w": 720,
+        "h": 49,
+        "layout": "V gap0 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Filter bar",
+      "type": "INST",
+      "x": 24,
+      "y": 125,
+      "w": 720,
+      "h": 270,
+      "component": "br-m-filter-bar / State=Expanded",
+      "layout": "V gap12 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Filter header",
+        "type": "FRAM",
+        "x": 0,
+        "y": 0,
+        "w": 720,
+        "h": 48,
+        "layout": "H gap0 p0,0,0,0 SC"
+       },
+       {
+        "name": "Skills",
+        "type": "INST",
+        "x": 0,
+        "y": 60,
+        "w": 720,
+        "h": 56,
+        "component": "br-select-field",
+        "layout": "H gap8 p0,8,0,12 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Date range",
+        "type": "INST",
+        "x": 0,
+        "y": 128,
+        "w": 720,
+        "h": 56,
+        "component": "br-select-field",
+        "layout": "H gap8 p0,8,0,12 MC",
+        "fill": "#ffffff {br/contrast}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "4"
+       },
+       {
+        "name": "Sort + show",
+        "type": "FRAM",
+        "x": 0,
+        "y": 196,
+        "w": 720,
+        "h": 74,
+        "layout": "H gap12 p0,0,0,0 MM"
+       }
+      ]
+     },
+     {
+      "name": "Cards",
+      "type": "FRAM",
+      "x": 24,
+      "y": 411,
+      "w": 720,
+      "h": 654,
+      "layout": "H gap16 p0,0,0,0 MM",
+      "children": [
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 7:00 pm",
+        "type": "INST",
+        "x": 0,
+        "y": 0,
+        "w": 352,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 5:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 368,
+        "y": 0,
+        "w": 352,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Thu 8 Oct 7:00 pm - 12:00 am",
+        "type": "INST",
+        "x": 0,
+        "y": 301,
+        "w": 352,
+        "h": 285,
+        "component": "br-overtime-card / Type=Available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       },
+       {
+        "name": "Card · Sun 11 Oct 12:00 am - 9:00 am",
+        "type": "INST",
+        "x": 368,
+        "y": 301,
+        "w": 352,
+        "h": 353,
+        "component": "br-overtime-card / Type=Not available",
+        "layout": "V gap12 p16,16,16,16 MM",
+        "fill": "#f9f9f9 {br/neutral-white}",
+        "stroke": "#0000001f {br/component-border} w1",
+        "radius": "8"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
