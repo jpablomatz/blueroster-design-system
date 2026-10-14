@@ -1,5 +1,7 @@
 # AGENTS.md — Blue Roster Design System rules
 
+> **Skill:** requests with `@BR_Legacy` follow `skills/BR_Legacy/SKILL.md` (see the end of this file).
+
 This file is the single source of rules for every AI coding agent (Cursor, Claude Code, Codex, others) building Blue Roster UI. `CLAUDE.md` and `.cursor/rules/blueroster.mdc` point here. `.cursor/rules/blueroster-build.mdc` repeats the Playbook. Read this file, then `tokens/` (including `tokens/events.md` and `tokens/typography.md`), `patterns/`, `components/` and the relevant `screens/` spec (with its PNGs in `img/` and node tree in `json/`) before writing UI code. Requests that say **Blue Roster**, **Blue Roster Legacy**, or **BR** follow the Playbook at the end of this file.
 
 Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy (fileKey `k05NWBKMjsvo5hEugQc2Tq`).
@@ -119,3 +121,6 @@ Keywords are request language. Each spec path is a file in `screens/`.
 Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
 
 "My schedule" means the signed-in employee's own calendar. A request to see **several employees** (team, crew, roster, empleados) on mobile has **no spec**: say so, ask, and offer the Gantt desktop spec as reference.
+
+## @BR_Legacy skill (Codex and all agents)
+When a request starts with **@BR_Legacy** (or says Blue Roster / BR), read and follow `skills/BR_Legacy/SKILL.md` before writing UI: closest spec → starter + PNG + spec → `--br-*` tokens and formats → reuse components → compose missing patterns with listed assumptions → self-check. Raw: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/skills/BR_Legacy/SKILL.md

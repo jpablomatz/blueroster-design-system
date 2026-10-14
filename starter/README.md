@@ -11,3 +11,6 @@ For **static mockups only** (Claude, Figma Make, quick prototypes outside Angula
 
 Fonts: Roboto (400/500/700) and Material Icons Outlined from Google Fonts. Logo: `../assets/br-logo-isotype-{light,dark}.svg`.
 Keep the folder structure (`starter/`, `tokens/`, `assets/` side by side) so relative paths work.
+
+## admin-attendance-today.html
+Admin "who is absent / who is working today" view, mobile 390. **Composed pattern — pending design approval** (no Figma frame yet). Built from my-schedule-day pieces; placeholder names only. Renders: `_verify/admin-attendance-today-{light,dark}.png`.

@@ -10,7 +10,7 @@ Source of truth for AI coding agents (Cursor, Claude Code, Codex) to build Blue 
 | `.cursor/rules/blueroster.mdc` | Always-on Cursor rule → `AGENTS.md`. |
 | `.cursor/rules/blueroster-build.mdc` | Always-on build playbook. Triggers: Blue Roster, Blue Roster Legacy, BR. |
 | `llms.txt` | llmstxt.org index: playbook, token summary, and raw links to every source file. |
-| `llms-full.txt` | Concatenated context: `AGENTS.md`, `tokens/*.md`, `tokens/tokens.css`, `patterns/*.md`, `assets/README.md`, `fixtures/schedule.json`, `components/*.md`, `screens/**/*.md` (images as absolute raw URLs), `starter/br-m.css`, `starter/my-schedule-day.html`. |
+| `llms-full.txt` | `AGENTS.md` plus every `tokens/*.md`, `components/*.md`, and `screens/**/*.md`, concatenated. |
 | `tokens/tokens.json` | All 777 Figma variables from collection `s2d` with Light / Dark / Default values and aliases (plus resolved values). |
 | `tokens/tokens.css` | Same tokens as CSS custom properties. Light on `:root`, Dark overrides on `[data-theme="dark"]`. |
 | `tokens/*.md` | Readable tables: `semantic-br.md` (br/*), `typography.md`, `spacing.md`, `radius.md`. |
@@ -62,6 +62,4 @@ Ejemplos:
 Para Claude/ChatGPT: pásale https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt
 
 ## Regenerating `llms.txt` / `llms-full.txt`
-`llms.txt` is the llmstxt.org index: inline playbook, token summary, and a raw GitHub link for every file, including `tokens/events.md`, `patterns/`, `assets/`, `fixtures/`, `starter/`, and the screen PNGs.
-
-`llms-full.txt` concatenates, in this order: `AGENTS.md`, `tokens/*.md`, `tokens/tokens.css` (verbatim, in a css code block), `patterns/*.md`, `assets/README.md`, `fixtures/schedule.json`, `components/*.md`, every `screens/**/*.md` with image links rewritten to absolute `https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/...` URLs, `starter/br-m.css`, and `starter/my-schedule-day.html`.
+`llms-full.txt` must include, verbatim: `AGENTS.md`, **`tokens/tokens.css` (full file, not only the markdown tables)**, `tokens/events.md`, `tokens/typography.md`, `patterns/*.md`, `assets/README.md`, `fixtures/schedule.json`, `starter/br-m.css`, `starter/my-schedule-day.html`, every `screens/**/*.md` with its image links rewritten to absolute `https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/...` URLs, and `components/*.md`. The current `llms*.txt` files predate this update and must be regenerated.
