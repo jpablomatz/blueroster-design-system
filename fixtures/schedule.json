@@ -19,9 +19,17 @@
     "dateNavLabel": "Thu 8 Oct 2026",
     "visibleHours": {
       "first": "5 AM",
-      "last": "4 PM"
+      "last": "7 PM",
+      "_note": "Figma frame shows 5 AM–4 PM; extended to 7 PM so the sample overtime block is visible."
     },
     "events": [
+      {
+        "type": "planned",
+        "title": "Weld · Sku 1 hola",
+        "start": "05:00",
+        "end": "06:00",
+        "timeLabel": "5:00 am - 6:00 am"
+      },
       {
         "type": "shift",
         "title": "0600 10-Hr w/ Lunch - 60S",
@@ -35,8 +43,23 @@
         "start": "06:00",
         "end": "16:00",
         "timeLabel": "6:00 am - 4:00 pm"
+      },
+      {
+        "type": "leave",
+        "title": "Vacation",
+        "start": "12:00",
+        "end": "14:00",
+        "timeLabel": "12:00 pm - 2:00 pm"
+      },
+      {
+        "type": "overtime",
+        "title": "Weld · Sku 1 hola",
+        "start": "17:00",
+        "end": "19:00",
+        "timeLabel": "5:00 pm - 7:00 pm"
       }
-    ]
+    ],
+    "_sampleNote": "Overtime, Planned overtime and Leave blocks are PLACEHOLDERS: labels reuse existing fixture text (overtimeOpportunities 'Weld · Sku 1 hola' 5:00 pm - 7:00 pm, balanceCard 'Vacation'). Not in the Figma frame."
   },
   "week": {
     "_source": "My Schedule · Week 372:5508",
@@ -86,7 +109,8 @@
         "state": "Default",
         "dots": [
           "shift",
-          "task"
+          "task",
+          "overtime"
         ]
       },
       {
@@ -170,6 +194,13 @@
         "label": "Thu 8 Oct",
         "events": [
           {
+            "type": "planned",
+            "title": "Weld · Sku 1 hola",
+            "start": "05:00",
+            "end": "06:00",
+            "timeLabel": "5:00 am - 6:00 am"
+          },
+          {
             "type": "shift",
             "title": "0600 10-Hr w/ Lunch - 60S",
             "start": "06:00",
@@ -182,6 +213,20 @@
             "start": "06:00",
             "end": "16:00",
             "timeLabel": "6:00 am - 4:00 pm"
+          },
+          {
+            "type": "leave",
+            "title": "Vacation",
+            "start": "12:00",
+            "end": "14:00",
+            "timeLabel": "12:00 pm - 2:00 pm"
+          },
+          {
+            "type": "overtime",
+            "title": "Weld · Sku 1 hola",
+            "start": "17:00",
+            "end": "19:00",
+            "timeLabel": "5:00 pm - 7:00 pm"
           }
         ]
       }
@@ -207,7 +252,9 @@
       ],
       "8": [
         "shift",
-        "task"
+        "task",
+        "overtime",
+        "leave"
       ],
       "12": [
         "shift",
@@ -263,6 +310,13 @@
       "label": "Thu 8 Oct",
       "events": [
         {
+          "type": "planned",
+          "title": "Weld · Sku 1 hola",
+          "start": "05:00",
+          "end": "06:00",
+          "timeLabel": "5:00 am - 6:00 am"
+        },
+        {
           "type": "shift",
           "title": "0600 10-Hr w/ Lunch - 60S",
           "start": "06:00",
@@ -275,6 +329,20 @@
           "start": "06:00",
           "end": "16:00",
           "timeLabel": "6:00 am - 4:00 pm"
+        },
+        {
+          "type": "leave",
+          "title": "Vacation",
+          "start": "12:00",
+          "end": "14:00",
+          "timeLabel": "12:00 pm - 2:00 pm"
+        },
+        {
+          "type": "overtime",
+          "title": "Weld · Sku 1 hola",
+          "start": "17:00",
+          "end": "19:00",
+          "timeLabel": "5:00 pm - 7:00 pm"
         }
       ]
     }
@@ -374,5 +442,12 @@
       }
     ]
   },
-  "_notInFigma": "No sample exists in Figma for Overtime, Planned overtime or Leave blocks placed on a timeline, nor for multi-employee calendars. Do not invent them; if a mockup needs them, reuse the eventBlockVariants text and say so."
+  "_notInFigma": "Figma has no sample of Overtime, Planned overtime or Leave blocks on a timeline, nor multi-employee calendars. Thu 8 Oct 2026 carries placeholder Overtime/Planned overtime/Leave events built only from existing fixture text (see day._sampleNote) so all 5 event types can be shown. Week dots support shift/task/overtime only; month dots add leave (no planned dot in those components). Do not invent other data.",
+  "legendTypeKeys": {
+    "Shift": "shift",
+    "Tasks": "task",
+    "Overtime": "overtime",
+    "Planned overtime": "planned",
+    "Leave": "leave"
+  }
 }

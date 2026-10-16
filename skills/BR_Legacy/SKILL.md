@@ -26,6 +26,8 @@ Full context in one file: `llms-full.txt`.
 - Filters: 1–3 inline; 4 or more go in one `br-filter-dialog` opened by `br-filter-button`.
 - Mobile first: 390 → 768 → desktop. Light (`:root`) and Dark (`[data-theme="dark"]`).
 - Employee shell: `br-app-shell` with `App=Employee`. Admin specs are drawn at 1440×900.
+- **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
+- Day sample (`fixtures/schedule.json`, Thu 8 Oct 2026) now has all 5 event types: Shift, Tasks, Planned overtime 5–6 am, Leave 12–2 pm, Overtime 5–7 pm (placeholders reusing existing fixture text; range extended to 7 PM). Overlapping events go side by side in columns.
 
 ## Workflow
 

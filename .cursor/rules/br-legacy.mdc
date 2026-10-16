@@ -11,3 +11,5 @@ Follow `skills/BR_Legacy/SKILL.md` step by step (local repo). If the repo is not
 - Full context: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt
 
 Short version: find the closest spec → copy its starter, PNG and spec → use `--br-*` tokens, 12h time, "Thu 8 Oct 2026" dates, Roboto and Material Icons Outlined → filters 1–3 inline, 4+ in `br-filter-dialog` → reuse components → compose missing patterns, label them and list assumptions → run the self-check.
+
+- **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).

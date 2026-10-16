@@ -53,7 +53,7 @@
       <button class="br-m-date-nav__arrow" aria-label="Next day"><span class="mi">chevron_right</span></button>
     </div>
 
-    <div class="br-m-timeline" id="timeline" data-first-hour="5" data-last-hour="16">
+    <div class="br-m-timeline" id="timeline" data-first-hour="5" data-last-hour="19">
       <div class="br-m-timeline__events" id="events"></div>
     </div>
   </main>
@@ -71,18 +71,37 @@ for (let h = first; h <= last; h++) {
   row.innerHTML = `<span class="br-m-hour-row__label">${label(h)}</span><span class="br-m-hour-row__line"></span>`;
   tl.insertBefore(row, ev);
 }
-// SAMPLE DATA (fixtures/schedule.json → day.events)
+// SAMPLE DATA (fixtures/schedule.json → day.events). Overtime / Planned overtime / Leave are placeholders.
 const events = [
-  { type: 'shift', title: '0600 10-Hr w/ Lunch - 60S', start: 6, end: 16, time: '6:00 am - 4:00 pm' },
-  { type: 'task',  title: 'Shipping/Outside',          start: 6, end: 16, time: '6:00 am - 4:00 pm' },
+  { type: 'planned',  title: 'Weld · Sku 1 hola',         start: 5,  end: 6,  time: '5:00 am - 6:00 am' },
+  { type: 'shift',    title: '0600 10-Hr w/ Lunch - 60S', start: 6,  end: 16, time: '6:00 am - 4:00 pm' },
+  { type: 'task',     title: 'Shipping/Outside',          start: 6,  end: 16, time: '6:00 am - 4:00 pm' },
+  { type: 'leave',    title: 'Vacation',                  start: 12, end: 14, time: '12:00 pm - 2:00 pm' },
+  { type: 'overtime', title: 'Weld · Sku 1 hola',         start: 17, end: 19, time: '5:00 pm - 7:00 pm' },
 ];
-const n = events.length, w = (AREA - RIGHT - GAP * (n - 1)) / n; // all overlap in this sample
-events.forEach((e, i) => {
-  const b = document.createElement('div');
-  b.className = `br-m-event-block br-m-event-block--${e.type}`;
-  Object.assign(b.style, { top: ((e.start - first) * HOUR + 4) + 'px', height: ((e.end - e.start) * HOUR - 8) + 'px', left: (i * (w + GAP)) + 'px', width: w + 'px' });
-  b.innerHTML = `<span class="br-m-event-block__title">${e.title}</span><span class="br-m-event-block__time">${e.time}</span>`;
-  ev.appendChild(b);
+// Overlap layout: group transitively overlapping events into clusters, give each event the
+// first free column, and split the cluster width equally between its columns.
+events.sort((a, b) => a.start - b.start || b.end - a.end);
+const clusters = []; let cur = null, curEnd = -1;
+events.forEach(e => {
+  if (!cur || e.start >= curEnd) { cur = []; clusters.push(cur); curEnd = -1; }
+  cur.push(e); curEnd = Math.max(curEnd, e.end);
+});
+clusters.forEach(c => {
+  const colEnds = [];
+  c.forEach(e => {
+    let col = colEnds.findIndex(end => end <= e.start);
+    if (col < 0) { col = colEnds.length; colEnds.push(0); }
+    colEnds[col] = e.end; e.col = col;
+  });
+  const n = colEnds.length, w = (AREA - RIGHT - GAP * (n - 1)) / n;
+  c.forEach(e => {
+    const b = document.createElement('div');
+    b.className = `br-m-event-block br-m-event-block--${e.type}`;
+    Object.assign(b.style, { top: ((e.start - first) * HOUR + 4) + 'px', height: ((e.end - e.start) * HOUR - 8) + 'px', left: (e.col * (w + GAP)) + 'px', width: w + 'px' });
+    b.innerHTML = `<span class="br-m-event-block__title">${e.title}</span><span class="br-m-event-block__time">${e.time}</span>`;
+    ev.appendChild(b);
+  });
 });
 </script>
 </body>

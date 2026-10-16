@@ -20,6 +20,8 @@ No border on any type. Radius 4px (no radius token for 4; use `calc(var(--spacin
 
 Legend order in every My Schedule frame: **Shift · Tasks · Overtime · Planned overtime · Leave** (5 items; label "Tasks" is plural, the Figma variant is "Task").
 
+- **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
+
 ## Dots (legend, week strip, month grid)
 
 | Where | Size | Shift | Task | Overtime | Planned overtime | Leave |
