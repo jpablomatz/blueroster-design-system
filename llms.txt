@@ -166,3 +166,6 @@ Radius (Light = Dark): `--radius-md` 6px, `--radius-lg` 8px, `--radius-2xl` 16px
 ## Optional
 
 - [llms-full.txt](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt): Concatenated AGENTS.md, tokens/*.md, components/*.md, and screens/**/*.md.
+
+- Admin Attendance Today (approved): screens/admin/attendance-today.md
+- Proposals (new, not in Legacy): proposals/README.md

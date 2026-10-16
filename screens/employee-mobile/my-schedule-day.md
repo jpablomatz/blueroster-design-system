@@ -27,6 +27,14 @@ Read with `tokens/events.md`, `tokens/typography.md`, `patterns/formats.md`, `pa
 
 Body content height is 811 (16 + 85 + 16 + 14 + 16 + 40 + 16 + 576 + 32), taller than the 787 px under the app bar.
 
+## Event overflow (approved)
+
+Applies when 3 or more events overlap in the Day timeline (width per column = (310 − 4 − 6·(n−1)) / n).
+
+- **Title:** one line, ellipsis (`white-space: nowrap; overflow: hidden; text-overflow: ellipsis`).
+- **Time line:** hidden when the column is under 120 px wide (3 columns = 98 px) or the event lasts 1 h (40 px tall). Class `is-compact`.
+- **4+ overlapping:** show 3 columns; the rest collapse into a `+N` pill (`br-m-event-more`, 20 tall, r10, padding 0 6, Roboto Medium 11, bg `--br-neutral-darkest`, text `--br-contrast`) at the top-right of the 3rd column. Tapping it opens the day agenda (TBD).
+
 ## Visual reference
 
 Exported from Figma (mobile at 2x, desktop/admin at 1x). Match these pixel-for-pixel before anything else.

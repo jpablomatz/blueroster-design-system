@@ -38,6 +38,8 @@ Full context in one file: `llms-full.txt`.
 - Mobile first: 390 → 768 → desktop. Light (`:root`) and Dark (`[data-theme="dark"]`).
 - Employee shell: `br-app-shell` with `App=Employee`. Admin specs are drawn at 1440×900.
 - **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
+- **Event block overflow (My Schedule Day, 3+ overlapping):** the title stays on one line with an ellipsis; the time line is hidden when the column is under 120 px wide or the event lasts 1 h (40 px tall); with 4+ overlapping events show 3 columns plus a `+N` pill (`br-m-event-more`) for the rest. `starter/br-m.css` and `starter/my-schedule-day.html` implement it (`is-compact` class).
+- **Proposals (new, not in Legacy):** coverage holes (`--br-event-hole`, `br-event-hole`, `br-coverage-warning`) and Shift swap request cards live in `proposals/` and Figma page "Proposals · not in Legacy". Use them only when the user asks for coverage holes or shift swap, and label output "Proposal — new, not in Legacy".
 - Day sample (`fixtures/schedule.json`, Thu 8 Oct 2026) now has all 5 event types: Shift, Tasks, Planned overtime 5–6 am, Leave 12–2 pm, Overtime 5–7 pm (placeholders reusing existing fixture text; range extended to 7 PM). Overlapping events go side by side in columns.
 
 ## Workflow
@@ -50,7 +52,7 @@ For the chosen spec, load:
 - the spec `screens/<group>/<name>.md` (read its **Anatomy** section),
 - the PNGs `screens/<group>/img/<name>-light.png` and `-dark.png`,
 - the node tree `screens/<group>/json/`,
-- the closest starter in `starter/` (`my-schedule-day.html`, `admin-attendance-today.html`, `components.html`) with `starter/br-m.css`.
+- the closest starter in `starter/` (`my-schedule-day.html`, `admin-attendance-today.html` (approved, desktop 1440), `components.html`) with `starter/br-m.css`.
 Copy the starter and edit it. Keep its classes, spacing and structure.
 
 ### 3. Use only Blue Roster tokens and formats
@@ -62,7 +64,7 @@ Copy the starter and edit it. Keep its classes, spacing and structure.
 Use only what is documented in `components/` and shown in `starter/components.html`: `br-m-app-bar`, `br-m-page-header`, `br-page-tab`, `br-m-legend`, `br-m-date-nav`, `br-m-timeline`, `br-m-event-block`, `br-m-status-pill`, `br-m-avatar`, `br-chip`, `br-button`, `br-filter-button`, `br-filter-dialog`, `br-table` and Mobiscroll (`br-mobiscroll-*`) for calendars. Do not redraw a component in raw HTML.
 
 ### 5. Missing pattern? Compose it and flag it
-If no spec covers the request (for example a multi-employee admin calendar or attendance view):
+If no spec covers the request (for example a multi-employee mobile calendar):
 1. Compose it from existing pieces: schedule and timeline (`my-schedule-day`), event blocks, legend, date nav, avatars, status pills and filters.
 2. Label it in the output: **"Composed pattern — pending design approval"**.
 3. Write an **Assumptions** list (layout, states, colors chosen, copy, data) and a **Questions** list for the designer.

@@ -22,6 +22,16 @@ Legend order in every My Schedule frame: **Shift · Tasks · Overtime · Planned
 
 - **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
 
+## Overflow (Day, 3+ overlapping)
+
+Title one line with ellipsis; time hidden under 120 px wide or at 1 h (40 px); 4+ overlaps → 3 columns + `+N` pill `br-m-event-more` (bg `--br-neutral-darkest`, text `--br-contrast`). See `screens/employee-mobile/my-schedule-day.md`.
+
+## Proposal: coverage hole (new, not in Legacy)
+
+| Token | Light | Dark | Use |
+|---|---|---|---|
+| `--br-event-hole` | → `--br-semantic3-3` (`#f59e0b1f`) | → `--br-semantic3-2` (`#f59e0b59`) | Background of `br-event-hole`; 1px dashed `--br-semantic3` border, `warning` icon `--br-semantic3`. Figma variable `br/event-hole`. |
+
 ## Dots (legend, week strip, month grid)
 
 | Where | Size | Shift | Task | Overtime | Planned overtime | Leave |

@@ -20,6 +20,8 @@ Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKM
 - Every screen and component must work in both themes. Themes switch with `[data-theme="dark"]` on a root element; Light is the default (`:root`).
 - Verify both themes before finishing.
 - **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
+- **Event block overflow (My Schedule Day, 3+ overlapping):** the title stays on one line with an ellipsis; the time line is hidden when the column is under 120 px wide or the event lasts 1 h (40 px tall); with 4+ overlapping events show 3 columns plus a `+N` pill (`br-m-event-more`) for the rest. `starter/br-m.css` and `starter/my-schedule-day.html` implement it (`is-compact` class).
+- **Proposals (new, not in Legacy):** coverage holes (`--br-event-hole`, `br-event-hole`, `br-coverage-warning`) and Shift swap request cards live in `proposals/` and Figma page "Proposals · not in Legacy". Use them only when the user asks for coverage holes or shift swap, and label output "Proposal — new, not in Legacy".
 
 ## 4. Icons
 - Use **Material Icons Outlined** only. Do not mix icon sets.
@@ -103,6 +105,9 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | rosters list, rosters tab | `screens/admin/rosters-rosters.md` |
 | rosters assignment, assignment planning | `screens/admin/rosters.md` |
 | sign in, login, iniciar sesión | `screens/admin/sign-in.md` |
+| attendance, attendance today, asistencia, who is absent, quién faltó, ausencias hoy | `screens/admin/attendance-today.md` (approved, desktop 1440) |
+| coverage hole, hueco, holes, cobertura | `proposals/coverage-holes.md` (**proposal**, not in Legacy) |
+| shift swap, cambio de turno, intercambio de turno | `proposals/shift-swap.md` (**proposal**, not in Legacy) |
 | workload engine | `screens/admin/workload-engine.md` |
 | workload template, plantilla | `screens/admin/workload-template.md` |
 | employee profile, perfil, profile desktop | `screens/employee-desktop/employee-profile-desktop.md` |

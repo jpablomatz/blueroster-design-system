@@ -55,7 +55,14 @@
 
 /* br-m-event-block (371:5384) */
 .br-m-event-block { display: flex; flex-direction: column; gap: 2px; padding: 6px 8px; border-radius: 4px; overflow: hidden; }
-.br-m-event-block__title { font: 500 var(--text-xs)/14px "Roboto", sans-serif; }
+.br-m-event-block__title { font: 500 var(--text-xs)/14px "Roboto", sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.br-m-event-block.is-compact .br-m-event-block__time { display: none; } /* column < 120px or 1h event */
+.br-m-event-more { position: absolute; height: 20px; padding: 0 6px; border-radius: 10px; background: var(--br-neutral-darkest); color: var(--br-contrast); font: 500 11px/20px "Roboto", sans-serif; }
+/* PROPOSAL — new, not in Legacy: coverage hole block + banner */
+.br-event-hole { display: flex; align-items: center; gap: 6px; padding: 6px 8px; border-radius: 4px; background: var(--br-event-hole); border: 1px dashed var(--br-semantic3); color: var(--br-neutral-darkest); overflow: hidden; }
+.br-event-hole .mi { font-size: 16px; color: var(--br-semantic3); }
+.br-coverage-warning { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 8px; background: var(--br-semantic3-3); border: 1px solid var(--br-semantic3); color: var(--br-neutral-darkest); font: 500 14px/18px "Roboto", sans-serif; }
+.br-coverage-warning .mi { font-size: 20px; color: var(--br-semantic3); }
 .br-m-event-block__time { font: 400 11px/13px "Roboto", sans-serif; }
 .br-m-event-block--shift { background: var(--br-event-shift-neutral); color: var(--br-neutral-darkest); }
 .br-m-event-block--task { background: var(--br-event-shift); color: var(--br-on-primary); }

@@ -1,0 +1,108 @@
+{
+  "_proposal": "PROPOSAL — new, not in Legacy. Not in Blue Roster Storybook (checked index.json, 1054 stories, Oct 2026) nor in Legacy screens. Placeholder data only.",
+  "coverage": {
+    "_source": "Figma 'Proposals · not in Legacy' https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-37452",
+    "date": "2026-10-08",
+    "dateLabel": "Thu 8 Oct 2026",
+    "warning": "This request will leave a hole in Line 1, Position 1",
+    "lanes": [
+      {
+        "line": "Line 1",
+        "position": "Position 1",
+        "events": [
+          {
+            "type": "hole",
+            "title": "Hole · Line 1, Position 1",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "line": "Line 1",
+        "position": "Position 2",
+        "events": [
+          {
+            "type": "shift",
+            "title": "Employee 1 · 0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "line": "Line 2",
+        "position": "Position 1",
+        "events": [
+          {
+            "type": "task",
+            "title": "Employee 2 · Shipping/Outside",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "line": "Line 2",
+        "position": "Position 2",
+        "events": [
+          {
+            "type": "hole",
+            "title": "Hole · Line 2, Position 2",
+            "start": "06:00",
+            "end": "10:00",
+            "timeLabel": "6:00 am - 10:00 am"
+          },
+          {
+            "type": "shift",
+            "title": "Employee 5 · 0600 10-Hr w/ Lunch - 60S",
+            "start": "10:00",
+            "end": "16:00",
+            "timeLabel": "10:00 am - 4:00 pm"
+          },
+          {
+            "type": "overtime",
+            "title": "Employee 5 · Weld · Sku 1 hola",
+            "start": "17:00",
+            "end": "19:00",
+            "timeLabel": "5:00 pm - 7:00 pm"
+          }
+        ]
+      }
+    ],
+    "holeCount": 2
+  },
+  "shiftSwap": {
+    "_source": "Figma 'Proposals · not in Legacy' mobile https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-918 · admin https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-949",
+    "card": {
+      "typeIcon": "swap_horiz",
+      "title": "Shift swap",
+      "dates": "Thu 8 Oct · 6:00 am - 4:00 pm",
+      "detail": "Employee 2 with Employee 5 · 0600 10-Hr w/ Lunch - 60S",
+      "meta": "Requested Mon 5 Oct"
+    },
+    "states": [
+      {
+        "status": "Pending",
+        "pill": "pending",
+        "actions": [
+          "Decline",
+          "Approve"
+        ]
+      },
+      {
+        "status": "Approved",
+        "pill": "approved",
+        "actions": []
+      },
+      {
+        "status": "Declined",
+        "pill": "rejected",
+        "actions": []
+      }
+    ]
+  }
+}

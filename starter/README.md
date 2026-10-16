@@ -13,4 +13,7 @@ Fonts: Roboto (400/500/700) and Material Icons Outlined from Google Fonts. Logo:
 Keep the folder structure (`starter/`, `tokens/`, `assets/` side by side) so relative paths work.
 
 ## admin-attendance-today.html
-Admin "who is absent / who is working today" view, mobile 390. **Composed pattern — pending design approval** (no Figma frame yet). Built from my-schedule-day pieces; placeholder names only. Renders: `_verify/admin-attendance-today-{light,dark}.png`.
+Admin Attendance Today, desktop 1440. **Approved pattern** (Figma 497:14593 / 497:14900). Status pills Working / Late / Absent, `br-table` rows with roster track (5 event types). Data: `fixtures/admin.json`. Renders: `_verify/admin-attendance-today-{light,dark}.png`.
+
+## Overflow preview
+`my-schedule-day.html?demo=overflow` adds 2 placeholder events to show the 3-column + `+N` rule (`_verify/my-schedule-day-overflow-light.png`).

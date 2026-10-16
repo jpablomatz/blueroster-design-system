@@ -1,0 +1,139 @@
+{
+  "_sampleData": "SAMPLE DATA for mockups only. Placeholder employees (Employee 1..6), no real names. Shift/task/overtime text reused from fixtures/schedule.json. Not an API contract.",
+  "attendance": {
+    "_source": "Attendance Today · Light https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=497-14593 (content br-content-attendance-today 497:4887)",
+    "date": "2026-10-08",
+    "dateLabel": "Thu 8 Oct 2026",
+    "visibleHours": {
+      "first": "5 AM",
+      "last": "7 PM"
+    },
+    "summary": {
+      "Working": 3,
+      "Late": 1,
+      "Absent": 2
+    },
+    "statusPill": {
+      "Working": {
+        "pill": "approved",
+        "token": "--br-semantic1",
+        "icon": "check_circle"
+      },
+      "Late": {
+        "pill": "pending",
+        "token": "--br-semantic3",
+        "icon": "schedule"
+      },
+      "Absent": {
+        "pill": "rejected",
+        "token": "--br-semantic2",
+        "icon": "cancel"
+      }
+    },
+    "rows": [
+      {
+        "employee": "Employee 1",
+        "position": "Weld",
+        "shift": "0600 10-Hr w/ Lunch - 60S",
+        "time": "6:00 am - 4:00 pm",
+        "status": "Working",
+        "events": [
+          {
+            "type": "task",
+            "title": "Shipping/Outside",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "employee": "Employee 2",
+        "position": "Package",
+        "shift": "0600 10-Hr w/ Lunch - 60S",
+        "time": "6:00 am - 4:00 pm",
+        "status": "Working",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "employee": "Employee 3",
+        "position": "Weld",
+        "shift": "0600 10-Hr w/ Lunch - 60S",
+        "time": "6:00 am - 4:00 pm",
+        "status": "Late",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "employee": "Employee 4",
+        "position": "Package",
+        "shift": "0600 10-Hr w/ Lunch - 60S",
+        "time": "6:00 am - 4:00 pm",
+        "status": "Absent",
+        "events": [
+          {
+            "type": "leave",
+            "title": "Vacation",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          }
+        ]
+      },
+      {
+        "employee": "Employee 5",
+        "position": "Weld",
+        "shift": "0600 10-Hr w/ Lunch - 60S",
+        "time": "6:00 am - 4:00 pm",
+        "status": "Working",
+        "events": [
+          {
+            "type": "shift",
+            "title": "0600 10-Hr w/ Lunch - 60S",
+            "start": "06:00",
+            "end": "16:00",
+            "timeLabel": "6:00 am - 4:00 pm"
+          },
+          {
+            "type": "overtime",
+            "title": "Weld · Sku 1 hola",
+            "start": "17:00",
+            "end": "19:00",
+            "timeLabel": "5:00 pm - 7:00 pm"
+          }
+        ]
+      },
+      {
+        "employee": "Employee 6",
+        "position": "Package",
+        "shift": "0600 10-Hr w/ Lunch - 60S",
+        "time": "6:00 am - 4:00 pm",
+        "status": "Absent",
+        "events": [
+          {
+            "type": "planned",
+            "title": "Weld · Sku 1 hola",
+            "start": "05:00",
+            "end": "06:00",
+            "timeLabel": "5:00 am - 6:00 am"
+          }
+        ]
+      }
+    ]
+  }
+}

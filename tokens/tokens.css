@@ -776,6 +776,7 @@
   --br-event-overtime-soft: var(--br-semantic1-3);
   --br-event-leave-soft: var(--br-semantic2-3);
   --br-event-shift-neutral: var(--br-neutral-light);
+  --br-event-hole: var(--br-semantic3-3); /* PROPOSAL — new, not in Legacy */
 }
 
 [data-theme="dark"] {
@@ -952,6 +953,7 @@
   --br-illustration-primary-dark: #8ebafa;
   --br-event-shift-soft: #6ea3ff29;
   --br-event-task-soft: #6ea3ff1f;
+  --br-event-hole: var(--br-semantic3-2); /* PROPOSAL — new, not in Legacy */
 }
 
 /* Alias re-declaration: a var() alias resolves where it is declared, so aliases

@@ -1,98 +1,88 @@
 <!doctype html>
-<!-- Blue Roster · Admin · Attendance Today (mobile 390).
-     COMPOSED PATTERN — PENDING DESIGN APPROVAL. No Figma frame exists yet.
-     Composed from my-schedule-day (date nav, legend, hour rows, event blocks), br-m-avatar and br-m-status-pill.
-     Placeholder names only ("Employee 1..6"); shift titles/times from fixtures/schedule.json. Add ?theme=dark for Dark. -->
+<!-- Blue Roster · Admin · Attendance Today (desktop 1440). APPROVED PATTERN.
+     Figma: Screens 497:14593 (Light) / 497:14900 (Dark); content br-content-attendance-today 497:4887.
+     Sample data: fixtures/admin.json → attendance (Employee 1..6, placeholders). Add ?theme=dark for Dark. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=390, initial-scale=1">
-<title>Attendance Today — Blue Roster (composed)</title>
+<meta name="viewport" content="width=1440">
+<title>Attendance Today — Blue Roster</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
 <link rel="stylesheet" href="br-m.css">
 <script>if (/theme=dark/.test(location.search)) document.documentElement.setAttribute('data-theme','dark');</script>
-<style>html,body{margin:0;background:var(--br-contrast);}
-/* Composed: only br-m.css pieces + tokens. */
-.att-note{font:400 11px/14px "Roboto",sans-serif;color:var(--br-text-label);border:1px dashed var(--br-component-border);border-radius:var(--radius-lg);padding:6px 8px}
-.att-summary{display:flex;gap:8px}
-.att-row{display:flex;align-items:center;gap:8px;height:48px;border-bottom:1px solid var(--br-divider)}
-.att-row__who{width:96px;white-space:nowrap;display:flex;align-items:center;gap:6px;font:500 var(--text-xs)/14px "Roboto",sans-serif;color:var(--br-neutral-darkest)}
-.att-row__track{position:relative;flex:1;height:36px}
-.att-row__track .br-m-event-block{position:absolute;top:0;height:36px;padding:3px 6px}
-.att-hours{display:flex;margin-left:94px;justify-content:space-between;font:400 11px/13px "Roboto",sans-serif;color:var(--br-text-label)}
-.att-absent{color:var(--br-event-leave)}
-.att-working{color:var(--br-event-overtime)}
+<style>
+html,body{margin:0;background:var(--br-neutral-lightest);font-family:"Roboto",sans-serif}
+/* br-app-shell App=Admin (simplified: sidebar 232 + page header). Use the real br-app-shell in code. */
+.shell{display:flex;width:1440px;height:900px}
+.side{width:232px;background:var(--br-contrast);border-right:1px solid var(--br-component-border);padding:16px 12px;box-sizing:border-box}
+.side a{display:flex;gap:12px;align-items:center;height:40px;padding:0 12px;border-radius:8px;color:var(--br-neutral-darkest);font:400 14px/20px Roboto;text-decoration:none}
+.side a.is-active{background:var(--br-neutral-light)}
+.main{flex:1;padding:24px 32px;box-sizing:border-box}
+.main h1{font:700 24px/28px Roboto;color:var(--br-neutral-darkest);margin:0 0 24px}
+.content{width:1144px;background:var(--br-contrast);padding:16px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px}
+.summary{display:flex;align-items:center;gap:8px}.summary b{font:500 16px/20px Roboto;color:var(--br-neutral-darkest);margin-right:16px}
+.tbl{border:1px solid var(--br-component-border);border-radius:8px;overflow:hidden}
+.tr{display:flex;align-items:center;height:52px;border-bottom:1px solid var(--br-divider)}.tr:last-child{border-bottom:0}
+.th{height:48px;background:var(--br-neutral-lightest);border-bottom:1px solid var(--br-neutral-light);font:500 12px/14px Roboto;color:var(--br-neutral-dark)}
+.c{padding:0 12px 0 16px;box-sizing:border-box;font:400 12px/14px Roboto;color:var(--br-neutral-dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c.pri{color:var(--br-neutral-darkest)}
+.w1{width:120px}.w2{width:90px}.w3{width:160px}.w4{width:140px}.w5{width:120px;overflow:visible}
+.track{position:relative;width:448px;height:36px;margin-left:16px}
+.hours{display:flex;margin-left:16px}.hours span{width:64px}
+.track .br-m-event-block{position:absolute;top:0;height:36px;box-sizing:border-box;padding:4px 8px}
 </style>
 </head>
 <body class="br">
-<div class="br-m-screen">
-  <header class="br-m-app-bar">
-    <div class="br-m-app-bar__row">
-      <button class="br-m-app-bar__btn" aria-label="Menu"><span class="mi">menu</span></button>
-      <span class="br-m-app-bar__logo">
-        <img class="br-logo-light" src="../assets/br-logo-isotype-light.svg" width="32" height="34" alt="Blue Roster">
-        <img class="br-logo-dark" src="../assets/br-logo-isotype-dark.svg" width="32" height="34" alt="Blue Roster">
-      </span>
-      <div class="br-m-app-bar__trailing">
-        <button class="br-m-app-bar__btn" aria-label="Notifications"><span class="mi">notifications</span><span class="br-m-badge">2</span></button>
-        <button class="br-m-app-bar__btn" aria-label="Account"><span class="br-m-avatar">JM</span></button>
+<div class="shell">
+  <nav class="side">
+    <a class="is-active"><span class="mi">space_dashboard</span>Action Center</a>
+    <a><span class="mi">calendar_month</span>Gantt</a><a><span class="mi">manage_accounts</span>Workload</a>
+    <a><span class="mi">folder_special</span>Roster Catalogs</a><a><span class="mi">edit_calendar</span>Rosters</a>
+    <a><span class="mi">topic</span>Catalogs</a><a><span class="mi">history</span>History</a><a><span class="mi">assignment_ind</span>Roles</a>
+  </nav>
+  <main class="main">
+    <h1>Attendance Today</h1>
+    <section class="content">
+      <div class="summary" id="summary"><b>Thu 8 Oct 2026</b></div>
+      <div class="br-m-legend">
+        <span class="br-m-legend__item"><i class="br-dot br-dot--shift"></i>Shift</span>
+        <span class="br-m-legend__item"><i class="br-dot br-dot--task"></i>Tasks</span>
+        <span class="br-m-legend__item"><i class="br-dot br-dot--overtime"></i>Overtime</span>
+        <span class="br-m-legend__item"><i class="br-dot br-dot--planned"></i>Planned overtime</span>
+        <span class="br-m-legend__item"><i class="br-dot br-dot--leave"></i>Leave</span>
       </div>
-    </div>
-  </header>
-
-  <main class="br-m-body">
-    <section class="br-m-page-header">
-      <h1 class="br-m-page-header__title">Attendance</h1>
-      <nav class="br-m-tabs">
-        <button class="br-page-tab is-active"><span class="mi">view_day</span>Today</button>
-        <button class="br-page-tab"><span class="mi">view_week</span>Week</button>
-      </nav>
+      <div class="tbl" id="tbl">
+        <div class="tr th"><span class="c w1">EMPLOYEE</span><span class="c w2">POSITION</span><span class="c w3">SHIFT</span><span class="c w4">TIME</span><span class="c w5">STATUS</span><span class="hours" id="hours"></span></div>
+      </div>
     </section>
-    <div class="att-note"><span class="mi" style="font-size:14px;vertical-align:-3px">info</span> Composed pattern — pending design approval</div>
-    <div class="br-m-date-nav">
-      <span class="br-m-date-nav__label">Thu 8 Oct 2026</span>
-      <button class="br-m-date-nav__arrow" aria-label="Previous day"><span class="mi">chevron_left</span></button>
-      <button class="br-m-date-nav__today">Today</button>
-      <button class="br-m-date-nav__arrow" aria-label="Next day"><span class="mi">chevron_right</span></button>
-    </div>
-    <div class="att-summary">
-      <span class="br-m-status-pill att-working"><span class="mi">check_circle</span><b id="nWork"></b>&nbsp;Working</span>
-      <span class="br-m-status-pill att-absent"><span class="mi">cancel</span><b id="nAbs"></b>&nbsp;Absent</span>
-    </div>
-    <div class="br-m-legend">
-      <span class="br-m-legend__item"><i class="br-dot br-dot--shift"></i>Shift</span>
-      <span class="br-m-legend__item"><i class="br-dot br-dot--task"></i>Working now</span>
-      <span class="br-m-legend__item"><i class="br-dot br-dot--overtime"></i>Overtime</span>
-      <span class="br-m-legend__item"><i class="br-dot br-dot--leave"></i>Absent</span>
-    </div>
-    <div class="att-hours"><span>5 AM</span><span>8 AM</span><span>11 AM</span><span>2 PM</span><span>4 PM</span></div>
-    <div id="rows"></div>
   </main>
 </div>
 <script>
-// ASSUMPTIONS (pending approval): one row per employee on a 5 AM–4 PM track; "Working" = task color (in progress),
-// scheduled-not-started = shift neutral, absent = leave red full shift, overtime = overtime green. Placeholder names.
-const FIRST = 5, LAST = 16;
+// SAMPLE DATA (fixtures/admin.json → attendance.rows)
+const S = '0600 10-Hr w/ Lunch - 60S', T = '6:00 am - 4:00 pm';
 const rows = [
-  { who: 'Employee 1', type: 'task',  title: 'Working', start: 6, end: 16, time: '6:00 am - 4:00 pm' },
-  { who: 'Employee 2', type: 'leave', title: 'Absent',  start: 6, end: 16, time: '6:00 am - 4:00 pm' },
-  { who: 'Employee 3', type: 'task',  title: 'Working', start: 6, end: 14, time: '6:00 am - 2:00 pm' },
-  { who: 'Employee 4', type: 'shift', title: 'Scheduled', start: 12, end: 16, time: '12:00 pm - 4:00 pm' },
-  { who: 'Employee 5', type: 'leave', title: 'Absent',  start: 6, end: 16, time: '6:00 am - 4:00 pm' },
-  { who: 'Employee 6', type: 'overtime', title: 'Overtime', start: 5, end: 9, time: '5:00 am - 9:00 am' },
+  ['Employee 1','Weld','Working',[['task','Shipping/Outside',6,16,T]]],
+  ['Employee 2','Package','Working',[['shift',S,6,16,T]]],
+  ['Employee 3','Weld','Late',[['shift',S,6,16,T]]],
+  ['Employee 4','Package','Absent',[['leave','Vacation',6,16,T]]],
+  ['Employee 5','Weld','Working',[['shift',S,6,16,T],['overtime','Weld · Sku 1 hola',17,19,'5:00 pm - 7:00 pm']]],
+  ['Employee 6','Package','Absent',[['planned','Weld · Sku 1 hola',5,6,'5:00 am - 6:00 am']]],
 ];
-const el = document.getElementById('rows');
-rows.forEach((r, i) => {
-  const pct = h => ((h - FIRST) / (LAST - FIRST) * 100) + '%';
-  const d = document.createElement('div'); d.className = 'att-row';
-  d.innerHTML = `<span class="att-row__who"><span class="br-m-avatar">E${i+1}</span>${r.who}</span>
-    <div class="att-row__track"><div class="br-m-event-block br-m-event-block--${r.type}" style="left:${pct(r.start)};width:calc(${pct(r.end)} - ${pct(r.start)})">
-    <span class="br-m-event-block__title">${r.title}</span><span class="br-m-event-block__time">${r.time}</span></div></div>`;
-  el.appendChild(d);
+const PILL = { Working:['approved','check_circle'], Late:['pending','schedule'], Absent:['rejected','cancel'] };
+const pill = (s, label) => `<span class="br-m-status-pill br-m-status-pill--${PILL[s][0]}"><span class="mi">${PILL[s][1]}</span>${label || s}</span>`;
+const HOUR = 32, FIRST = 5;
+const count = s => rows.filter(r => r[2] === s).length;
+document.getElementById('summary').insertAdjacentHTML('beforeend', ['Working','Late','Absent'].map(s => pill(s, s + ' ' + count(s))).join(''));
+for (let h = FIRST; h < 19; h += 2) document.getElementById('hours').insertAdjacentHTML('beforeend', `<span>${(h % 12 || 12) + (h < 12 ? ' AM' : ' PM')}</span>`);
+const tbl = document.getElementById('tbl');
+rows.forEach(([e, p, s, evs]) => {
+  const blocks = evs.map(([ty, ti, a, b, tm]) => {
+    const w = (b - a) * HOUR - 4, compact = w < 120 || b - a <= 1; // overflow rule
+    return `<div class="br-m-event-block br-m-event-block--${ty}${compact ? ' is-compact' : ''}" style="left:${(a - FIRST) * HOUR + 2}px;width:${w}px"><span class="br-m-event-block__title">${ti}</span><span class="br-m-event-block__time">${tm}</span></div>`;
+  }).join('');
+  tbl.insertAdjacentHTML('beforeend', `<div class="tr"><span class="c w1 pri">${e}</span><span class="c w2">${p}</span><span class="c w3">${S}</span><span class="c w4">${T}</span><span class="c w5">${pill(s)}</span><div class="track">${blocks}</div></div>`);
 });
-document.getElementById('nWork').textContent = rows.filter(r => r.type === 'task' || r.type === 'overtime').length;
-document.getElementById('nAbs').textContent = rows.filter(r => r.type === 'leave').length;
 </script>
 </body>
 </html>

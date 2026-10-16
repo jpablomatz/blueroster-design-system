@@ -71,6 +71,7 @@ for (let h = first; h <= last; h++) {
   row.innerHTML = `<span class="br-m-hour-row__label">${label(h)}</span><span class="br-m-hour-row__line"></span>`;
   tl.insertBefore(row, ev);
 }
+// ?demo=overflow adds 2 extra overlapping placeholders to preview the +N pill.
 // SAMPLE DATA (fixtures/schedule.json → day.events). Overtime / Planned overtime / Leave are placeholders.
 const events = [
   { type: 'planned',  title: 'Weld · Sku 1 hola',         start: 5,  end: 6,  time: '5:00 am - 6:00 am' },
@@ -79,6 +80,9 @@ const events = [
   { type: 'leave',    title: 'Vacation',                  start: 12, end: 14, time: '12:00 pm - 2:00 pm' },
   { type: 'overtime', title: 'Weld · Sku 1 hola',         start: 17, end: 19, time: '5:00 pm - 7:00 pm' },
 ];
+if (/demo=overflow/.test(location.search)) events.push(
+  { type: 'overtime', title: 'Weld · Sku 1 hola', start: 12, end: 13, time: '12:00 pm - 1:00 pm' },
+  { type: 'planned',  title: 'Weld · Sku 1 hola', start: 13, end: 14, time: '1:00 pm - 2:00 pm' });
 // Overlap layout: group transitively overlapping events into clusters, give each event the
 // first free column, and split the cluster width equally between its columns.
 events.sort((a, b) => a.start - b.start || b.end - a.end);
@@ -94,14 +98,23 @@ clusters.forEach(c => {
     if (col < 0) { col = colEnds.length; colEnds.push(0); }
     colEnds[col] = e.end; e.col = col;
   });
-  const n = colEnds.length, w = (AREA - RIGHT - GAP * (n - 1)) / n;
-  c.forEach(e => {
+  const n = colEnds.length, cols = Math.min(n, 3), w = (AREA - RIGHT - GAP * (cols - 1)) / cols;
+  const hidden = c.filter(e => e.col >= 3);
+  c.filter(e => e.col < 3).forEach(e => {
     const b = document.createElement('div');
-    b.className = `br-m-event-block br-m-event-block--${e.type}`;
-    Object.assign(b.style, { top: ((e.start - first) * HOUR + 4) + 'px', height: ((e.end - e.start) * HOUR - 8) + 'px', left: (e.col * (w + GAP)) + 'px', width: w + 'px' });
+    const h = (e.end - e.start) * HOUR - 8;
+    // Overflow rule: title 1 line + ellipsis (CSS); hide time if column < 120px or 1h (40px) event.
+    b.className = `br-m-event-block br-m-event-block--${e.type}` + (w < 120 || h <= 40 ? ' is-compact' : '');
+    Object.assign(b.style, { top: ((e.start - first) * HOUR + 4) + 'px', height: h + 'px', left: (e.col * (w + GAP)) + 'px', width: w + 'px' });
     b.innerHTML = `<span class="br-m-event-block__title">${e.title}</span><span class="br-m-event-block__time">${e.time}</span>`;
     ev.appendChild(b);
   });
+  if (hidden.length) { // 4+ overlapping: 3 columns + "+N" pill
+    const p = document.createElement('span'); p.className = 'br-m-event-more'; p.textContent = '+' + hidden.length;
+    const top = Math.min(...c.map(e => e.start));
+    Object.assign(p.style, { top: ((top - first) * HOUR + 8) + 'px', right: (RIGHT + 4) + 'px' });
+    ev.appendChild(p);
+  }
 });
 </script>
 </body>

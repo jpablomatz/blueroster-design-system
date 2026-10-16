@@ -29,6 +29,8 @@ Full context in one file: `llms-full.txt`.
 - Mobile first: 390 → 768 → desktop. Light (`:root`) and Dark (`[data-theme="dark"]`).
 - Employee shell: `br-app-shell` with `App=Employee`. Admin specs are drawn at 1440×900.
 - **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
+- **Event block overflow (My Schedule Day, 3+ overlapping):** the title stays on one line with an ellipsis; the time line is hidden when the column is under 120 px wide or the event lasts 1 h (40 px tall); with 4+ overlapping events show 3 columns plus a `+N` pill (`br-m-event-more`) for the rest. `starter/br-m.css` and `starter/my-schedule-day.html` implement it (`is-compact` class).
+- **Proposals (new, not in Legacy):** coverage holes (`--br-event-hole`, `br-event-hole`, `br-coverage-warning`) and Shift swap request cards live in `proposals/` and Figma page "Proposals · not in Legacy". Use them only when the user asks for coverage holes or shift swap, and label output "Proposal — new, not in Legacy".
 - Day sample (`fixtures/schedule.json`, Thu 8 Oct 2026) now has all 5 event types: Shift, Tasks, Planned overtime 5–6 am, Leave 12–2 pm, Overtime 5–7 pm (placeholders reusing existing fixture text; range extended to 7 PM). Overlapping events go side by side in columns.
 
 ## Workflow
@@ -41,7 +43,7 @@ For the chosen spec, load:
 - the spec `screens/<group>/<name>.md` (read its **Anatomy** section),
 - the PNGs `screens/<group>/img/<name>-light.png` and `-dark.png`,
 - the node tree `screens/<group>/json/`,
-- the closest starter in `starter/` (`my-schedule-day.html`, `admin-attendance-today.html`, `components.html`) with `starter/br-m.css`.
+- the closest starter in `starter/` (`my-schedule-day.html`, `admin-attendance-today.html` (approved, desktop 1440), `components.html`) with `starter/br-m.css`.
 Copy the starter and edit it. Keep its classes, spacing and structure.
 
 ### 3. Use only Blue Roster tokens and formats
@@ -53,7 +55,7 @@ Copy the starter and edit it. Keep its classes, spacing and structure.
 Use only what is documented in `components/` and shown in `starter/components.html`: `br-m-app-bar`, `br-m-page-header`, `br-page-tab`, `br-m-legend`, `br-m-date-nav`, `br-m-timeline`, `br-m-event-block`, `br-m-status-pill`, `br-m-avatar`, `br-chip`, `br-button`, `br-filter-button`, `br-filter-dialog`, `br-table` and Mobiscroll (`br-mobiscroll-*`) for calendars. Do not redraw a component in raw HTML.
 
 ### 5. Missing pattern? Compose it and flag it
-If no spec covers the request (for example a multi-employee admin calendar or attendance view):
+If no spec covers the request (for example a multi-employee mobile calendar):
 1. Compose it from existing pieces: schedule and timeline (`my-schedule-day`), event blocks, legend, date nav, avatars, status pills and filters.
 2. Label it in the output: **"Composed pattern — pending design approval"**.
 3. Write an **Assumptions** list (layout, states, colors chosen, copy, data) and a **Questions** list for the designer.
@@ -77,7 +79,6 @@ If no spec covers the request (for example a multi-employee admin calendar or at
 2. The code (HTML/CSS or framework requested) or the Figma frame.
 3. **Assumptions** and **Questions** (always, even if short).
 4. The checklist result.
-
 
 # AGENTS.md
 
@@ -103,6 +104,8 @@ Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKM
 - Every screen and component must work in both themes. Themes switch with `[data-theme="dark"]` on a root element; Light is the default (`:root`).
 - Verify both themes before finishing.
 - **Light and Dark side by side:** event tokens such as `--br-event-shift-neutral` are aliases (`var(--br-neutral-light)`). An alias resolves where it is declared, so if it only lived on `:root`, a `<div data-theme="dark">` inside a Light page kept the Light event colors. `tokens/tokens.css` now re-declares all 74 alias tokens on `[data-theme="light"], [data-theme="dark"]`, so `data-theme` works on any container out of the box. If you copy tokens into another file, keep that alias block (or use one iframe per theme).
+- **Event block overflow (My Schedule Day, 3+ overlapping):** the title stays on one line with an ellipsis; the time line is hidden when the column is under 120 px wide or the event lasts 1 h (40 px tall); with 4+ overlapping events show 3 columns plus a `+N` pill (`br-m-event-more`) for the rest. `starter/br-m.css` and `starter/my-schedule-day.html` implement it (`is-compact` class).
+- **Proposals (new, not in Legacy):** coverage holes (`--br-event-hole`, `br-event-hole`, `br-coverage-warning`) and Shift swap request cards live in `proposals/` and Figma page "Proposals · not in Legacy". Use them only when the user asks for coverage holes or shift swap, and label output "Proposal — new, not in Legacy".
 
 ## 4. Icons
 - Use **Material Icons Outlined** only. Do not mix icon sets.
@@ -186,6 +189,9 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | rosters list, rosters tab | `screens/admin/rosters-rosters.md` |
 | rosters assignment, assignment planning | `screens/admin/rosters.md` |
 | sign in, login, iniciar sesión | `screens/admin/sign-in.md` |
+| attendance, attendance today, asistencia, who is absent, quién faltó, ausencias hoy | `screens/admin/attendance-today.md` (approved, desktop 1440) |
+| coverage hole, hueco, holes, cobertura | `proposals/coverage-holes.md` (**proposal**, not in Legacy) |
+| shift swap, cambio de turno, intercambio de turno | `proposals/shift-swap.md` (**proposal**, not in Legacy) |
 | workload engine | `screens/admin/workload-engine.md` |
 | workload template, plantilla | `screens/admin/workload-template.md` |
 | employee profile, perfil, profile desktop | `screens/employee-desktop/employee-profile-desktop.md` |
@@ -1167,6 +1173,15 @@ br-m-date-nav, br-m-hour-row, br-m-event-block, br-m-legend
 ## Not designed yet
 Loading, error, skeleton. Do not invent them silently; flag in the PR and follow README gaps.
 
+## Event overflow (approved)
+
+Applies when 3 or more events overlap in the Day timeline (width per column = (310 − 4 − 6·(n−1)) / n).
+
+- **Title:** one line, ellipsis (`white-space: nowrap; overflow: hidden; text-overflow: ellipsis`).
+- **Time line:** hidden when the column is under 120 px wide (3 columns = 98 px) or the event lasts 1 h (40 px tall). Class `is-compact`.
+- **4+ overlapping:** show 3 columns; the rest collapse into a `+N` pill (`br-m-event-more`, 20 tall, r10, padding 0 6, Roboto Medium 11, bg `--br-neutral-darkest`, text `--br-contrast`) at the top-right of the 3rd column. Tapping it opens the day agenda (TBD).
+
+
 # screens/employee-mobile/my-schedule-month.md
 
 # My Schedule · Month
@@ -1308,3 +1323,82 @@ br-m-app-bar, br-m-page-header, br-m-balance-card, br-m-balance-row, form fields
 
 ## Not designed yet
 Loading, error, skeleton. Do not invent them silently; flag in the PR and follow README gaps.
+
+# screens/admin/attendance-today.md
+
+# Attendance Today (Admin) — approved
+
+- **Status:** Approved pattern (Oct 2026). Previously "Composed pattern — pending design approval".
+- **Figma:** [Light](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=497-14593) · [Dark](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=497-14900) (Screens page)
+- **Platform:** Admin web app, desktop 1440×900, `br-app-shell` App=Admin, page title "Attendance Today" (no tabs, no primary button)
+- **Content component:** `br-content-attendance-today` ([497:4887](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=497-4887), Toolkit page)
+- **Starter:** `starter/admin-attendance-today.html` · **Sample data:** `fixtures/admin.json` → `attendance`
+
+## Purpose
+Who is working, late or absent today, with each person's roster for the day.
+
+## Layout (content 1144 wide, padding 16, gap 16, bg `--br-contrast`)
+1. **Summary row:** date "Thu 8 Oct 2026" (Roboto Medium 16) + 3 `br-m-status-pill` with counts: "Working 3", "Late 1", "Absent 2".
+2. **Legend:** `br-m-legend` (Shift · Tasks · Overtime · Planned overtime · Leave).
+3. **`br-table`** (r8, 1px `--br-component-border`): header row of `br-table-header-cell` (EMPLOYEE 120 · POSITION 90 · SHIFT 160 · TIME 140 · STATUS 110 · roster hours 5 AM–7 PM every 2 h). Rows 52 tall, 1px `--br-divider`: `br-table-cell` Text (employee), Text secondary (position, shift, time), status pill, roster track.
+4. **Roster track:** 14 h × 32 px, `br-m-event-block` 36 tall, all 5 event types; overflow rule from My Schedule Day (title ellipsis, time hidden under 120 px or at 1 h).
+
+## Status pills
+| Status | Pill variant | Token | Icon |
+|---|---|---|---|
+| Working | Approved | `--br-semantic1` | check_circle |
+| Late | Pending | `--br-semantic3` | schedule |
+| Absent | Rejected | `--br-semantic2` | cancel |
+
+## States
+- Designed: Default (Light, Dark). Not designed: loading, error, empty, filters, row tap detail (TBD).
+
+# proposals/README.md
+
+# Proposals — new, not in Legacy
+
+Designs that do **not** exist in Blue Roster Legacy screens or Storybook (checked `blue-roster-storybook-864a1.firebaseapp.com/index.json`, 1054 stories, Oct 2026: no coverage-hole or shift-swap story; only the `br-placeholder` Type=Shift swap empty-state illustration exists). Figma page: [Proposals · not in Legacy](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-909) (boards: [Light](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-37512) · [Dark](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-37691)).
+
+Label any output built from these as **"Proposal — new, not in Legacy"**. Sample data: `fixtures/proposals.json`.
+
+- `coverage-holes.md` — B · Coverage holes
+- `shift-swap.md` — C · Shift swap
+
+# proposals/coverage-holes.md
+
+# B · Coverage holes — Proposal (new, not in Legacy)
+
+A **hole** is a line/position with no one covering it for a time range (e.g. a leave or swap request removes the only person).
+
+## Token
+`--br-event-hole` (Figma `br/event-hole`): Light → `--br-semantic3-3`, Dark → `--br-semantic3-2`. Declared in `tokens/tokens.css` (marked PROPOSAL).
+
+## Components (Figma page "Proposals · not in Legacy")
+- **`br-event-hole`** ([498:910](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-910)): same geometry as `br-m-event-block` (padding 6/8, r4), bg `--br-event-hole`, 1px dashed `--br-semantic3`, `warning` icon 16 `--br-semantic3`, title Roboto Medium 12 + time 11 `--br-neutral-darkest`. Props: Title, Time. CSS: `.br-event-hole`.
+- **`br-coverage-warning`** ([498:915](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-915)): banner, bg `--br-semantic3-3`, 1px `--br-semantic3`, r8, padding 12/16, `warning` 20 + copy Roboto Medium 14: **"This request will leave a hole in Line 1, Position 1"**. CSS: `.br-coverage-warning`. Shown on a request (time off, sick time, shift swap) before approving.
+- **Action Center · Live view · coverage** ([498:37452](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-37452)): 1144 content; header "Thu 8 Oct 2026 · Live view · 2 coverage holes", warning banner, hours 5 AM–7 PM (56 px/h), one lane per Line · Position (52 tall, label 160). Two holes: Line 1 · Position 1 (6 am–4 pm) and Line 2 · Position 2 (6–10 am).
+
+## Open questions
+Who can fill a hole (overtime offer?), whether holes appear on employee mobile, and the exact rule that defines a hole.
+
+# proposals/shift-swap.md
+
+# C · Shift swap — Proposal (new, not in Legacy)
+
+Not in Storybook; Legacy only has the `br-placeholder` Type=Shift swap empty-state illustration (reuse it for the empty list).
+
+## Mobile — `br-m-shift-swap-card` ([498:918](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-918))
+Same anatomy as `br-m-request-card` (358 wide, padding 16, gap 8, r8, bg `--br-neutral-white`, 1px `--br-component-border`): icon `swap_horiz` 22 `--br-primary` · title "Shift swap" · `br-m-status-pill` · dates "Thu 8 Oct · 6:00 am - 4:00 pm" · detail "Employee 2 with Employee 5 · 0600 10-Hr w/ Lunch - 60S" · meta "Requested Mon 5 Oct".
+
+## Admin — `br-shift-swap-request-row` ([498:949](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=498-949))
+Row 1110×64 for Action Center · Requests: icon · who · when/shift · requested · status pill · (Pending only) `br-button` stroked "Decline" + raised "Approve".
+
+## States
+| Status | Pill variant | Token | Actions |
+|---|---|---|---|
+| Pending | Pending | `--br-semantic3` | Decline, Approve (admin) |
+| Approved | Approved | `--br-semantic1` | — |
+| Declined | Rejected (label "Declined") | `--br-semantic2` | — |
+
+If approving would leave a hole, show `br-coverage-warning` above the actions (see `coverage-holes.md`).
+
