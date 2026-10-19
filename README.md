@@ -24,6 +24,10 @@ Source of truth for AI coding agents (Cursor, Claude Code, Codex) to build Blue 
 | `screens/_TEMPLATE.md` | Template for new specs (anatomy, token table, formats, images). |
 | `assets/` | `br-logo` SVGs (isotype + full, Light/Dark/tokens), avatar-initials and badge specs, reference PNGs. |
 | `fixtures/schedule.json` | Sample shifts, tasks, overtime cards copied from the Figma mockups. Mockups only. |
+| `marketing/` | **Marketing design system (v6):** `foundations.md` (mkt colors, type, grid, spacing, decisions), `landing.md` (questionnaire landing + Wix notes), `banners.md` (campaign banners), `references/` (approved PNGs). |
+| `tokens/marketing.css` / `tokens/marketing.md` | Marketing `--mkt-*` tokens v0.5 (Inter, Light page + Navy band, orange `#F66C1E` with Navy on-color). Marketing pages only. |
+| `.cursor/rules/br-marketing.mdc` | Cursor rule for banners, landing and blueroster.com work. |
+| `CHANGELOG.md` | Version history. |
 | `starter/` | Plain HTML/CSS snippets for `br-m-*` components and a `my-schedule-day.html` page verified against Figma. |
 
 ## How to use it
@@ -33,6 +37,9 @@ Source of truth for AI coding agents (Cursor, Claude Code, Codex) to build Blue 
 - **In the app repo:** import `tokens/tokens.css` once at the root, and set `data-theme="dark"` to switch themes.
 
 Prompt template: *"Implement <screen> following `screens/<platform>/<screen>.md`, using only components in `components/` and tokens in `tokens/`. Follow AGENTS.md."*
+
+## Marketing
+Blue Roster marketing (blueroster.com sections, the questionnaire landing, campaign banners) is a separate layer: start at `marketing/README.md`, use `tokens/marketing.css` and Inter, and never the product `br-*` kit. Prompt template: *"Build a LinkedIn 1200x627 screen banner with Attendance Today following `marketing/banners.md` and `marketing/foundations.md`."*
 
 ## Updating
 Tokens and the inventory were generated from Figma via the Plugin API (read-only). When Figma changes, re-export and replace these files; do not hand-edit `tokens.json` / `tokens.css`.
@@ -58,6 +65,9 @@ Ejemplos:
 - `Arma My Schedule Week a 390 con BR` → `screens/employee-mobile/my-schedule-week.md`
 - `Sign in de Admin con Blue Roster, Light y Dark` → `screens/admin/sign-in.md`
 - `Overtime Opportunities en desktop usando Blue Roster Legacy` → `screens/employee-desktop/overtime-opportunities-desktop-filters.md`
+
+- `Banner de LinkedIn con la pantalla de Attendance Today con BR` → `marketing/banners.md`
+- `Arma el paso 5 de la landing del cuestionario con BR` → `marketing/landing.md`
 
 Para Claude/ChatGPT: pásale https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt
 

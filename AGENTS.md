@@ -1,6 +1,7 @@
 # AGENTS.md — Blue Roster Design System rules
 
 > **Skill:** requests with `@BR_Legacy` follow `skills/BR_Legacy/SKILL.md` (see the end of this file).
+> **Marketing (v6):** blueroster.com sections, the questionnaire landing and campaign banners follow `marketing/README.md` (section 11). They use the `mkt` layer (`tokens/marketing.css`, Inter), never the product `br-*` kit.
 
 This file is the single source of rules for every AI coding agent (Cursor, Claude Code, Codex, others) building Blue Roster UI. `CLAUDE.md` and `.cursor/rules/blueroster.mdc` point here. `.cursor/rules/blueroster-build.mdc` repeats the Playbook. Read this file, then `tokens/` (including `tokens/events.md` and `tokens/typography.md`), `patterns/`, `components/` and the relevant `screens/` spec (with its PNGs in `img/` and node tree in `json/`) before writing UI code. Requests that say **Blue Roster**, **Blue Roster Legacy**, or **BR** follow the Playbook at the end of this file.
 
@@ -63,6 +64,16 @@ Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKM
 ## 10. Known gaps (do not silently invent)
 Loading / error / skeleton states, formal breakpoints, avatar initials variant (see `assets/README.md` for how the app bar draws it), `br-textarea` variant in `br-input`, no `br/event-planned-overtime` alias (the design uses `br/special-4`, see `tokens/events.md`), accent palette update, sticky behaviour of page header/tabs on My Schedule, multi-employee mobile calendar, unpublished Figma library. See README. When you hit one, flag it in your PR.
 
+## 11. Marketing layer (website, landing, banners)
+Requests about **marketing, banners, posts, LinkedIn/Instagram/Story, campaigns, the questionnaire landing, Wix or blueroster.com** follow `marketing/` instead of sections 1–9:
+- Read `marketing/README.md`, then `marketing/foundations.md` and `tokens/marketing.md`; code uses `tokens/marketing.css` (`--mkt-*`, `.mkt-*`). Do not mix `--br-*` tokens or `br-*` components into marketing pages; product screenshots inside a marketing piece keep their own look.
+- Landing: `marketing/landing.md` (`mkt-button`, `mkt-text-field`, `mkt-progress`, `mkt-option-card`, `mkt-result-card`, `mkt-step`, `mkt-select`, `mkt-checkbox`, flow, copy, Wix notes). Banners: `marketing/banners.md`. Examples: `marketing/references/`.
+- Inter only: Black for display/H1 (and banner headlines), H2–H4 Semi Bold. Light page; Navy `#002458` only as a band (`[data-mkt-band="navy"]`), no Dark pages.
+- Buttons: `#064DB7` + White on light (Manufacturing too); White `#F9F9F9` + Navy text inside Navy bands. `#1E75F6` is a non-text accent only. Orange `#F66C1E` is an accent only: Navy text on it, never white, never a button.
+- Text contrast ≥ 4.5:1; check minimum sizes in every format.
+- Approved stats only (per vertical, `marketing/banners.md`); never invent stats, quotes, testimonials, names or prices. Say "light version" (up to 50 users), never "free". Headlines verbatim from blueroster.com, sentence case + period. Links in the first comment. Market: US only.
+- Unknowns stay `TBD`, exactly as for product work.
+
 ## Definition of done for UI work
 - Uses existing components and tokens only (or flags the gap).
 - Works in Light and Dark.
@@ -91,6 +102,9 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | Keywords | Spec |
 |---|---|
 | screen index, list of screens, qué pantallas | `screens/README.md` |
+| marketing, mkt, website section, blueroster.com, Navy band | `marketing/foundations.md` + `tokens/marketing.css` (**marketing layer**, see section 11) |
+| landing, questionnaire, cuestionario, Wix form, lead form | `marketing/landing.md` (**marketing layer**) |
+| banner, post, LinkedIn, Instagram, Story, social, campaign, campaña, screen banner | `marketing/banners.md` + `marketing/references/` (**marketing layer**) |
 | action center, action center live, centro de acción | `screens/admin/action-center.md` |
 | action center requests, requests tab | `screens/admin/action-center-requests.md` |
 | catalogs user, user catalog, usuarios | `screens/admin/catalogs-user.md` |
@@ -125,9 +139,11 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | time off approvals | `screens/employee-mobile/time-off-approvals.md` |
 | time off, time off request | `screens/employee-mobile/time-off-request.md` |
 
-Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+Marketing words (banner, post, landing, campaign, Wix, blueroster.com) win over product rows: "banner with My Schedule" maps to `marketing/banners.md`, not to the screen spec. Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
 
 "My schedule" means the signed-in employee's own calendar. A request to see **several employees** (team, crew, roster, empleados) on mobile has **no spec**: say so, ask, and offer the Gantt desktop spec as reference.
 
 ## @BR_Legacy skill (Codex and all agents)
 When a request starts with **@BR_Legacy** (or says Blue Roster / BR), read and follow `skills/BR_Legacy/SKILL.md` before writing UI: closest spec → starter + PNG + spec → `--br-*` tokens and formats → reuse components → compose missing patterns with listed assumptions → self-check. Raw: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/skills/BR_Legacy/SKILL.md
+
+Marketing requests (banner, post, landing, campaign, Wix, blueroster.com), with or without @BR_Legacy, follow the **Marketing mode** in `skills/BR_Legacy/SKILL.md` and `marketing/README.md`.

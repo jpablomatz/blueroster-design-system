@@ -1,0 +1,285 @@
+/* Blue Roster · Marketing foundations (mkt) v0.5 — 19 Oct 2026
+ * Marketing layer only. It does not touch tokens.css (s2d product tokens) or the br-* components.
+ * Figma: Design System Legacy (k05NWBKMjsvo5hEugQc2Tq), page "Marketing · Foundations" (561:21), board 566:80.
+ * Collections: mkt · primitives, mkt (Light / Navy band), mkt · layout (1440/1024/768/390).
+ * Status per value (sourced / derived / proposal / approved) is in tokens/marketing.md.
+ * Approved by István 2026-10-18:
+ *  1. Display 80px at 1440 (mobile 48).
+ *  2. H2 Semi Bold 600; Black only for display and H1; H3/H4 Semi Bold.
+ *  3. No Dark pages. Second mode = "Navy band": wrap content placed on Navy #002458 sections in
+ *     [data-mkt-band="navy"] (or .mkt-band-navy). Light is the default on :root.
+ *  4. Manufacturing buttons use #064DB7 (--mkt-vertical-mfg-accent-strong); #1E75F6 stays the accent for non-text.
+ *  5. Primary buttons inside a Navy band are White #F9F9F9 with Navy #002458 text (14.32:1):
+ *     --mkt-action-primary / --mkt-action-on-primary (and Mfg accent-strong in Navy band).
+ * Every block holds resolved values (no var() chains), so a Navy band nested in a Light page re-resolves correctly.
+ *  6. (Matz, 2026-10-19) Secondary accent orange #F66C1E from Matz's Styleguide "Secondary/Default"
+ *     (ramp #903502 -> #FFCDB1): --mkt-accent-secondary. Text on it is Navy (--mkt-accent-on-secondary,
+ *     5.08:1), never white (2.97:1). Non-text on the page bg (2.82:1 on #F9F9F9): highlights and
+ *     illustration accessories only, not buttons. For orange text use --mkt-orange-900 (7.4:1).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+
+:root {
+  /* primitives (mode-independent) */
+  --mkt-blue-500: #1e75f6; /* sourced */
+  --mkt-blue-700: #064db7; /* sourced */
+  --mkt-blue-200: #8ebafa; /* sourced */
+  --mkt-blue-100: #c7ddfd; /* sourced */
+  --mkt-blue-navy-tint: #063478; /* derived */
+  --mkt-navy-900: #002458; /* sourced */
+  --mkt-navy-raised: #143565; /* derived */
+  --mkt-navy-border: #324f78; /* derived */
+  --mkt-neutral-white: #f9f9f9; /* sourced */
+  --mkt-neutral-pure-white: #ffffff; /* sourced */
+  --mkt-neutral-dark: #111827; /* sourced */
+  --mkt-neutral-gray-300: #d1d5db; /* sourced */
+  --mkt-neutral-gray-600: #535353; /* sourced */
+  --mkt-teal-500: #14b8a6; /* sourced */
+  --mkt-teal-400: #26bdad; /* derived */
+  --mkt-teal-700: #13726e; /* derived */
+  --mkt-teal-100: #cbece8; /* derived */
+  --mkt-teal-navy-tint: #044268; /* derived */
+  --mkt-ochre-500: #ba7517; /* sourced */
+  --mkt-ochre-400: #c89249; /* derived */
+  --mkt-ochre-700: #87591c; /* derived */
+  --mkt-ochre-100: #ecdfcc; /* derived */
+  --mkt-ochre-navy-tint: #25344b; /* derived */
+  --mkt-gray-400: #9ca3af; /* sourced */
+  --mkt-gray-350: #a2a8b3; /* derived */
+  --mkt-gray-700: #5f6673; /* derived */
+  --mkt-gray-100: #e6e8ea; /* derived */
+  --mkt-gray-navy-tint: #1f3d69; /* derived */
+  --mkt-orange-900: #903502; /* sourced · Matz Styleguide */
+  --mkt-orange-500: #f66c1e; /* sourced · Matz Styleguide Secondary/Default */
+  --mkt-orange-100: #ffcdb1; /* sourced · Matz Styleguide */
+}
+
+:root,
+[data-mkt-band="light"] {
+  /* Light page (default) */
+  --mkt-vertical-mfg-accent: #1e75f6;
+  --mkt-vertical-mfg-accent-strong: #064db7;
+  --mkt-vertical-mfg-on-accent: #f9f9f9;
+  --mkt-vertical-mfg-tint: #c7ddfd;
+  --mkt-vertical-mfg-text: #064db7;
+  --mkt-vertical-health-accent: #14b8a6;
+  --mkt-vertical-health-accent-strong: #13726e;
+  --mkt-vertical-health-on-accent: #f9f9f9;
+  --mkt-vertical-health-tint: #cbece8;
+  --mkt-vertical-health-text: #13726e;
+  --mkt-vertical-logistics-accent: #ba7517;
+  --mkt-vertical-logistics-accent-strong: #87591c;
+  --mkt-vertical-logistics-on-accent: #f9f9f9;
+  --mkt-vertical-logistics-tint: #ecdfcc;
+  --mkt-vertical-logistics-text: #87591c;
+  --mkt-vertical-generic-accent: #9ca3af;
+  --mkt-vertical-generic-accent-strong: #5f6673;
+  --mkt-vertical-generic-on-accent: #f9f9f9;
+  --mkt-vertical-generic-tint: #e6e8ea;
+  --mkt-vertical-generic-text: #5f6673;
+  --mkt-surface-page: #f9f9f9;
+  --mkt-surface-raised: #ffffff;
+  --mkt-surface-inverse: #002458;
+  --mkt-text-heading: #002458;
+  --mkt-text-body: #111827;
+  --mkt-text-muted: #535353;
+  --mkt-text-on-inverse: #f9f9f9;
+  --mkt-border-default: #d1d5db;
+  --mkt-action-primary: #064db7;
+  --mkt-action-on-primary: #f9f9f9;
+  --mkt-accent-secondary: #f66c1e;
+  --mkt-accent-on-secondary: #002458;
+}
+
+[data-mkt-band="navy"],
+.mkt-band-navy {
+  /* Navy band: only inside Navy #002458 sections. Not a dark theme. */
+  --mkt-vertical-mfg-accent: #1e75f6;
+  --mkt-vertical-mfg-accent-strong: #f9f9f9;
+  --mkt-vertical-mfg-on-accent: #002458;
+  --mkt-vertical-mfg-tint: #063478;
+  --mkt-vertical-mfg-text: #8ebafa;
+  --mkt-vertical-health-accent: #14b8a6;
+  --mkt-vertical-health-accent-strong: #14b8a6;
+  --mkt-vertical-health-on-accent: #002458;
+  --mkt-vertical-health-tint: #044268;
+  --mkt-vertical-health-text: #26bdad;
+  --mkt-vertical-logistics-accent: #ba7517;
+  --mkt-vertical-logistics-accent-strong: #c89249;
+  --mkt-vertical-logistics-on-accent: #002458;
+  --mkt-vertical-logistics-tint: #25344b;
+  --mkt-vertical-logistics-text: #c89249;
+  --mkt-vertical-generic-accent: #9ca3af;
+  --mkt-vertical-generic-accent-strong: #9ca3af;
+  --mkt-vertical-generic-on-accent: #002458;
+  --mkt-vertical-generic-tint: #1f3d69;
+  --mkt-vertical-generic-text: #a2a8b3;
+  --mkt-surface-page: #002458;
+  --mkt-surface-raised: #143565;
+  --mkt-surface-inverse: #f9f9f9;
+  --mkt-text-heading: #f9f9f9;
+  --mkt-text-body: #c7ddfd;
+  --mkt-text-muted: #8ebafa;
+  --mkt-text-on-inverse: #002458;
+  --mkt-border-default: #324f78;
+  --mkt-action-primary: #f9f9f9;
+  --mkt-action-on-primary: #002458;
+  --mkt-accent-secondary: #f66c1e;
+  --mkt-accent-on-secondary: #002458;
+}
+
+[data-mkt-band="navy"], .mkt-band-navy { background-color: var(--mkt-surface-page); color: var(--mkt-text-body); }
+
+.mkt-button-primary { background-color: var(--mkt-action-primary); color: var(--mkt-action-on-primary); }
+/* Orange accent surface (highlights, badges): Navy text, never white. */
+.mkt-accent-secondary { background-color: var(--mkt-accent-secondary); color: var(--mkt-accent-on-secondary); }
+
+:root {
+  /* layout · 390 base (mobile first) */
+  --mkt-grid-columns: 4;
+  --mkt-grid-gutter: 16px;
+  --mkt-grid-margin: 20px;
+  --mkt-container-max: 1280px;
+  --mkt-content-measure: 350px;
+  --mkt-section-xs: 24px;
+  --mkt-section-sm: 32px;
+  --mkt-section-md: 48px;
+  --mkt-section-lg: 64px;
+  --mkt-section-xl: 80px;
+}
+@media (min-width: 768px) {
+  :root {
+    --mkt-grid-columns: 8;
+    --mkt-grid-gutter: 24px;
+    --mkt-grid-margin: 40px;
+    --mkt-container-max: 1280px;
+    --mkt-content-measure: 688px;
+    --mkt-section-xs: 24px;
+    --mkt-section-sm: 40px;
+    --mkt-section-md: 56px;
+    --mkt-section-lg: 72px;
+    --mkt-section-xl: 96px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --mkt-grid-columns: 12;
+    --mkt-grid-gutter: 24px;
+    --mkt-grid-margin: 48px;
+    --mkt-container-max: 1280px;
+    --mkt-content-measure: 720px;
+    --mkt-section-xs: 32px;
+    --mkt-section-sm: 48px;
+    --mkt-section-md: 64px;
+    --mkt-section-lg: 80px;
+    --mkt-section-xl: 112px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --mkt-grid-columns: 12;
+    --mkt-grid-gutter: 24px;
+    --mkt-grid-margin: 80px;
+    --mkt-container-max: 1280px;
+    --mkt-content-measure: 720px;
+    --mkt-section-xs: 32px;
+    --mkt-section-sm: 48px;
+    --mkt-section-md: 64px;
+    --mkt-section-lg: 96px;
+    --mkt-section-xl: 128px;
+  }
+}
+
+:root {
+  --mkt-font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mkt-font-display-weight: 900;
+  --mkt-font-display-size: 48px;
+  --mkt-font-display-line-height: 1.1;
+  --mkt-font-display-letter-spacing: -1.5px;
+  --mkt-font-h1-weight: 900;
+  --mkt-font-h1-size: 36px;
+  --mkt-font-h1-line-height: 1.1;
+  --mkt-font-h1-letter-spacing: -1.5px;
+  --mkt-font-h2-weight: 600;
+  --mkt-font-h2-size: 28px;
+  --mkt-font-h2-line-height: 1.2;
+  --mkt-font-h2-letter-spacing: -1px;
+  --mkt-font-h3-weight: 600;
+  --mkt-font-h3-size: 22px;
+  --mkt-font-h3-line-height: 1.2;
+  --mkt-font-h3-letter-spacing: -0.5px;
+  --mkt-font-h4-weight: 600;
+  --mkt-font-h4-size: 18px;
+  --mkt-font-h4-line-height: 1.3;
+  --mkt-font-h4-letter-spacing: 0px;
+  --mkt-font-eyebrow-weight: 700;
+  --mkt-font-eyebrow-size: 12px;
+  --mkt-font-eyebrow-line-height: 1.4;
+  --mkt-font-eyebrow-letter-spacing: 1.2px;
+  --mkt-font-lead-weight: 400;
+  --mkt-font-lead-size: 18px;
+  --mkt-font-lead-line-height: 1.4;
+  --mkt-font-lead-letter-spacing: 0px;
+  --mkt-font-body-weight: 400;
+  --mkt-font-body-size: 16px;
+  --mkt-font-body-line-height: 1.4;
+  --mkt-font-body-letter-spacing: 0px;
+  --mkt-font-small-weight: 400;
+  --mkt-font-small-size: 14px;
+  --mkt-font-small-line-height: 1.4;
+  --mkt-font-small-letter-spacing: 0px;
+  --mkt-font-button-weight: 700;
+  --mkt-font-button-size: 16px;
+  --mkt-font-button-line-height: 1.25;
+  --mkt-font-button-letter-spacing: 0px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --mkt-font-display-size: 80px;
+    --mkt-font-display-line-height: 1.05;
+    --mkt-font-display-letter-spacing: -2.5px;
+    --mkt-font-h1-size: 44px;
+    --mkt-font-h1-line-height: 1.1;
+    --mkt-font-h1-letter-spacing: -2.5px;
+    --mkt-font-h2-size: 34px;
+    --mkt-font-h2-line-height: 1.15;
+    --mkt-font-h2-letter-spacing: -1.5px;
+    --mkt-font-h3-size: 24px;
+    --mkt-font-h3-line-height: 1.2;
+    --mkt-font-h3-letter-spacing: -0.5px;
+    --mkt-font-h4-size: 20px;
+    --mkt-font-h4-line-height: 1.3;
+    --mkt-font-h4-letter-spacing: 0px;
+    --mkt-font-eyebrow-size: 14px;
+    --mkt-font-eyebrow-line-height: 1.4;
+    --mkt-font-eyebrow-letter-spacing: 1.5px;
+    --mkt-font-lead-size: 22px;
+    --mkt-font-lead-line-height: 1.4;
+    --mkt-font-lead-letter-spacing: 0px;
+    --mkt-font-body-size: 16px;
+    --mkt-font-body-line-height: 1.4;
+    --mkt-font-body-letter-spacing: 0px;
+    --mkt-font-small-size: 14px;
+    --mkt-font-small-line-height: 1.4;
+    --mkt-font-small-letter-spacing: 0px;
+    --mkt-font-button-size: 16px;
+    --mkt-font-button-line-height: 1.25;
+    --mkt-font-button-letter-spacing: 0px;
+  }
+}
+
+.mkt-display { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-display-weight); font-size: var(--mkt-font-display-size); line-height: var(--mkt-font-display-line-height); letter-spacing: var(--mkt-font-display-letter-spacing); }
+.mkt-h1 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h1-weight); font-size: var(--mkt-font-h1-size); line-height: var(--mkt-font-h1-line-height); letter-spacing: var(--mkt-font-h1-letter-spacing); }
+.mkt-h2 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h2-weight); font-size: var(--mkt-font-h2-size); line-height: var(--mkt-font-h2-line-height); letter-spacing: var(--mkt-font-h2-letter-spacing); }
+.mkt-h3 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h3-weight); font-size: var(--mkt-font-h3-size); line-height: var(--mkt-font-h3-line-height); letter-spacing: var(--mkt-font-h3-letter-spacing); }
+.mkt-h4 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h4-weight); font-size: var(--mkt-font-h4-size); line-height: var(--mkt-font-h4-line-height); letter-spacing: var(--mkt-font-h4-letter-spacing); }
+.mkt-eyebrow { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-eyebrow-weight); font-size: var(--mkt-font-eyebrow-size); line-height: var(--mkt-font-eyebrow-line-height); letter-spacing: var(--mkt-font-eyebrow-letter-spacing); text-transform: uppercase; }
+.mkt-lead { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-lead-weight); font-size: var(--mkt-font-lead-size); line-height: var(--mkt-font-lead-line-height); letter-spacing: var(--mkt-font-lead-letter-spacing); }
+.mkt-body { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-body-weight); font-size: var(--mkt-font-body-size); line-height: var(--mkt-font-body-line-height); letter-spacing: var(--mkt-font-body-letter-spacing); }
+.mkt-small { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-small-weight); font-size: var(--mkt-font-small-size); line-height: var(--mkt-font-small-line-height); letter-spacing: var(--mkt-font-small-letter-spacing); }
+.mkt-button { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-button-weight); font-size: var(--mkt-font-button-size); line-height: var(--mkt-font-button-line-height); letter-spacing: var(--mkt-font-button-letter-spacing); }
+
+/* container + grid helpers */
+.mkt-container { box-sizing: border-box; width: 100%; max-width: calc(var(--mkt-container-max) + 2 * var(--mkt-grid-margin)); margin-inline: auto; padding-inline: var(--mkt-grid-margin); }
+.mkt-grid { display: grid; grid-template-columns: repeat(var(--mkt-grid-columns), minmax(0, 1fr)); column-gap: var(--mkt-grid-gutter); }
+.mkt-measure { max-width: var(--mkt-content-measure); }

@@ -1,6 +1,6 @@
 ---
 name: BR_Legacy
-description: Design or build Blue Roster screens in the Blue Roster Legacy style. Use when the user writes @BR_Legacy, Blue Roster, Blue Roster Legacy or BR.
+description: Design or build Blue Roster screens in the Blue Roster Legacy style. Use when the user writes @BR_Legacy, Blue Roster, Blue Roster Legacy or BR. Also covers Blue Roster marketing (banners, questionnaire landing, blueroster.com) through Marketing mode.
 ---
 
 # BR_Legacy (Claude Skill)
@@ -10,6 +10,7 @@ Before answering, fetch and follow these files. They are the source of truth:
 2. Full context (rules, tokens, components, specs): https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt
 3. Starters: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/starter/br-m.css, https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/starter/my-schedule-day.html, https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/starter/admin-attendance-today.html
 4. Screen PNGs: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/<group>/img/<name>-light.png (and -dark.png)
+5. Marketing (banners, landing): https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/README.md, https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/foundations.md, https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/landing.md, https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/banners.md, https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.css
 
 If you cannot fetch them, use the copy below.
 
@@ -82,6 +83,15 @@ If no spec covers the request (for example a multi-employee mobile calendar):
 - [ ] Composed patterns are labeled, with Assumptions and Questions listed.
 - [ ] Placeholder data only, and gaps are marked `TBD`.
 - [ ] One view delivered; I am asking for review before the next one.
+
+## Marketing mode (banners, landing, blueroster.com)
+Use this instead of steps 1–6 when the request is about a banner, post, LinkedIn/Instagram/Story, campaign, the questionnaire landing, Wix or a blueroster.com section.
+1. Read `marketing/README.md`, then `marketing/foundations.md` (decisions, colors, 20 `mkt` text styles, grid, spacing) and `tokens/marketing.css` (`--mkt-*`).
+2. Landing or form → `marketing/landing.md` (`mkt-*` components, flow, copy, Wix notes). Banner or post → `marketing/banners.md`. Match the PNGs in `marketing/references/`.
+3. Inter only (Black for display/H1 and banner headlines; H2–H4 Semi Bold). Light page; Navy `#002458` only as a band. Buttons `#064DB7` + White on light, White `#F9F9F9` + Navy text on Navy. `#1E75F6` is never text. Orange `#F66C1E`: accent only, Navy text on it, never white, never a button.
+4. Copy verbatim from blueroster.com or approved lines; headlines in sentence case + period. Approved stats only, per vertical. No quotes, testimonials, names, prices or "free" (say "light version", up to 50 users). Links in the first comment. Market: US only.
+5. Screen banners: Attendance Today, My Schedule Day, Overtime cards, Light captures at 2x, role-based example data, current dates, no real names.
+6. Self-check: text contrast ≥ 4.5:1 and minimum sizes per format; every line has a source; gaps stay `TBD`. Output: **Based on** (file + reference PNG), the piece, Assumptions, Questions, checklist.
 
 ## Output format
 1. **Based on:** spec + starter.

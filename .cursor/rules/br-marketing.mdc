@@ -1,0 +1,20 @@
+---
+description: "Blue Roster marketing: campaign banners, social posts (LinkedIn, Instagram, Story), the questionnaire landing (Wix) and blueroster.com sections. Apply when the request mentions banner, post, campaign, landing, questionnaire, Wix, blueroster.com or marketing for Blue Roster / BR."
+globs:
+alwaysApply: false
+---
+
+# Blue Roster marketing
+
+Follow `marketing/README.md` (local repo), then `marketing/foundations.md`, and `marketing/landing.md` or `marketing/banners.md`. Tokens: `tokens/marketing.css` (`--mkt-*`); details in `tokens/marketing.md`. Match the PNGs in `marketing/references/`. If the repo is not open: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/README.md
+
+- Marketing layer only: do not use `--br-*` tokens or `br-*` components on marketing pages (product screenshots inside a piece keep their own look).
+- Inter only. Black for display/H1 and banner headlines; H2–H4 Semi Bold.
+- Light page; Navy `#002458` only as a band (`[data-mkt-band="navy"]`). No Dark pages.
+- Buttons: `#064DB7` + White on light (Manufacturing too); White `#F9F9F9` + Navy text in Navy bands. `#1E75F6` is a non-text accent only.
+- Orange `#F66C1E`: accent only. Navy text on it, never white, never a button.
+- Text contrast ≥ 4.5:1; check minimum sizes in every format.
+- Approved stats only, per vertical. Never invent stats, quotes, testimonials, names or prices. Say "light version" (up to 50 users), never "free".
+- Headlines verbatim from blueroster.com, sentence case + period. Links go in the first comment. Market: US only.
+- Landing: all 3 next steps for everyone; Country = United States (default) · Other; consent lines exactly as in `marketing/landing.md`.
+- Unknowns stay `TBD`. List Assumptions and Questions with the output.

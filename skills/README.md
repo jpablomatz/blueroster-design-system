@@ -25,5 +25,8 @@ Escribe `@BR_Legacy <lo que necesitas>` y la IA diseña con estilo Blue Roster L
 1. Clona el repo; Codex lee `AGENTS.md` automáticamente.
 2. Pide "@BR_Legacy …" y seguirá `skills/BR_Legacy/SKILL.md`.
 
+## Marketing (v6)
+La misma skill tiene un **Marketing mode** para banners, posts, la landing del cuestionario (Wix) y secciones de blueroster.com. Lee `marketing/README.md`; en Cursor también está la regla `.cursor/rules/br-marketing.mdc`. En ChatGPT y Gemini sube además los archivos de `marketing/` y `tokens/marketing.css` que listan sus instrucciones.
+
 ## Enlace único
 Si una herramienta no permite instalar nada, pega este enlace: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt

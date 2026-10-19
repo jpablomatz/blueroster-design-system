@@ -6,6 +6,8 @@
 
 Requests that say **@BR_Legacy** follow [skills/BR_Legacy/SKILL.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/skills/BR_Legacy/SKILL.md) (workflow, cheat sheet, self-check). Install guides: [skills/README.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/skills/README.md). Wrappers: Cursor `.cursor/rules/br-legacy.mdc`, Claude [claude/BR_Legacy.zip](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/claude/BR_Legacy.zip), ChatGPT `gpt/instructions.md`, Gemini `gemini/gem-instructions.md`, Codex `AGENTS.md`. New starter: `starter/admin-attendance-today.html` (composed, pending approval).
 
+**Marketing (v6):** banners, social posts, the questionnaire landing (Wix) and blueroster.com sections use the marketing layer, not the product kit: start at [marketing/README.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/README.md), tokens [tokens/marketing.css](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.css). Inter; Light page with Navy `#002458` bands; buttons `#064DB7` + White (light) or White + Navy (Navy band); orange `#F66C1E` accent only with Navy text, never white; text contrast ≥ 4.5:1; approved stats only; "light version", never "free"; links in the first comment; US market only.
+
 
 ### Playbook
 
@@ -27,6 +29,9 @@ Keywords are request language. Each spec path is a file in `screens/`.
 
 | Keywords | Spec |
 |---|---|
+| marketing, mkt, website section, blueroster.com, Navy band | `marketing/foundations.md` + `tokens/marketing.css` (marketing layer) |
+| landing, questionnaire, cuestionario, Wix form, lead form | `marketing/landing.md` (marketing layer) |
+| banner, post, LinkedIn, Instagram, Story, social, campaign, campaña, screen banner | `marketing/banners.md` + `marketing/references/` (marketing layer) |
 | attendance, asistencia, quién faltó, who is absent, working today, admin agenda | `starter/admin-attendance-today.html` (composed, pending approval) |
 | screen index, list of screens, qué pantallas | `screens/README.md` |
 | action center, action center live, centro de acción | `screens/admin/action-center.md` |
@@ -59,7 +64,7 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | time off approvals | `screens/employee-mobile/time-off-approvals.md` |
 | time off, time off request | `screens/employee-mobile/time-off-request.md` |
 
-Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+Marketing words (banner, post, landing, campaign, Wix, blueroster.com) win over product rows: "banner with My Schedule" maps to `marketing/banners.md`. Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
 
 ### Token summary
 
@@ -163,9 +168,22 @@ Radius (Light = Dark): `--radius-md` 6px, `--radius-lg` 8px, `--radius-2xl` 16px
 - [screens/employee-mobile/time-off-approvals.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/time-off-approvals.md): Time off approvals.
 - [screens/employee-mobile/time-off-request.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/screens/employee-mobile/time-off-request.md): Time off request.
 
+## Marketing
+
+- [marketing/README.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/README.md): Marketing design system index, keyword table and ten rules.
+- [marketing/foundations.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/foundations.md): mkt colors (Light + Navy band), 20 text styles, 4 grid styles, spacing, approved decisions.
+- [marketing/landing.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/landing.md): Questionnaire landing components, frames, flow, copy, rules and Wix build notes.
+- [marketing/banners.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/banners.md): Campaign banners: formats, families, styling, screen banners, approved stats, checklist.
+- [marketing/references/README.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/README.md): Approved reference PNGs (3 Light screen captures, 6 banners).
+- [tokens/marketing.css](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.css): Marketing CSS variables --mkt-* v0.5. Light on :root, Navy band on [data-mkt-band=navy].
+- [tokens/marketing.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.md): Marketing token tables, primitives, sources and contrast.
+- [.cursor/rules/br-marketing.mdc](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/.cursor/rules/br-marketing.mdc): Cursor rule for marketing work.
+- [CHANGELOG.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/CHANGELOG.md): Version history.
+
 ## Optional
 
 - [llms-full.txt](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/llms-full.txt): Concatenated AGENTS.md, tokens/*.md, components/*.md, and screens/**/*.md.
 
 - Admin Attendance Today (approved): screens/admin/attendance-today.md
 - Proposals (new, not in Legacy): proposals/README.md
+- Marketing design system (v6): marketing/README.md

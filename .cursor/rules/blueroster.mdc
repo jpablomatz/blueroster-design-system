@@ -4,3 +4,5 @@ alwaysApply: true
 ---
 
 Follow @AGENTS.md for all UI work. Use tokens from @tokens/tokens.css, components listed in @components/README.md, and the screen specs in @screens/README.md.
+
+Marketing work (blueroster.com sections, the questionnaire landing, campaign banners) follows @marketing/README.md with tokens from @tokens/marketing.css, not the product kit.

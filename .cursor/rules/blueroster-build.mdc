@@ -24,6 +24,9 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | Keywords | Spec |
 |---|---|
 | screen index, list of screens, qué pantallas | `screens/README.md` |
+| marketing, mkt, website section, blueroster.com, Navy band | `marketing/foundations.md` + `tokens/marketing.css` (**marketing layer**, AGENTS.md section 11) |
+| landing, questionnaire, cuestionario, Wix form, lead form | `marketing/landing.md` (**marketing layer**) |
+| banner, post, LinkedIn, Instagram, Story, social, campaign, campaña, screen banner | `marketing/banners.md` + `marketing/references/` (**marketing layer**) |
 | action center, action center live, centro de acción | `screens/admin/action-center.md` |
 | action center requests, requests tab | `screens/admin/action-center-requests.md` |
 | catalogs user, user catalog, usuarios | `screens/admin/catalogs-user.md` |
@@ -55,6 +58,6 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | time off approvals | `screens/employee-mobile/time-off-approvals.md` |
 | time off, time off request | `screens/employee-mobile/time-off-request.md` |
 
-Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+Marketing words (banner, post, landing, campaign, Wix, blueroster.com) win over product rows: "banner with My Schedule" maps to `marketing/banners.md`, not to the screen spec. Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
 
 "My schedule" means the signed-in employee's own calendar. A request to see **several employees** (team, crew, roster, empleados) on mobile has **no spec**: say so, ask, and offer the Gantt desktop spec as reference.

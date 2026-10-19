@@ -2,7 +2,7 @@
 
 ---
 name: BR_Legacy
-description: Design or build any Blue Roster screen in the Blue Roster Legacy style (Figma "Design System Legacy"). Use when the request says @BR_Legacy, Blue Roster, Blue Roster Legacy or BR.
+description: Design or build any Blue Roster screen in the Blue Roster Legacy style (Figma "Design System Legacy"). Use when the request says @BR_Legacy, Blue Roster, Blue Roster Legacy or BR. Also covers Blue Roster marketing (banners, questionnaire landing, blueroster.com) through Marketing mode.
 ---
 
 # @BR_Legacy — Blue Roster Legacy skill
@@ -74,6 +74,15 @@ If no spec covers the request (for example a multi-employee mobile calendar):
 - [ ] Placeholder data only, and gaps are marked `TBD`.
 - [ ] One view delivered; I am asking for review before the next one.
 
+## Marketing mode (banners, landing, blueroster.com)
+Use this instead of steps 1–6 when the request is about a banner, post, LinkedIn/Instagram/Story, campaign, the questionnaire landing, Wix or a blueroster.com section.
+1. Read `marketing/README.md`, then `marketing/foundations.md` (decisions, colors, 20 `mkt` text styles, grid, spacing) and `tokens/marketing.css` (`--mkt-*`).
+2. Landing or form → `marketing/landing.md` (`mkt-*` components, flow, copy, Wix notes). Banner or post → `marketing/banners.md`. Match the PNGs in `marketing/references/`.
+3. Inter only (Black for display/H1 and banner headlines; H2–H4 Semi Bold). Light page; Navy `#002458` only as a band. Buttons `#064DB7` + White on light, White `#F9F9F9` + Navy text on Navy. `#1E75F6` is never text. Orange `#F66C1E`: accent only, Navy text on it, never white, never a button.
+4. Copy verbatim from blueroster.com or approved lines; headlines in sentence case + period. Approved stats only, per vertical. No quotes, testimonials, names, prices or "free" (say "light version", up to 50 users). Links in the first comment. Market: US only.
+5. Screen banners: Attendance Today, My Schedule Day, Overtime cards, Light captures at 2x, role-based example data, current dates, no real names.
+6. Self-check: text contrast ≥ 4.5:1 and minimum sizes per format; every line has a source; gaps stay `TBD`. Output: **Based on** (file + reference PNG), the piece, Assumptions, Questions, checklist.
+
 ## Output format
 1. **Based on:** spec + starter.
 2. The code (HTML/CSS or framework requested) or the Figma frame.
@@ -85,6 +94,7 @@ If no spec covers the request (for example a multi-employee mobile calendar):
 # AGENTS.md — Blue Roster Design System rules
 
 > **Skill:** requests with `@BR_Legacy` follow `skills/BR_Legacy/SKILL.md` (see the end of this file).
+> **Marketing (v6):** blueroster.com sections, the questionnaire landing and campaign banners follow `marketing/README.md` (section 11). They use the `mkt` layer (`tokens/marketing.css`, Inter), never the product `br-*` kit.
 
 This file is the single source of rules for every AI coding agent (Cursor, Claude Code, Codex, others) building Blue Roster UI. `CLAUDE.md` and `.cursor/rules/blueroster.mdc` point here. `.cursor/rules/blueroster-build.mdc` repeats the Playbook. Read this file, then `tokens/` (including `tokens/events.md` and `tokens/typography.md`), `patterns/`, `components/` and the relevant `screens/` spec (with its PNGs in `img/` and node tree in `json/`) before writing UI code. Requests that say **Blue Roster**, **Blue Roster Legacy**, or **BR** follow the Playbook at the end of this file.
 
@@ -147,6 +157,16 @@ Figma source: **Design System Legacy** — https://www.figma.com/design/k05NWBKM
 ## 10. Known gaps (do not silently invent)
 Loading / error / skeleton states, formal breakpoints, avatar initials variant (see `assets/README.md` for how the app bar draws it), `br-textarea` variant in `br-input`, no `br/event-planned-overtime` alias (the design uses `br/special-4`, see `tokens/events.md`), accent palette update, sticky behaviour of page header/tabs on My Schedule, multi-employee mobile calendar, unpublished Figma library. See README. When you hit one, flag it in your PR.
 
+## 11. Marketing layer (website, landing, banners)
+Requests about **marketing, banners, posts, LinkedIn/Instagram/Story, campaigns, the questionnaire landing, Wix or blueroster.com** follow `marketing/` instead of sections 1–9:
+- Read `marketing/README.md`, then `marketing/foundations.md` and `tokens/marketing.md`; code uses `tokens/marketing.css` (`--mkt-*`, `.mkt-*`). Do not mix `--br-*` tokens or `br-*` components into marketing pages; product screenshots inside a marketing piece keep their own look.
+- Landing: `marketing/landing.md` (`mkt-button`, `mkt-text-field`, `mkt-progress`, `mkt-option-card`, `mkt-result-card`, `mkt-step`, `mkt-select`, `mkt-checkbox`, flow, copy, Wix notes). Banners: `marketing/banners.md`. Examples: `marketing/references/`.
+- Inter only: Black for display/H1 (and banner headlines), H2–H4 Semi Bold. Light page; Navy `#002458` only as a band (`[data-mkt-band="navy"]`), no Dark pages.
+- Buttons: `#064DB7` + White on light (Manufacturing too); White `#F9F9F9` + Navy text inside Navy bands. `#1E75F6` is a non-text accent only. Orange `#F66C1E` is an accent only: Navy text on it, never white, never a button.
+- Text contrast ≥ 4.5:1; check minimum sizes in every format.
+- Approved stats only (per vertical, `marketing/banners.md`); never invent stats, quotes, testimonials, names or prices. Say "light version" (up to 50 users), never "free". Headlines verbatim from blueroster.com, sentence case + period. Links in the first comment. Market: US only.
+- Unknowns stay `TBD`, exactly as for product work.
+
 ## Definition of done for UI work
 - Uses existing components and tokens only (or flags the gap).
 - Works in Light and Dark.
@@ -175,6 +195,9 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | Keywords | Spec |
 |---|---|
 | screen index, list of screens, qué pantallas | `screens/README.md` |
+| marketing, mkt, website section, blueroster.com, Navy band | `marketing/foundations.md` + `tokens/marketing.css` (**marketing layer**, see section 11) |
+| landing, questionnaire, cuestionario, Wix form, lead form | `marketing/landing.md` (**marketing layer**) |
+| banner, post, LinkedIn, Instagram, Story, social, campaign, campaña, screen banner | `marketing/banners.md` + `marketing/references/` (**marketing layer**) |
 | action center, action center live, centro de acción | `screens/admin/action-center.md` |
 | action center requests, requests tab | `screens/admin/action-center-requests.md` |
 | catalogs user, user catalog, usuarios | `screens/admin/catalogs-user.md` |
@@ -209,12 +232,14 @@ Keywords are request language. Each spec path is a file in `screens/`.
 | time off approvals | `screens/employee-mobile/time-off-approvals.md` |
 | time off, time off request | `screens/employee-mobile/time-off-request.md` |
 
-Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
+Marketing words (banner, post, landing, campaign, Wix, blueroster.com) win over product rows: "banner with My Schedule" maps to `marketing/banners.md`, not to the screen spec. Disambiguation: "agenda" or "my schedule" with no Day, Week, or Month, and no desktop, maps to `screens/employee-mobile/my-schedule-day.md`. "Overtime" with no Approvals maps to Opportunities. Desktop or Admin in the request wins over the mobile row. State the chosen spec before building.
 
 "My schedule" means the signed-in employee's own calendar. A request to see **several employees** (team, crew, roster, empleados) on mobile has **no spec**: say so, ask, and offer the Gantt desktop spec as reference.
 
 ## @BR_Legacy skill (Codex and all agents)
 When a request starts with **@BR_Legacy** (or says Blue Roster / BR), read and follow `skills/BR_Legacy/SKILL.md` before writing UI: closest spec → starter + PNG + spec → `--br-*` tokens and formats → reuse components → compose missing patterns with listed assumptions → self-check. Raw: https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/skills/BR_Legacy/SKILL.md
+
+Marketing requests (banner, post, landing, campaign, Wix, blueroster.com), with or without @BR_Legacy, follow the **Marketing mode** in `skills/BR_Legacy/SKILL.md` and `marketing/README.md`.
 
 # tokens/radius.md
 
@@ -1181,7 +1206,6 @@ Applies when 3 or more events overlap in the Day timeline (width per column = (3
 - **Time line:** hidden when the column is under 120 px wide (3 columns = 98 px) or the event lasts 1 h (40 px tall). Class `is-compact`.
 - **4+ overlapping:** show 3 columns; the rest collapse into a `+N` pill (`br-m-event-more`, 20 tall, r10, padding 0 6, Roboto Medium 11, bg `--br-neutral-darkest`, text `--br-contrast`) at the top-right of the 3rd column. Tapping it opens the day agenda (TBD).
 
-
 # screens/employee-mobile/my-schedule-month.md
 
 # My Schedule · Month
@@ -1402,3 +1426,1037 @@ Row 1110×64 for Action Center · Requests: icon · who · when/shift · request
 
 If approving would leave a hole, show `br-coverage-warning` above the actions (see `coverage-holes.md`).
 
+# CHANGELOG.md
+
+# Changelog
+
+## v6 · 2026-10-19 · Marketing design system
+
+Adds the Blue Roster **marketing** layer so any AI can replicate the campaign banners and the questionnaire landing. The product (Legacy) kit is unchanged.
+
+**Added**
+- `marketing/README.md`: index, keyword → file table and ten rules.
+- `marketing/foundations.md`: from Figma *Design System Legacy* page "Marketing · Foundations" (561:21): colors (Light page + Navy band), 20 `mkt` text styles (display 80 px at 1440; H2–H4 Semi Bold; Black only for display/H1), 4 `mkt/grid` styles, section spacing, and the 6 approved decisions (no Dark pages, Navy bands; Mfg buttons `#064DB7`, `#1E75F6` non-text accent; Navy band button White `#F9F9F9` with Navy text; orange `#F66C1E` with Navy text only, never white).
+- `marketing/landing.md`: questionnaire landing (page 570:21, Read me 577:40287): `mkt-button`, `mkt-text-field`, `mkt-progress`, `mkt-option-card`, `mkt-result-card`, `mkt-step`, `mkt-select`, `mkt-checkbox`; frames, flow and copy; rules (3 options for everyone, light version "Up to 50 users.", industry rule, consent lines, US-only market with Country = United States default · Other); Wix build notes.
+- `marketing/banners.md`: formats (LinkedIn 1200x627, 1080x1080, Story 1080x1920, Display), naming, Asset Library structure, 5 families and rotation, styling rules, banners with system screens (Attendance Today, My Schedule Day, Overtime cards), approved headlines, approved-stats-only rule, accessibility and a hand-off checklist.
+- `marketing/references/`: 3 Light screen captures (2x) and 6 approved banners (one per family + Display).
+- `tokens/marketing.css` and `tokens/marketing.md` (mkt v0.5, orange `accent/secondary` `#F66C1E` with Navy `accent/on-secondary`).
+- `.cursor/rules/br-marketing.mdc`: Cursor rule for marketing requests.
+- `CHANGELOG.md` (this file).
+
+**Changed**
+- `AGENTS.md`: marketing note at the top, new section 11 "Marketing layer", marketing rows in the keyword → spec table, marketing-over-product disambiguation.
+- `.cursor/rules/blueroster.mdc`, `.cursor/rules/blueroster-build.mdc`, `.cursor/rules/br-legacy.mdc`: point marketing work to `marketing/`.
+- `skills/BR_Legacy/SKILL.md`, `claude/BR_Legacy/SKILL.md`, `claude/BR_Legacy.zip`: new "Marketing mode".
+- `gpt/instructions.md`, `gemini/gem-instructions.md`: marketing step 7 and marketing knowledge files.
+- `skills/README.md`, `README.md`: marketing install and usage notes.
+- `llms.txt`: marketing summary, keyword rows and a Marketing link section. `llms-full.txt`: updated `AGENTS.md` and `SKILL.md`, plus the marketing files appended.
+
+Earlier versions (v1–v5) were shipped as archives without a changelog.
+
+# marketing/README.md
+
+# Blue Roster Marketing design system
+
+Everything an AI needs to replicate Blue Roster **marketing** output: blueroster.com sections, the questionnaire landing (Wix) and campaign banners. It is a separate layer from the product (Legacy) kit: product screens follow `AGENTS.md`, `tokens/tokens.css` and `components/`; marketing follows this folder.
+
+| File | What |
+|---|---|
+| [foundations.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/foundations.md) | Colors (Light page + Navy band modes), 20 `mkt` text styles, 4 grid styles, section spacing, and the 6 approved decisions. |
+| [../tokens/marketing.css](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.css) | `--mkt-*` CSS variables and `.mkt-*` helpers (v0.5). Import on marketing pages only. |
+| [../tokens/marketing.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.md) | Full token tables, primitives, sources, contrast and changelog (v0.5). |
+| [landing.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/landing.md) | Questionnaire landing: `mkt-*` components, frames, flow, copy, rules and the Wix build notes. |
+| [banners.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/banners.md) | Campaign banners: formats, families, styling, system-screen banners, approved stats, compliance checklist. |
+| [references/](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/README.md) | Approved reference PNGs: 3 Light screen captures and 6 banners. |
+
+## Keyword → file
+
+| Keywords | Read |
+|---|---|
+| marketing, mkt, website section, blueroster.com, Inter, Navy band | `marketing/foundations.md` + `tokens/marketing.css` |
+| landing, questionnaire, cuestionario, Wix, form, lead form | `marketing/landing.md` |
+| banner, post, LinkedIn, Instagram, Story, social, campaign, campaña | `marketing/banners.md` + `marketing/references/` |
+| screen banner, banner with screens, mockup with app screens | `marketing/banners.md` → "Banners with system screens" |
+
+## Ten rules (summary)
+
+1. Inter only; Black for display/H1 and banner headlines, H2–H4 Semi Bold. Product screenshots keep Roboto.
+2. Light page; Navy `#002458` only as a band (`[data-mkt-band="navy"]`). No Dark pages.
+3. Primary CTA `#064DB7` + White on light; White `#F9F9F9` + Navy text on Navy.
+4. `#1E75F6` and vertical accents are non-text; text uses `text/*` or `vertical/*/text`.
+5. Orange `#F66C1E`: accent only, Navy text on it, never white, never a button.
+6. Text contrast ≥ 4.5:1; check minimum sizes in every format.
+7. Approved stats only, per vertical. Never invent stats, quotes, testimonials, names or prices.
+8. Say "light version" (up to 50 users), never "free". All 3 landing options for everyone.
+9. Headlines verbatim from blueroster.com, sentence case + period. Links in the first comment.
+10. Market is US only. Unknowns stay `TBD`; flag gaps instead of inventing.
+
+# marketing/foundations.md
+
+# Marketing foundations (`mkt`)
+
+Source: Figma **Design System Legacy** (`k05NWBKMjsvo5hEugQc2Tq`) → page **Marketing · Foundations** ([561:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=561-21)), docs board [566:80](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=566-80). Read from Figma on 2026-10-19 (read-only). Tokens version: **v0.5**.
+
+Code: [`../tokens/marketing.css`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.css) (CSS variables) · full value tables, sources and contrast: [`../tokens/marketing.md`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.md).
+
+The marketing layer sits **next to** the product kit, never inside it. Product screens keep `tokens/tokens.css` (`--br-*`), Roboto and the `br-*` components. Marketing pages (blueroster.com, the questionnaire landing) and campaign banners use `--mkt-*`, Inter and the `mkt-*` components. Product screenshots placed inside a marketing piece keep their own Roboto/`--br-*` look.
+
+## Decisions (approved, Figma block [566:94](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=566-94))
+
+| # | Decision | Status |
+|---|---|---|
+| 1 | Hero **display stays 80 px at 1440** (mobile 48 px). | István 2026-10-18 |
+| 2 | **H2 is Inter Semi Bold (600)** on desktop and mobile. **Black (900) only for display and H1.** H3 and H4 are Semi Bold, so no heading below H2 is heavier than H2. | István 2026-10-18 |
+| 3 | **No Dark pages.** The `mkt` collection has two modes: **Light** (the page) and **Navy band** (only for content inside Navy `#002458` sections: CTA band, stat band, confirmation, footer). | István 2026-10-18 |
+| 4 | **Manufacturing buttons use `#064DB7`** (`vertical/mfg/accent-strong`, 7.25:1 with white text). **`#1E75F6` is the Mfg accent for non-text elements only** (icons, illustration, highlights, dots, charts). Never 16 px white text on `#1E75F6` (4.05:1). | István 2026-10-18 |
+| 5 | **Primary button inside a Navy band** (any vertical) is **White `#F9F9F9` with Navy `#002458` text** (14.32:1). Tokens `action/primary` + `action/on-primary`. | István 2026-10-18 |
+| 6 | **Secondary accent orange `#F66C1E`** (Matz Styleguide "Secondary/Default", ramp `#903502` → `#FFCDB1`). **Text on orange is only Navy `#002458`** (5.08:1), **never white** (2.97:1). Orange is never a button and never the only signal for meaning. Orange-colored text uses `orange/900` `#903502`. `#FF6B35` is dropped. | Matz 2026-10-19 |
+
+Nothing is pending in the Foundations decisions. Line heights, mobile sizes, eyebrow, grid and spacing values are still **proposals** (usable, but flag them if you change them).
+
+## 1. Colors: collection `mkt` (modes Light / Navy band)
+
+Brand base: Navy `#002458`, Blue `#1E75F6`, Blue Light `#C7DDFD`, White `#F9F9F9`, Dark `#111827`. Vertical accents: Manufacturing `#1E75F6`, Healthcare `#14B8A6`, Logistics `#BA7517`, Generic `#9CA3AF`.
+
+CSS: Light is the default on `:root`. Wrap anything placed on a Navy section in `[data-mkt-band="navy"]` (or `.mkt-band-navy`); every value re-resolves inside it.
+
+### Neutral and action tokens
+
+| Token | CSS variable | Light page | Navy band |
+|---|---|---|---|
+| `surface/page` | `--mkt-surface-page` | `#F9F9F9` | `#002458` |
+| `surface/raised` | `--mkt-surface-raised` | `#FFFFFF` | `#143565` |
+| `surface/inverse` | `--mkt-surface-inverse` | `#002458` | `#F9F9F9` |
+| `text/heading` | `--mkt-text-heading` | `#002458` | `#F9F9F9` |
+| `text/body` | `--mkt-text-body` | `#111827` | `#C7DDFD` |
+| `text/muted` | `--mkt-text-muted` | `#535353` | `#8EBAFA` |
+| `text/on-inverse` | `--mkt-text-on-inverse` | `#F9F9F9` | `#002458` |
+| `border/default` | `--mkt-border-default` | `#D1D5DB` | `#324F78` |
+| `action/primary` | `--mkt-action-primary` | `#064DB7` | `#F9F9F9` |
+| `action/on-primary` | `--mkt-action-on-primary` | `#F9F9F9` | `#002458` |
+| `accent/secondary` | `--mkt-accent-secondary` | `#F66C1E` | `#F66C1E` |
+| `accent/on-secondary` | `--mkt-accent-on-secondary` | `#002458` | `#002458` |
+
+### Vertical tokens (`vertical/<mfg|health|logistics|generic>/<role>`)
+
+Roles: `accent` (decorative fills, illustration, highlights) · `accent-strong` (filled buttons, badges, selected cards, meaningful icons) · `on-accent` (text on `accent-strong`) · `tint` (soft background, selected option card) · `text` (accent-colored text, ≥4.5:1 on surface and tint).
+
+| Vertical | accent | accent-strong (Light / Navy) | on-accent (Light / Navy) | tint (Light / Navy) | text (Light / Navy) |
+|---|---|---|---|---|---|
+| Manufacturing | `#1E75F6` | `#064DB7` / `#F9F9F9` | `#F9F9F9` / `#002458` | `#C7DDFD` / `#063478` | `#064DB7` / `#8EBAFA` |
+| Healthcare | `#14B8A6` | `#13726E` / `#14B8A6` | `#F9F9F9` / `#002458` | `#CBECE8` / `#044268` | `#13726E` / `#26BDAD` |
+| Logistics | `#BA7517` | `#87591C` / `#C89249` | `#F9F9F9` / `#002458` | `#ECDFCC` / `#25344B` | `#87591C` / `#C89249` |
+| Generic | `#9CA3AF` | `#5F6673` / `#9CA3AF` | `#F9F9F9` / `#002458` | `#E6E8EA` / `#1F3D69` | `#5F6673` / `#A2A8B3` |
+
+On the Light page Health `#14B8A6` (2.36:1) and Generic `#9CA3AF` (2.41:1) are below 3:1: decorative areas only; use `accent-strong` for icons, borders, focus rings and text. Primitives (31 values in `mkt · primitives`) and the full contrast table are in [`../tokens/marketing.md`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.md).
+
+## 2. Typography: 20 text styles (`mkt/desktop/*` + `mkt/mobile/*`)
+
+Family **Inter** (Regular 400, Semi Bold 600, Bold 700, Black 900). Desktop styles apply at ≥1024 px, mobile below 1024 (designed at 390). CSS: `.mkt-<role>` classes and `--mkt-font-<role>-{size,line-height,letter-spacing,weight}`, which switch at `min-width: 1024px`. Values below are read from the Figma text styles.
+
+| Role | Weight | Desktop (size / LH / tracking) | Mobile (size / LH / tracking) |
+|---|---|---|---|
+| `display` | Black | 80 / 105% / −2.5px | 48 / 110% / −1.5px |
+| `h1` | Black | 44 / 110% / −2.5px | 36 / 110% / −1.5px |
+| `h2` | Semi Bold | 34 / 115% / −1.5px | 28 / 120% / −1px |
+| `h3` | Semi Bold | 24 / 120% / −0.5px | 22 / 120% / −0.5px |
+| `h4` | Semi Bold | 20 / 130% / 0 | 18 / 130% / 0 |
+| `eyebrow` (UPPERCASE) | Bold | 14 / 140% / +1.5px | 12 / 140% / +1.2px |
+| `lead` | Regular | 22 / 140% / 0 | 18 / 140% / 0 |
+| `body` | Regular | 16 / 140% / 0 | 16 / 140% / 0 |
+| `small` | Regular | 14 / 140% / 0 | 14 / 140% / 0 |
+| `button` | Bold | 16 / 125% / 0 | 16 / 125% / 0 |
+
+Rules: Black only for `display` and `h1` · H2–H4 Semi Bold · eyebrow and button Bold · no Light/ExtraLight headlines. Wix theme mapping is in [`landing.md`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/landing.md#wix-theme-site-styles).
+
+## 3. Grid: 4 grid styles (`mkt/grid/*`) and collection `mkt · layout`
+
+| Breakpoint | Range | Columns | Gutter | Side margin | Content measure | Figma grid style |
+|---|---|---|---|---|---|---|
+| 1440 | ≥ 1440 | 12 | 24 | 80 | 720 | `mkt/grid/1440` |
+| 1024 | 1024–1439 | 12 | 24 | 48 | 720 | `mkt/grid/1024` |
+| 768 | 768–1023 | 8 | 24 | 40 | 688 | `mkt/grid/768` |
+| 390 | < 768 | 4 | 16 | 20 | 350 | `mkt/grid/390` |
+
+Container max width **1280** (`--mkt-container-max`), centred. Text measure max **720** (`--mkt-content-measure`). Grid variables: `--mkt-grid-columns`, `--mkt-grid-gutter`, `--mkt-grid-margin`. 390 / 768 / 1440 match the Legacy reference frames; 1024 is new. (Proposal.)
+
+## 4. Spacing: section scale (4 px base)
+
+| Token | CSS variable | 1440 | 1024 | 768 | 390 | Use |
+|---|---|---|---|---|---|---|
+| `section/xs` | `--mkt-section-xs` | 32 | 32 | 24 | 24 | small stacks |
+| `section/sm` | `--mkt-section-sm` | 48 | 48 | 40 | 32 | heading → content |
+| `section/md` | `--mkt-section-md` | 64 | 64 | 56 | 48 | inside a section |
+| `section/lg` | `--mkt-section-lg` | 96 | 80 | 72 | 64 | between sections |
+| `section/xl` | `--mkt-section-xl` | 128 | 112 | 96 | 80 | hero top / final CTA |
+
+Component-level spacing uses the Legacy 4 px base (`--spacing`). (Proposal.)
+
+## 5. Quick rules for any marketing output
+
+- Light page by default. Navy appears only as a **band** (`[data-mkt-band="navy"]`), never as a full dark theme. One Navy band per landing page (the confirmation).
+- Primary CTA: `--mkt-action-primary` + `--mkt-action-on-primary` (Light `#064DB7`/White, Navy band White/Navy). Mfg uses the same `#064DB7` on light.
+- `#1E75F6` and the vertical `accent` colors are for non-text elements; text uses `text/*` or `vertical/*/text`.
+- Orange `#F66C1E`: highlights and illustration accessories only (e.g. the blue men vest); Navy text on it, never white; never a button.
+- Contrast: text ≥ 4.5:1 (≥ 3:1 only for large text ≥ 24 px, or 18.66 px bold), UI control edges and meaningful graphics ≥ 3:1.
+- Known gaps: no error/feedback token (the landing uses literal `#B42318`), no `border/strong` token (field edges use `text/muted`).
+
+# tokens/marketing.md
+
+# Marketing foundations (`mkt`) · v0.5
+
+Status: five decisions approved by István (art direction) on 2026-10-18 and the orange accent decided by Matz on 2026-10-19; the remaining proposals are still open. This is the marketing layer for the questionnaire landing and other blueroster.com pages. It sits **next to** the product kit and never inside it: `tokens.css` (s2d), `br/*` variables and `br-*` components are untouched.
+
+- Figma: *Design System Legacy* → page **Marketing · Foundations** ([561:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=561-21)), docs board [566:80](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=566-80)
+  - Sections: [Decisions 566:94](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=566-94) (decision 5: [568:23](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=568-23), decision 6: [588:11856](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=588-11856)) · [Type 566:109](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=566-109) · [Grid 567:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=567-21) · [Spacing 567:81](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=567-81) · [Colors 568:26](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=568-26) (Light page [568:30](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=568-30), Navy band [568:165](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=568-165)) · [Orange accent 568:300](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=568-300)
+  - Variable collections: `mkt · primitives` (1 mode), `mkt` (**Light** / **Navy band**), `mkt · layout` (1440 / 1024 / 768 / 390)
+  - Styles: `mkt/desktop/*`, `mkt/mobile/*` (Inter text styles) and `mkt/grid/1440|1024|768|390` (grid styles)
+- CSS: [`tokens/marketing.css`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/tokens/marketing.css). Import it on marketing pages only. Light is the default on `:root`. Wrap Navy sections in `[data-mkt-band="navy"]` (or `.mkt-band-navy`).
+
+## Decisions: **Approved by István 2026-10-18**
+
+| # | Decision | Where it lands |
+|---|---|---|
+| 1 | Hero **display stays at 80 px at 1440**. Mobile stays at 48 px (0.6×; no change needed). | `mkt/desktop/display`, `mkt/mobile/display`, `--mkt-font-display-size` |
+| 2 | **H2 is Inter Semi Bold (600)** on desktop and mobile. **Black only for display and H1.** H3 and H4 were lowered to Semi Bold, so no heading below H2 is heavier than H2. | `mkt/*/h2`, `h3`, `h4` |
+| 3 | **No Dark pages.** The second `mkt` mode is renamed **Navy band** and is used only for content inside Navy `#002458` sections. | collection `mkt`, `[data-mkt-band="navy"]` |
+| 4 | **Manufacturing buttons use `#064DB7`** (`vertical/mfg/accent-strong`, 7.25:1 with white text). **`#1E75F6` stays the Mfg accent** for non-text elements (icons, illustration, highlights, dots, charts). Do not put 16 px white text on `#1E75F6` (4.05:1). | `vertical/mfg/accent`, `vertical/mfg/accent-strong` |
+| 5 | **Primary buttons inside a Navy band** (Manufacturing and any vertical) are **White `#F9F9F9` with Navy `#002458` text: 14.32:1** (button vs band edge also 14.32:1). This replaces the `#6EA3FF` proposal. `#1E75F6` stays the accent for non-text elements. | `action/primary`, `action/on-primary`, `vertical/mfg/accent-strong` (Navy band), `.mkt-button-primary` |
+| 6 | **Secondary accent orange is `#F66C1E`**, from Matz's Styleguide "Secondary/Default" (ramp `#903502` → `#FFCDB1`). Text on it is **Navy `#002458` (5.08:1), never white** (2.97:1). `#FF6B35` is dropped. **Decided by Matz 2026-10-19.** | `accent/secondary`, `accent/on-secondary`, `orange/*`, `.mkt-accent-secondary` |
+
+Nothing pending in Foundations decisions.
+
+## Status labels
+
+| Label | Meaning |
+|---|---|
+| **approved** | Decided by art direction (István), with date |
+| **sourced** | Taken as-is from `context.md`, the blueroster.com Wix theme CSS, or the Legacy product tokens |
+| **derived** | Computed from a sourced value with the stated formula |
+| **proposal** | Alex's judgment; still needs approval |
+| **pending** | Decision open; no token created |
+
+## 1. Type: Inter
+
+Font family: **Inter**, in Regular 400, Semi Bold 600, Bold 700 and Black 900. Weight rule (**Approved by István 2026-10-18**): **Black only for display and H1**; H2–H4 are Semi Bold; eyebrow and button are Bold. Product screenshots inside mockups keep Roboto.
+
+Site conversion: the Wix theme sizes headings in `spx` at a 1802 px design width (`--theme-spx-ratio: var(--scaling-factor) / 1802`), so a Wix size N = `N × viewport / 1802`. The desktop values below are the 1440 equivalents (×0.8). Desktop styles apply at ≥1024; mobile styles below 1024 (designed at 390).
+
+| Role | Weight | Desktop size / LH / tracking | Mobile size / LH / tracking | Source / status |
+|---|---|---|---|---|
+| `display` | Black | 80 / 105% / -2.5px | 48 / 110% / -1.5px | 80px at 1440: Approved by István 2026-10-18. Source: blueroster.com Wix theme font_0 = Inter Black 100spx at the 1802 design width, which is 80px at 1440 (Wix scales ×W/1802). Weight and −2.5px: context.md. Mobile 48 (0.6× desktop, same step as H1 44→36 relative to the 390 column): proposal, kept. Line height: proposal. |
+| `h1` | Black | 44 / 110% / -2.5px | 36 / 110% / -1.5px | Size: site font_2 (H2 role) Inter Black 55spx, 44px at 1440. Weight and −2.5px: context.md. Line height and mobile: proposal. |
+| `h2` | Semi Bold | 34 / 115% / -1.5px | 28 / 120% / -1px | Size and weight: site font_6 Inter Semi Bold 42spx, 33.6px at 1440, rounded to 34. Semi Bold: Approved by István 2026-10-18 (Black only for display and H1). Letter spacing, line height and mobile: proposal. |
+| `h3` | Semi Bold | 24 / 120% / -0.5px | 22 / 120% / -0.5px | Size: site font_4 24px (fixed px). Weight lowered from Black to Semi Bold so it is never heavier than H2 (Approved by István 2026-10-18). Line height (site 1em), letter spacing and mobile: proposal. |
+| `h4` | Semi Bold | 20 / 130% / 0px | 18 / 130% / 0px | Size: proposal. Weight Semi Bold so it is never heavier than H2 (Approved by István 2026-10-18). |
+| `eyebrow` (UPPER) | Bold | 14 / 140% / 1.5px | 12 / 140% / 1.2px | Proposal. Inter Bold uppercase; 14px is the most common inline size on the site. |
+| `lead` | Regular | 22 / 140% / 0px | 18 / 140% / 0px | Desktop: site font_8 (Body M) Inter Regular 22spx, 1.4em. Mobile: proposal. |
+| `body` | Regular | 16 / 140% / 0px | 16 / 140% / 0px | Site font_7 (Body L) Inter Regular 16px. Line height 1.4em is the site default. |
+| `small` | Regular | 14 / 140% / 0px | 14 / 140% / 0px | 14px: the most common inline font-size on blueroster.com. Line height 1.4em is the site default. |
+| `button` | Bold | 16 / 125% / 0px | 16 / 125% / 0px | Site font_5 Inter Bold 16px. Line height 1.25: proposal. |
+
+Figma style names: `mkt/desktop/<role>` and `mkt/mobile/<role>`. CSS: `.mkt-<role>` classes plus `--mkt-font-<role>-{size,line-height,letter-spacing,weight}`, which switch at `min-width: 1024px`.
+
+Site reference (Wix theme, at the 1802 design width): font_0 Inter Black 100 · font_2 (H2) Black 55 · font_3 (H3) Black 52 · font_4 (H4) Black 24px · font_5 (H5) Bold 16px · font_6 (H6) Semi Bold 42 · font_7 (Body L) Regular 16px/1.25 · font_8 (Body M) Regular 22 · font_9 (Body S) Regular 19 · font_10 DIN Next Light 12px.
+
+## 2. Grid, breakpoints, container (**proposal**)
+
+| Breakpoint | Range (mobile-first) | Columns | Gutter | Side margin | Content width | Figma grid style |
+|---|---|---|---|---|---|---|
+| 390 | < 768 | 4 | 16 | 20 | 350 (fluid) | `mkt/grid/390` |
+| 768 | 768–1023 | 8 | 24 | 40 | 688 (fluid) | `mkt/grid/768` |
+| 1024 | 1024–1439 | 12 | 24 | 48 | 928 (fluid) | `mkt/grid/1024` |
+| 1440 | ≥ 1440 | 12 | 24 | 80 | 1280 (max) | `mkt/grid/1440` |
+
+- The container max width is **1280** (`--mkt-container-max`), centred; the text measure max is **720** (`--mkt-content-measure`).
+- 390 / 768 / 1440 match the Legacy reference frames; 1024 is new.
+- blueroster.com (Wix) switches at ≤1000 and ≤750, for reference only.
+
+### Section spacing scale (**proposal**, 4 px base from Legacy `spacing`)
+
+| Token | 1440 | 1024 | 768 | 390 | Typical use |
+|---|---|---|---|---|---|
+| `section/xs` | 32 | 32 | 24 | 24 | small stacks |
+| `section/sm` | 48 | 48 | 40 | 32 | heading → content |
+| `section/md` | 64 | 64 | 56 | 48 | inside a section |
+| `section/lg` | 96 | 80 | 72 | 64 | between sections |
+| `section/xl` | 128 | 112 | 96 | 80 | hero top / final CTA |
+
+## 3. Color: collection `mkt` (Light page / Navy band)
+
+**Modes ({A}):** `Light` is the page. `Navy band` is **not a dark theme**: use it only for content placed inside a Navy `#002458` section, such as a CTA band, a stat band or the footer. In that mode, `surface/page` resolves to Navy.
+
+### Vertical roles
+
+| Role | Use |
+|---|---|
+| `accent` | Brand accent: decorative fills, illustration, highlights, icons where ≥3:1. **Mfg = `#1E75F6` in both modes ({A})** |
+| `accent-strong` | Filled buttons, badges, selected option cards, icons that convey meaning. **Mfg Light = `#064DB7` ({A})** |
+| `on-accent` | Text and icons on `accent-strong` |
+| `tint` | Soft background (option card hover/selected, section band) |
+| `text` | Accent-colored text on the surface **and** on `tint` (≥4.5:1 on both) |
+
+| Token | Light page | Navy band |
+|---|---|---|
+| `vertical/mfg/accent` | `#1E75F6` (sourced, `blue/500`) | `#1E75F6` (sourced, `blue/500`) |
+| `vertical/mfg/accent-strong` | `#064DB7` (sourced, `blue/700`) | `#F9F9F9` (sourced, `neutral/white`) |
+| `vertical/mfg/on-accent` | `#F9F9F9` (sourced, `neutral/white`) | `#002458` (sourced, `navy/900`) |
+| `vertical/mfg/tint` | `#C7DDFD` (sourced, `blue/100`) | `#063478` (derived, `blue/navy-tint`) |
+| `vertical/mfg/text` | `#064DB7` (sourced, `blue/700`) | `#8EBAFA` (sourced, `blue/200`) |
+| `vertical/health/accent` | `#14B8A6` (sourced, `teal/500`) | `#14B8A6` (sourced, `teal/500`) |
+| `vertical/health/accent-strong` | `#13726E` (derived, `teal/700`) | `#14B8A6` (sourced, `teal/500`) |
+| `vertical/health/on-accent` | `#F9F9F9` (sourced, `neutral/white`) | `#002458` (sourced, `navy/900`) |
+| `vertical/health/tint` | `#CBECE8` (derived, `teal/100`) | `#044268` (derived, `teal/navy-tint`) |
+| `vertical/health/text` | `#13726E` (derived, `teal/700`) | `#26BDAD` (derived, `teal/400`) |
+| `vertical/logistics/accent` | `#BA7517` (sourced, `ochre/500`) | `#BA7517` (sourced, `ochre/500`) |
+| `vertical/logistics/accent-strong` | `#87591C` (derived, `ochre/700`) | `#C89249` (derived, `ochre/400`) |
+| `vertical/logistics/on-accent` | `#F9F9F9` (sourced, `neutral/white`) | `#002458` (sourced, `navy/900`) |
+| `vertical/logistics/tint` | `#ECDFCC` (derived, `ochre/100`) | `#25344B` (derived, `ochre/navy-tint`) |
+| `vertical/logistics/text` | `#87591C` (derived, `ochre/700`) | `#C89249` (derived, `ochre/400`) |
+| `vertical/generic/accent` | `#9CA3AF` (sourced, `gray/400`) | `#9CA3AF` (sourced, `gray/400`) |
+| `vertical/generic/accent-strong` | `#5F6673` (derived, `gray/700`) | `#9CA3AF` (sourced, `gray/400`) |
+| `vertical/generic/on-accent` | `#F9F9F9` (sourced, `neutral/white`) | `#002458` (sourced, `navy/900`) |
+| `vertical/generic/tint` | `#E6E8EA` (derived, `gray/100`) | `#1F3D69` (derived, `gray/navy-tint`) |
+| `vertical/generic/text` | `#5F6673` (derived, `gray/700`) | `#A2A8B3` (derived, `gray/350`) |
+
+### Neutral tokens
+
+| Token | Light page | Navy band |
+|---|---|---|
+| `surface/page` | `#F9F9F9` (sourced) | `#002458` (sourced) |
+| `surface/raised` | `#FFFFFF` (sourced) | `#143565` (derived) |
+| `surface/inverse` | `#002458` (sourced) | `#F9F9F9` (sourced) |
+| `text/heading` | `#002458` (sourced) | `#F9F9F9` (sourced) |
+| `text/body` | `#111827` (sourced) | `#C7DDFD` (sourced) |
+| `text/muted` | `#535353` (sourced) | `#8EBAFA` (sourced) |
+| `text/on-inverse` | `#F9F9F9` (sourced) | `#002458` (sourced) |
+| `border/default` | `#D1D5DB` (sourced) | `#324F78` (derived) |
+| `action/primary` | `#064DB7` (sourced) | `#F9F9F9` (sourced) |
+| `action/on-primary` | `#F9F9F9` (sourced) | `#002458` (sourced) |
+| `accent/secondary` | `#F66C1E` (sourced, `orange/500`) | `#F66C1E` (sourced, `orange/500`) |
+| `accent/on-secondary` | `#002458` (sourced, `navy/900`) | `#002458` (sourced, `navy/900`) |
+
+### Primary action ({A})
+
+| Token | Light page | Navy band | Contrast |
+|---|---|---|---|
+| `action/primary` | `#064DB7` | `#F9F9F9` | edge vs surface: 7.25:1 / 14.32:1 |
+| `action/on-primary` | `#F9F9F9` | `#002458` | text: 7.25:1 / 14.32:1 |
+
+Use `action/primary` for the main CTA button on any page or band. Inside a Navy band, every primary button is White with Navy text, whatever the vertical; `vertical/*/accent-strong` stays available for badges and selected states. `#064DB7` is not used in Navy bands (1.98:1 against `#002458`).
+
+### Primitives (`mkt · primitives`): source of every value
+
+| Primitive | Hex | Status | Source / formula |
+|---|---|---|---|
+| `blue/500` | `#1E75F6` | sourced | context.md Brand Blue; blueroster.com theme color_18. Mfg accent and non-text elements (Approved by István 2026-10-18) |
+| `blue/700` | `#064DB7` | sourced | blueroster.com theme color_19; Legacy br/primary-dark. Mfg / primary buttons on the Light page and accent text (Approved by István 2026-10-18) |
+| `blue/200` | `#8EBAFA` | sourced | blueroster.com CSS; Legacy br/primary-light |
+| `blue/100` | `#C7DDFD` | sourced | context.md Blue Light; blueroster.com color_16 |
+| `blue/navy-tint` | `#063478` | derived | mix 20% #1E75F6 into #002458 |
+| `navy/900` | `#002458` | sourced | context.md Navy; blueroster.com color_20 |
+| `navy/raised` | `#143565` | derived | mix 8% #F9F9F9 into #002458 |
+| `navy/border` | `#324F78` | derived | mix 20% #F9F9F9 into #002458 |
+| `neutral/white` | `#F9F9F9` | sourced | context.md White; blueroster.com color_11. Primary button fill in Navy band (Approved by István 2026-10-18) |
+| `neutral/pure-white` | `#FFFFFF` | sourced | blueroster.com color_0 |
+| `neutral/dark` | `#111827` | sourced | context.md Dark |
+| `neutral/gray-300` | `#D1D5DB` | sourced | blueroster.com color_13 |
+| `neutral/gray-600` | `#535353` | sourced | blueroster.com color_14; Legacy br/neutral |
+| `teal/500` | `#14B8A6` | sourced | context.md Health accent |
+| `teal/400` | `#26BDAD` | derived | mix 8% #F9F9F9 into #14B8A6 until >=4.5:1 on #002458 and on teal/navy-tint |
+| `teal/700` | `#13726E` | derived | mix 44% #111827 into #14B8A6 until >=4.5:1 on #F9F9F9 and on teal/100 |
+| `teal/100` | `#CBECE8` | derived | mix 20% #14B8A6 into #F9F9F9 |
+| `teal/navy-tint` | `#044268` | derived | mix 20% #14B8A6 into #002458 |
+| `ochre/500` | `#BA7517` | sourced | context.md Logistics accent |
+| `ochre/400` | `#C89249` | derived | mix 22% #F9F9F9 into #BA7517 until >=4.5:1 on #002458 and on ochre/navy-tint |
+| `ochre/700` | `#87591C` | derived | mix 30% #111827 into #BA7517 until >=4.5:1 on #F9F9F9 and on ochre/100 |
+| `ochre/100` | `#ECDFCC` | derived | mix 20% #BA7517 into #F9F9F9 |
+| `ochre/navy-tint` | `#25344B` | derived | mix 20% #BA7517 into #002458 |
+| `gray/400` | `#9CA3AF` | sourced | context.md Generic accent |
+| `gray/350` | `#A2A8B3` | derived | mix 6% #F9F9F9 into #9CA3AF until >=4.5:1 on #002458 and on gray/navy-tint |
+| `gray/700` | `#5F6673` | derived | mix 44% #111827 into #9CA3AF until >=4.5:1 on #F9F9F9 and on gray/100 |
+| `gray/100` | `#E6E8EA` | derived | mix 20% #9CA3AF into #F9F9F9 |
+| `gray/navy-tint` | `#1F3D69` | derived | mix 20% #9CA3AF into #002458 |
+| `orange/900` | `#903502` | sourced | Matz Styleguide, Secondary ramp darkest. 7.4:1 on #F9F9F9: the only orange for text |
+| `orange/500` | `#F66C1E` | sourced | Matz Styleguide "Secondary/Default" (= Legacy br/illustration-secondary, blueroster.com color_23). Decided by Matz 2026-10-19 |
+| `orange/100` | `#FFCDB1` | sourced | Matz Styleguide, Secondary ramp lightest |
+
+`mix(a, b, t)` is a linear sRGB blend of t·a + (1−t)·b. Text shades step t in 2 % increments until WCAG 2.x reaches ≥4.5:1 on the surface and on the tint. Tints are 20 % accent mixed into White (Light) or Navy (Navy band). The Manufacturing Light tint is the sourced Blue Light `#C7DDFD`.
+
+### Contrast (WCAG 2.x)
+
+| Mode | Vertical | on-accent / accent-strong | text / surface | text / tint | accent / surface (graphics ≥3) |
+|---|---|---|---|---|---|
+| Light | Manufacturing | 7.25 | 7.25 | 5.52 | 4.05 |
+| Light | Healthcare | 5.45 | 5.45 | 4.56 | 2.36 ⚠️ |
+| Light | Logistics | 5.74 | 5.74 | 4.6 | 3.53 |
+| Light | Generic | 5.49 | 5.49 | 4.7 | 2.41 ⚠️ |
+| Navy band | Manufacturing | 14.32 | 7.58 | 5.96 | 3.54 |
+| Navy band | Healthcare | 6.06 | 6.43 | 4.52 | 6.06 |
+| Navy band | Logistics | 5.5 | 5.5 | 4.58 | 4.05 |
+| Navy band | Generic | 5.94 | 6.31 | 4.55 | 5.94 |
+
+⚠️ On the Light page, Health `#14B8A6` (2.36:1) and Generic `#9CA3AF` (2.41:1) are below 3:1. Use them only for large decorative areas and illustration; use `accent-strong` for icons, borders, focus rings and text.
+
+### Orange accent: **decided by Matz 2026-10-19**
+
+| Token | Light page | Navy band | Contrast |
+|---|---|---|---|
+| `accent/secondary` | `#F66C1E` | `#F66C1E` | vs `#F9F9F9` 2.82:1 ⚠️ · vs `#002458` 5.08:1 |
+| `accent/on-secondary` | `#002458` | `#002458` | Navy on orange 5.08:1 ✅ · white on orange 2.97:1 ❌ |
+
+- Source: Matz's Styleguide (Figma `DAuBM7JWL76akz6WcfnbZ4`, node 1:2), "Secondary/Default" `#F66C1E`, ramp `#903502` → `#FFCDB1`. The Styleguide also confirms `#064DB7` as Primary/Dark.
+- Use for highlights, badges and illustration accessories (e.g. the blue men vest). It is below 3:1 on the page bg, so never the only signal for meaning, and **never a button**.
+- Any text on orange is Navy (`accent/on-secondary`), **never white**. For orange-colored text use `orange/900` `#903502` (7.4:1 on `#F9F9F9`).
+- `#FF6B35` (Blue men character sheet v1.0) is not in the Styleguide and is dropped.
+
+## Changelog
+- **v0.5 (2026-10-19):** decision 6 (Matz): orange accent `#F66C1E`. Added primitives `orange/900`, `orange/500`, `orange/100`, semantic `accent/secondary` + `accent/on-secondary` (Navy), and the `.mkt-accent-secondary` helper. Figma: Orange panel 568:300 now shows the token, decision 6 added to the Decisions block. (v0.4 was not packaged.)
+- **v0.3 (2026-10-18):** decision 5: Navy band primary button is White `#F9F9F9` + Navy text (14.32:1). Added `action/primary` and `action/on-primary`, set `vertical/mfg/accent-strong` (Navy band) to White, removed the unused primitive `blue/300` `#6EA3FF`, and added the `.mkt-button-primary` helper.
+- **v0.2 (2026-10-18):** applied István's decisions 1–4. H2–H4 are now Semi Bold. The Dark mode became Navy band, with values re-derived against Navy and Dark-only primitives removed. Documented the Mfg `#064DB7` / `#1E75F6` split. CSS: Navy band selector `[data-mkt-band="navy"]` replaces `[data-theme="dark"]`, and Inter 600 is added to the font import.
+- **v0.1 (2026-10-18):** first draft.
+
+## Open questions
+1. The remaining proposals (line heights, mobile sizes, eyebrow, grid, spacing) are still waiting for approval.
+
+# marketing/landing.md
+
+# Questionnaire landing (Wix)
+
+Figma: **Design System Legacy** → page **Marketing · Questionnaire landing** ([570:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=570-21)) · Read me [577:40287](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=577-40287) · components frame "Components · mkt landing" [570:22](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=570-22).
+Built with [`foundations.md`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/foundations.md) (mkt v0.5) and the `br-blue-men` poses (Raising hand, Standing thinking, Arms up, Waving). State: v0.1, final decisions by Matz 2026-10-19. Copy: Hemmingway v3 / v3.1.
+
+Funnel: social post → this single-scroll questionnaire landing → one of 3 next steps (learn more · book a demo · try the light version). Every answer lands in a Google Sheet for sales.
+
+## Hard rules
+
+1. **Market: United States only** (Matz, 2026-10-19). The Country field is a dropdown: **United States** (default) · **Other** ("Other" shows a short text field by a Wix Rule). Mexico is removed; no other countries, no Spanish version.
+2. **All 3 options for everyone**, any company size. No size cutoff and no Rule depends on company size. The employee ranges (1–49 · 50–200 · 201–500 · 500+) are data for sales only.
+3. **Light version**: open to any company, allows **up to 50 users** in the system. Option helper (helper style, `mkt/small`, `text/muted`): **"Up to 50 users."** Always say "light version", never "free" (no pricing anywhere).
+4. **Demo**: option text **"A 20–45 minute demo."**
+5. **Industry rule**: only Manufacturing, Healthcare and Logistics (they have their own page) carry "for [industry]". Food & beverage, Retail, Security & facilities and Other go to the general page and drop it (table below).
+6. **Consent lines** (Hemmingway, privacy policy draft):
+   - Checkbox A, **required** when `next_step` = demo or light: "Blue Roster can email me about my request and related product updates. I can unsubscribe anytime."
+   - Notice under it, always shown, helper style (`mkt/small` 14, `text/muted` `#535353`): "We use your answers to reply to your request and follow up about Blue Roster. Details in our Privacy Policy." ("Privacy Policy" links to the policy page, URL TBD.)
+   - Checkbox B, **optional, unchecked by default**: "Blue Roster can call or text me at the number above, including with automated technology, about its products. Consent isn't required to buy anything. Reply STOP to opt out." Keep it only if sales will call/text (pending client); stored as its own column `consent_call_text`.
+7. No testimonials, no prices, no logos other than `br-logo`. Approved stats only (see [`banners.md`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/banners.md#approved-stats-only)). Orange `#F66C1E` is not used in the form UI.
+8. Hero: **"See your schedule run itself."** (option A, decided by Matz).
+
+## Frames
+
+| Row | Frames (desktop 1440 / mobile 390) |
+|---|---|
+| 1 | D0 Hero [574:51](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=574-51) → D1 Step 1 Industry [574:174](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=574-174) → D2 Step 2 Company [574:371](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=574-371) → D3 Step 3 Team [574:494](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=574-494) → D4 Step 4 How it runs today [574:606](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=574-606) |
+| 2 | D5 Step 5 What's next × 4 industry treatments: Manufacturing [575:137](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=575-137) · Healthcare [575:264](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=575-264) · Logistics [575:391](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=575-391) · General (Food / Retail / Security / Other) [575:518](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=575-518) |
+| 3 | Post-submit confirmation, the one Navy band per page: D6 Learn more (Mfg) [576:141](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=576-141) · D7 Book a demo [576:257](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=576-257) · D8 Light version [576:370](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=576-370) · D9 `/light-version` placeholder [576:483](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=576-483) |
+| 4 | Mobile 390: M0 Hero [577:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=577-21) · M1 Industry [577:126](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=577-126) · M2 Company, error state [577:253](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=577-253) · M5 Step 5, demo + errors [577:376](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=577-376) · M6 Confirmation [577:501](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=577-501) |
+
+Yellow notes in the frames are build/TBD annotations, not UI.
+
+## Components (`mkt-*`, frame 570:22)
+
+All bind to `mkt` variables and `mkt/*` text styles. Never use `br-*` product components on marketing pages.
+
+| Component | Node | Props / variants | Anatomy and tokens |
+|---|---|---|---|
+| `mkt-button` | [571:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=571-21) | Variant Primary · Secondary · Tertiary × Size L 56 · M 48 · S 40; text Label | Radius 8, gap 8, horizontal padding L 32 · M 24 · S 16, text `mkt/*/button`. Primary fill `action/primary` + label `action/on-primary` (Light `#064DB7`/`#F9F9F9` 7.25:1, Navy band `#F9F9F9`/`#002458` 14.32:1). Secondary = 1.5 px outline `action/primary`. Tertiary = text link, no padding. CSS helper `.mkt-button-primary`. |
+| `mkt-text-field` | [571:40](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=571-40) | State Default · Focus · Filled · Error; Label; Show helper | 480 wide, gap 8. Label `mkt/*/button`, value/placeholder `mkt/*/body`, helper `mkt/*/small` (`text/muted`). Field edge `text/muted` (3:1 for controls). Error text and edge: literal `#B42318` (gap: no mkt feedback token). Example error "Add your company name to continue." |
+| `mkt-progress` | [570:68](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=570-68) | Step 1–5; Show note | Segmented bar, 5 segments, 480 wide, label "Step N of 5" (`mkt/*/small`). Wix Forms has no progress bar: always also put "Step N of 5" in the page title; the bar is optional decoration. |
+| `mkt-option-card` | [572:343](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=572-343) | Type Single (radio) · Multi (checkbox) × State Default · Hover · Selected; Label; Description; Show description | 480 × 100, radius 12, padding 20/24, gap 16. Default `surface/raised` + 1 px `border/default`; Hover 2 px `vertical/mfg/accent`; Selected fill `vertical/mfg/tint` + 2 px `vertical/mfg/accent-strong`. Label `mkt/*/h4`, description `mkt/*/small`. Indicator stroke `text/muted` (7.31:1). Keyboard focus = Hover look. |
+| `mkt-result-card` | [573:21](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=573-21) | Industry Manufacturing · Healthcare · Logistics · General × State Default · Hover · Selected; Eyebrow, Title, Body, Stat value, Stat label, Destination, Helper (+ Show toggles) | Step 5 choice card, 400 wide, radius 16. Industry sets accent bar, eyebrow, stat and selected colors (`vertical/<k>/*`); Selected = `vertical/<k>/tint` + 2 px `vertical/<k>/accent-strong`. Eyebrow `mkt/*/eyebrow`, title `mkt/*/h3`, stat value `mkt/*/h2`, stat label/helper `mkt/*/small`. General = Food, Retail, Security & facilities, Other (generic tokens + 216 h stat). Health and General accent bars are decorative (below 3:1). Helper "Up to 50 users." shows on the light-version card only. |
+| `mkt-step` | [572:457](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=572-457) | Viewport Desktop (720 wide, gap 32) · Mobile (350 wide, gap 24) × Content Cards · Input; Question, Hint, Tag, Show toggles | One step per screen: progress ("Step N of 5"), question (`mkt/*/h2`), hint (`mkt/*/body`), options (8 slots, hide unused) or input, Back/Next. Multi-question steps (2–5) compose the same pieces inside a step frame. |
+| `mkt-select` | [573:170](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=573-170) | State Default · Focus · Filled; Label | Wix Forms Dropdown. 480 wide, label `mkt/*/button`, value `mkt/*/body`, edge `text/muted`. Country: "United States" (default) · "Other". |
+| `mkt-checkbox` | [573:186](https://www.figma.com/design/k05NWBKMjsvo5hEugQc2Tq/Design-System-Legacy?node-id=573-186) | State Default · Checked · Error; Label; Privacy line; Show privacy | Wix Forms Checkbox. 480 wide, gap 6, label and helper `mkt/*/small`. Error "Check the box so we can reply." in literal `#B42318`. The component's **default** text is the superseded "I agree… / As described in the Privacy Policy"; instances in the frames carry the final lines from rule 6. Always use the rule 6 copy. |
+
+Observed in Figma (flag, do not copy): the `mkt-result-card` Hover state uses `vertical/mfg/accent` as its stroke for every industry, and `mkt-step` Mobile uses the desktop `small` style for the progress label.
+
+## Flow and copy (one Wix Form, 5 pages)
+
+**Hero (D0/M0).** Headline **"See your schedule run itself."** · Sub "Tell us how your shifts run. Five quick steps, then pick what's next." · CTA **Start** (scrolls to / opens the form) · blue man illustration. Header = logo only; no header CTA, so every demo request goes through the form.
+
+**Step 1 of 5 · Your industry.** "What industry are you in?" (required, single choice): Manufacturing · Healthcare · Logistics & warehousing · Food & beverage · Retail · Security & facilities · Other [short text].
+
+**Step 2 of 5 · Your company.** Company name (required) · "How many employees do you schedule?" (required) 1–49 · 50–200 · 201–500 · 500+ · "How many sites?" (required) 1 · 2–5 · 6+ · "Do you run 24/7?" (optional) Yes · No · **Country** (required, dropdown): **United States** (default) · Other [short text by Rule].
+
+**Step 3 of 5 · Your team.** "What roles do your people work?" (required, multi; shown by industry):
+- Manufacturing: Line operators · Machine operators · Maintenance · Quality · Supervisors
+- Healthcare: RNs · CNAs · Techs · Support staff · Supervisors
+- Logistics: Pickers & packers · Forklift operators · Drivers · Supervisors
+- Food, Retail, Security, Other: Hourly staff · Shift leads · Supervisors · Other
+
+"Which certifications do you check before a shift?" (optional): OSHA · RN / CNA / BLS · Forklift · None · Other. Role and certification lists are TBD with the client.
+
+**Step 4 of 5 · How it runs today.** "How do you schedule today?" (required) Spreadsheets · Paper or whiteboard · Group texts · Another scheduling tool · HR system · "What breaks most often?" (optional, up to 2) Last-minute call-outs · Overtime cost · Expired certifications · Demand surges · Swaps and time-off · "When do you want this fixed?" (optional) This month · This quarter · Just exploring.
+
+**Step 5 of 5 · What's next.** "What would you like to do?" (required, last question so it lands in the file), 3 `mkt-result-card`s for everyone:
+- Learn more about Blue Roster for [industry] (see industry rule)
+- Book a demo: "A 20–45 minute demo."
+- Try the light version: helper "Up to 50 users."
+
+Contact (required for demo and light; optional for learn more): First name · Last name · Work email · Job title (optional) · Phone (optional), then the consent lines (rule 6). CTA **Continue**.
+
+Approved stat per industry on the cards: Mfg 4.5 h saved per week · Health under 5 min to fill a gap · Logistics 18 min vs 22 hrs to staff a surge · General managers spend 216 h a year scheduling.
+
+**After submit (D6–D9, Navy band, White primary button).**
+- Redirect titles: Learn more "Taking you to Blue Roster for [industry]…" (general: "Taking you to Blue Roster…") · Demo "Taking you to booking…" + "We'll come in knowing your team." · Light "Opening the light version…"
+- Fallback buttons (if the redirect stalls, approved): "Continue to Blue Roster for [industry]" (general: "Continue to Blue Roster") · "Open the calendar" · "Open the light version".
+- `/light-version` placeholder (hidden, no-index): "The light version is almost ready." · "We saved your answers." · buttons "Book a demo" · "Learn more about Blue Roster for [industry]" (general: "Learn more about Blue Roster").
+
+**Errors.** Required choice "Pick one to continue." · required text "Add your [company name / first name / last name] to continue." · email "Enter a valid work email." · consent "Check the box so we can reply." · submit failed "Something went wrong. Try again."
+
+**Footer.** "© 2026 Blue Roster · Privacy (URL TBD) · blueroster.com".
+
+### [industry] token rule
+
+| Line | Manufacturing / Healthcare / Logistics | Food & beverage · Retail · Security & facilities · Other |
+|---|---|---|
+| Step 5 option | Learn more about Blue Roster for [industry] | Learn more about Blue Roster |
+| Redirect title | Taking you to Blue Roster for [industry]… | Taking you to Blue Roster… |
+| Fallback button | Continue to Blue Roster for [industry] | Continue to Blue Roster |
+| /light-version button | Learn more about Blue Roster for [industry] | Learn more about Blue Roster |
+
+---
+
+## Wix build notes
+
+Copied from the team's `design/landing-wix-notes.md` (2026-10-19, final decisions by Matz). Field keys and element IDs are placeholders.
+
+### Wix theme (Site Styles)
+
+All Inter (Google Font in Wix). Black only for display and H1; H2–H4 Semi Bold.
+
+| Wix theme text | mkt style | Desktop (1440) | Mobile (390) |
+|---|---|---|---|
+| Heading 1 | `mkt/display` | Inter Black 80 / 105%, −2.5 px | 48 / 110%, −1.5 |
+| Heading 2 | `mkt/h1` | Inter Black 44 / 110%, −2.5 | 36 / 110%, −1.5 |
+| Heading 3 | `mkt/h2` (step titles, question titles) | Inter Semi Bold 34 / 115%, −1.5 | 28 / 120%, −1 |
+| Heading 4 | `mkt/h3` (choice cards) | Semi Bold 24 / 120%, −0.5 | 22 |
+| Heading 5 | `mkt/h4` (field questions, option labels) | Semi Bold 20 / 130% | 18 |
+| Paragraph 1 | `mkt/lead` | Regular 22 / 140% | 18 |
+| Paragraph 2 | `mkt/body` | Regular 16 / 140% | 16 |
+| Paragraph 3 | `mkt/small` | Regular 14 / 140% | 14 |
+| Button | `mkt/button` | Bold 16 / 125% | 16 |
+| (eyebrow, set per element) | `mkt/eyebrow` | Bold 14, UPPER, +1.5 | 12, +1.2 |
+
+Wix scales type with the viewport: set desktop values on the 1440 breakpoint and mobile values on the mobile breakpoint by hand.
+
+- **Colors (Light page):** page `#F9F9F9` · cards/fields `#FFFFFF` · headings `#002458` · body `#111827` · muted `#535353` · dividers `#D1D5DB` · primary button `#064DB7` with `#F9F9F9` text (7.25:1) · progress/hover accent `#1E75F6` (non-text only) · selected tint `#C7DDFD`.
+- **Navy band (confirmation section only):** bg `#002458` · primary button `#F9F9F9` with `#002458` text (14.32:1) · body `#C7DDFD` · muted/eyebrow `#8EBAFA`.
+- **Industry accents on Step 5 cards:** Mfg `#1E75F6` / text `#064DB7` / tint `#C7DDFD` · Health `#14B8A6` / `#13726E` / `#CBECE8` · Logistics `#BA7517` / `#87591C` / `#ECDFCC` · General `#9CA3AF` / `#5F6673` / `#E6E8EA`. Health and General accent bars are decorative only (under 3:1).
+- **Orange:** `#F66C1E` highlights and illustration only, never a button; Navy text on it, never white. Not used in the form UI.
+- **Not in mkt:** error red `#B42318` (literal, flagged as a gap).
+- **Grid:** 12 col, 24 gutter, 80 margin, 1280 max at 1440 · 4 col, 16 gutter, 20 margin at 390.
+
+### Figma piece → Wix element
+
+| Figma | Wix |
+|---|---|
+| Header (logo only) / Footer | Site header + footer: "© 2026 Blue Roster · Privacy (URL TBD) · blueroster.com". No header CTA. |
+| D0 Hero | Section: text + button (scrolls to / opens the form) + image (blue man exported as SVG/PNG from `br-blue-men`) |
+| One Wix Form, 5 pages | **Wix Forms multi-step** ("Pages"), one page per step |
+| `mkt-progress` + "Step N of 5" | No native progress bar: "Step N of 5" in each page title; the segmented bar is optional decoration |
+| `mkt-option-card` · Single | **Single choice** field (radio) styled as cards |
+| `mkt-option-card` · Multi | **Multi choice** field (checkboxes). "Up to 2" on pain: confirm Wix can cap it, otherwise validate in Velo |
+| `mkt-text-field` | **Short text** (Company name, First/Last name, Job title) · **Email** (Work email) · **Phone** |
+| `mkt-select` | **Dropdown** Country: **United States** (default) · Other. "Other" shows a Short text field by a Rule. Market: US only (Mexico removed). |
+| `mkt-checkbox` × 2 + notice | Rule 6 lines. Checkbox A required when `next_step` = demo or light; notice as checkbox help text or a text element under it; checkbox B optional, unchecked, own column `consent_call_text` |
+| Step 2 employees | **Single choice** ranges 1–49 · 50–200 · 201–500 · 500+ (sales data; no Rule depends on it) |
+| Step 3 roles by industry | One Multi choice field per industry, shown by a **Rule** on `industry` |
+| `mkt-result-card` (Step 5) | **Single choice** `next_step` (`learn_more` / `demo` / `light`), required, last question. All 3 options for everyone. Built as two fields (see below). Card stat and "Goes to…" lines are option descriptions or static text |
+| Contact required for demo/light | **Rules**: name + work email + consent required when `next_step` = demo or light; optional for learn_more |
+| `mkt-button` Back / Next / Continue | Form's own Previous / Next / Submit buttons (primary `#064DB7`) |
+| D6–D8 confirmation (Navy band) | Form success message (or a short success section), then Velo redirect |
+| D9 /light-version | Hidden, no-index page `/light-version` |
+
+**Two `next_step` fields (industry label rule).** Wix Forms can't change an option label from an earlier answer, so (decision Hugo/István) use two fields + a Wix Rule, no Velo for the label:
+- `next_step_industry`: "Learn more about Blue Roster for [industry]", "Book a demo", "Try the light version". Shown when `industry` = Manufacturing / Healthcare / Logistics.
+- `next_step_general`: "Learn more about Blue Roster", "Book a demo", "Try the light version". Shown when `industry` = Food & beverage / Retail / Security & facilities / Other.
+- Both store `learn_more` / `demo` / `light` and are required when visible. The Google Sheet automation merges them into one `next_step` column (or formula `=IF(A2<>"",A2,B2)`); Velo reads `v.next_step_industry || v.next_step_general`.
+
+### Where the sales file comes from
+
+1. Every submission lands in **Forms & Submissions**; CSV export is the backup (times in UTC).
+2. **Wix Automation:** "Form submitted" → **Update Google Sheets** → sheet "BR · Questionnaire leads", one row per lead, every field mapped. If the Google permission is removed, skipped rows are not backfilled, so keep the CSV backup.
+3. Hidden fields set by Velo: `lead_id`, `utm_source`, `utm_campaign`, `landing_url`.
+4. Contact fields map to Wix Contacts. Demo bookings (Wix Bookings) join the row by **work email**.
+5. Optional: automation email to sales, flag `next_step = demo` in the subject.
+
+### Velo redirect + /light-version
+
+Native redirect is one URL for everyone, so routing needs Velo (Dev Mode). Log `values` once; v2 choice fields return the option **value**, not the label.
+
+```js
+import wixLocationFrontend from 'wix-location-frontend';
+const LIGHT_URL = '/light-version';               // swap for the real light version later (URL TBD)
+// Only these industries have their own page and carry "for [industry]" in copy
+const PAGES = { manufacturing: '/manufacturing', healthcare: '/healthcare', logistics: '/logistics' };
+const NAMES = { manufacturing: 'Manufacturing', healthcare: 'Healthcare', logistics: 'Logistics' };
+const GENERAL = '/';                              // TBD: '/' or '/active-scheduling' (Food, Retail, Security & facilities, Other)
+const DEMO = '/booking-calendar/intro-to-blue-roster-software';
+const hasPage = (ind) => Boolean(PAGES[ind]);
+const forIndustry = (ind) => hasPage(ind) ? ` for ${NAMES[ind]}` : '';   // '' for general-page industries
+let v = {};
+$w.onReady(() => {
+  const q = wixLocationFrontend.query;
+  $w('#form').setFieldValues({ lead_id: crypto.randomUUID(), utm_source: q.utm_source || '', utm_campaign: q.utm_campaign || '', landing_url: wixLocationFrontend.url });
+  $w('#form').onSubmit(values => { v = values; });
+  $w('#form').onSubmitSuccess(() => {
+    v.next_step = v.next_step_industry || v.next_step_general;   // two fields, one value
+    const p = new URLSearchParams({ lead: v.lead_id, industry: v.industry, size: v.employee_bucket }).toString();
+    if (v.next_step === 'demo')  return wixLocationFrontend.to(DEMO);
+    if (v.next_step === 'light') return wixLocationFrontend.to(`${LIGHT_URL}?${p}`);
+    // learn_more: confirmation copy + destination depend on whether the industry has its own page
+    $w('#redirectTitle').text = `Taking you to Blue Roster${forIndustry(v.industry)}…`;
+    $w('#fallbackButton').label = `Continue to Blue Roster${forIndustry(v.industry)}`;
+    const url = hasPage(v.industry) ? PAGES[v.industry] : GENERAL;
+    $w('#fallbackButton').link = url;
+    wixLocationFrontend.to(url);
+  });
+});
+// /light-version page code: same rule for its Learn more button
+// const ind = wixLocationFrontend.query.industry;
+// $w('#learnMoreButton').label = `Learn more about Blue Roster${forIndustry(ind)}`;
+// $w('#learnMoreButton').link = hasPage(ind) ? PAGES[ind] : GENERAL;
+```
+
+- `/light-version` reads `lead`, `industry`, `size` from the query and offers Book a demo + Learn more. When the real light version exists, change `LIGHT_URL` only.
+- No-code fallback if Velo is not allowed: one hidden "Next steps" page with 3 static buttons (Learn more can't follow the industry, and the click isn't in the file).
+
+### Limitations / to confirm
+
+- **Plan:** 5 form steps need Wix **Core / Business or higher** (Light allows 3 steps). Exact plan to be confirmed.
+- No step branching in new Wix Forms (only show/hide/required Rules), so the 5 pages are fixed for everyone.
+- No native progress bar and no native UTM capture (hidden fields + Velo).
+- Choice fields have limited styling: cards may render as styled radios/checkboxes. Keep label, selected color and 3:1 control edges; the hover shadow can be dropped.
+- Velo needs Dev Mode and someone to maintain it.
+- **Privacy Policy page:** Wix has no policy generator; create it manually once the client/attorney fills the TBDs, and link it in the footer ("Privacy"), the form notice ("Privacy Policy") and the cookie banner. URL TBD.
+
+## Open items (TBD, do not invent)
+
+Privacy Policy page content and URL · call/text checkbox (keep only if sales calls/texts, incl. automated) · role and certification lists · general page URL (`/` or `/active-scheduling`) · light-version URL · exact Wix plan.
+
+# marketing/banners.md
+
+# Campaign banners
+
+How to build Blue Roster social and display banners so they match the approved **Asset Library** and **Batch 01**. Tokens and type: [`foundations.md`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/foundations.md). Reference PNGs: [`references/`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/README.md).
+
+Figma: banners file `95vgcOmJbHpvSOiLvybtZj`, page **"Asset Library"** (`1055:98`), which holds the cleaned library and the Batch 01 section (`1071:1400`). The page **"Social "** (`1:2`, trailing space) is the published history: read it, never edit it. Screen copies for banners live in Design System Legacy, page **"Marketing · Banner screens"** (`588:11872`); never edit the original product screens.
+
+## Non-negotiable rules
+
+1. **Approved stats only.** Never invent or alter stats, quotes, testimonials, customer names, logos or prices. If no approved stat fits, run a stat-free headline.
+2. **Pricing never appears** in posts, banners or landings. Say **"light version"**, never "free", "free plan", "free trial" or "free under 50". (Legacy site CTA "Book a Free Demo" exists on a few older Generic pieces as verbatim site copy; do not add it to new pieces without art-direction approval.)
+3. **Copy is verbatim**: headlines and body come from blueroster.com, an existing approved library line, or the approved stat wording. Trims may only drop the end of a sentence. Any new line is marked `NEW COPY — pending approval` and is not shipped.
+4. **Links go in the FIRST COMMENT**, never in the caption or on the creative (a small `blueroster.com/{vertical}` footer URL on the creative is fine).
+5. **No raw product screens**: no old dates, no lorem ipsum, **no real names**. Use roles and role initials.
+6. **Accessibility**: text contrast **≥ 4.5:1** (check every text layer, including chips and footers), meaningful graphics and control edges ≥ 3:1, and check minimum sizes in every format (see table below). Color is never the only signal.
+7. Posts in English. Tone: direct, non-salesy, **pain → mechanism → proof**. Hashtags: LinkedIn 3–5, Instagram 15–30, Facebook 0–2.
+
+### Approved stats only
+
+| Vertical | Approved wording |
+|---|---|
+| 🏭 Manufacturing | 4.5 h saved/week · <5 min to fill a shift · 100% OSHA cert enforced |
+| 🏥 Healthcare | 100% cert verified · zero license gaps · <5 min gap filled |
+| 🚛 Logistics | 18 min vs 22 hrs to staff a surge |
+| 🌐 Generic | 216 h/year spent scheduling per manager |
+
+Each piece carries **only its own vertical's** stat. Never move a stat to another vertical (e.g. 4.5 h on Generic), never tell a stat as a customer anecdote, and never use other site numbers (22%, 18%, $52K, 94%, +40%, 35%, $18K, "4 min", "3 hours", "0 open shifts", "go live in under a week"…).
+
+## Formats
+
+| Format | Size | Notes |
+|---|---|---|
+| LinkedIn feed | **1200x627** | Main format. One LI + one Square per piece minimum. |
+| Square | **1080x1080** | LinkedIn / Instagram / Facebook feed. |
+| Story | **1080x1920** | Instagram / Facebook Story. Keep text clear of the platform UI at the top and bottom (exact safe area: proposal, ~250 px). CTA "↑  Swipe up to learn more". Photos must be native resolution (no upscaled drafts). |
+| Display | 300x250 · 728x90 · 300x600 | Library only; text + CTA, no screens. |
+
+Minimum sizes: **check them on every format**. No sizes are approved yet; working **proposal** (flag anything smaller): body/support text ≥ 24 px on 1080/1200 formats, ≥ 12 px on Display; eyebrows/chips ≥ 20 px on 1080/1200; product-screen text inside a mockup must still read at feed size (crop or zoom the screen rather than shrinking it).
+
+## Naming and library structure
+
+Name every frame and PNG `{emoji} {Vertical} — {Topic} — {Format} {WxH}`, adding ` · 02`, ` · 03` when topic and format repeat. Emoji: 🏭 Manufacturing · 🏥 Healthcare · 🚛 Logistics · 🌐 Generic. Example: `🏭 Manufacturing — Shift Fill — LinkedIn 1200x627`. No week numbers in names or on the creative (eyebrow is "Blue Roster for {Vertical}" or "Blue Roster — Active Scheduling").
+
+Asset Library v1 (105 pieces), sections by vertical → topic:
+
+| Vertical | Topics |
+|---|---|
+| 🏭 Manufacturing | Shift Fill · Call-Outs · Active Scheduling · Certifications · Time Saved |
+| 🏥 Healthcare | Certifications · Switching · Coverage Heat Map · Coverage Gaps · Call-Outs |
+| 🚛 Logistics | Surge · Coverage Heat Map · Call-Outs |
+| 🌐 Generic | Active Scheduling · Time Spent · Demand Matching · Time-Off · Call-Outs · Brand |
+
+Batch 01 (Demand Matching + Time-Off × 4 verticals): 8 pieces × LI / Square / Story; object-photo Stories stay on hold until their photos are approved.
+
+## The 5 families and rotation
+
+| Family | What it is | Batch 01 example |
+|---|---|---|
+| **Big Number (BN)** | Giant approved-stat numeral (Inter Black) + Semi Bold statement line + body + CTA. Light or Navy background. | A1 Mfg "<5 min to fill a shift." (light) · B1 Health "<5 min gap filled." (Navy) |
+| **Icon/Chart (IC)** | Simple diagram (Venn, dot grid, heat map, stat tiles) or redrawn product-UI panel. | A3 Logistics Venn "Open Shifts · Certified & Available · ✓ Matched" + "18 min vs 22 hrs" tiles |
+| **Documentary photo (DP)** | Candid workplace photo + Navy panel/gradient with text. Open space low-left for text; screens read as a soft glow. | A2 Health (nurse at a station), B2 Logistics (supervisor in a DC office) |
+| **Object photo (OP)** | Still life of a work object (desk calendar, hard hat, shift board). | A4 Generic, B4 Mfg (drafts, pending approval) |
+| **Doodle "blue men" (DD)** | Blue men illustration (editable vectors, brand-mapped colors), Blue Light background. About once a month. | B3 Generic "Still guessing who covers a day off?" |
+
+Rotation: never the same family twice in one week; doodle about once a month; each vertical uses at least two families; in the Instagram grid never put two solid-color pieces (BN, IC, DD) next to each other: alternate solid and photo.
+
+## Layout and styling (as built in the library)
+
+- **Type:** Inter only. Main headline Inter **Black 900**, tracking −2.5 px at 40–100 px, about −3% below 40 px, about −4.5% on giant numerals > 100 px. Secondary heavy text Semi Bold, body Regular. No Light/ExtraLight/Bold headlines.
+- **Palette only:** Navy `#002458`, Blue `#1E75F6`, Blue Light `#C7DDFD`, White `#F9F9F9` (not `#FFFFFF`), Dark `#111827`, plus vertical accents (Mfg `#1E75F6`, Health `#14B8A6`, Logistics `#BA7517`, Generic `#9CA3AF`) and orange `#F66C1E` (rules below).
+- **CTAs:** on Navy → White `#F9F9F9` fill with Navy text. On light, Manufacturing → `#064DB7` with White text; other verticals on light → Navy fill with White text. CTA copy from existing pieces: "Book a {Vertical} Demo →".
+- **`#1E75F6` is never text.** Blue text becomes Blue Light on Navy and Navy on light. `#1E75F6` stays for non-text accents (Mfg rules/bars, eyebrow dot, doodle figure).
+- **Grey `#9CA3AF` is decorative only** (Generic dots and rules), never text.
+- **Highlighted headline words** use the vertical accent only where it passes on that background (Health teal, Logistics ochre on Navy); Mfg and Generic highlights on Navy use Blue Light.
+- **Orange `#F66C1E`:** highlights and illustration accessories only (e.g. the blue men Mfg vest), never a background block for text and never a button. Any text on orange is Navy `#002458` (5.08:1), never white (2.82–2.97:1).
+- **Eyebrow/status chips:** on dark, 15% Blue Light tint with Blue Light text; on light, solid Blue Light with Navy text.
+- **Status colors in UI mocks (heat maps):** covered = Blue `#1E75F6`, partial = Blue Light `#C7DDFD`, gap = Dark `#111827` with a diagonal hatch **and** a "GAP" label. Checks are White ✓ on Blue.
+- **Logo:** always the `BR-Logo` component (light-on-dark version on Navy, `BR-Logo [Day]` on light). Never typed "Blue Roster.com", never redrawn; no ".com" suffix next to it.
+- **No visible internal labels** ("Week 4", placeholders, notes) on the creative.
+
+## Banners with system screens (client priority)
+
+Connect the promotion with the demo by showing real Blue Roster screens. Use the clean captures in Design System Legacy page "Marketing · Banner screens" (copies; originals untouched), exported at **2x**. Light versions are in [`references/screens/`](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/README.md).
+
+| Screen | Capture | Headline (approved, sentence case + period) | Support line |
+|---|---|---|---|
+| **Attendance Today** (admin, desktop 1440) | `attendance-today-light@2x.png` (2880×1800). Crop just below the table. | **Never get caught short-staffed.** (site: /active-scheduling/coverage-gaps) | Optional "Under 5 min to fill a shift." (Mfg only); omit on Generic |
+| **My Schedule Day** (employee mobile, 5 event types) | `my-schedule-day-light@2x.png` (780×1688) | **Time off requests, simplified.** (site: /active-scheduling/time-off-requests) · swaps alt: **Shift swaps without the headache.** (site: /active-scheduling/shift-swaps) | — |
+| **Overtime cards** (employee mobile, incl. the locked "Forklift cert." card) | `overtime-cards-full-light@2x.png` (780×3020, all 4 cards) | **Cut overtime costs automatically.** (site: /active-scheduling/overtime-costs) | **No stat** (35% and $18K are not approved) |
+
+Headline rule: take the headline **verbatim from blueroster.com** (site lines are Title Case) and set it in **sentence case with a final period**, as in Batch 01. Do not add claims.
+
+Screen data rules:
+- **Role-based example data, no real names**: rows and cards show roles (e.g. "Welder · Line 2", Operator, Line Lead, Inspector, RN, CNA) with role initials (OP, LL, QI, RN, CA). No real or realistic person names, no customer names.
+- **Current dates** (the captures use the week of Mon 19 Oct 2026); never old dates or lorem ipsum.
+- Prefer **Light** captures. In Dark, light-blue task blocks with white text have low contrast.
+- Mockup layout per format (**proposal**, pending art direction): LinkedIn 1200x627 = headline left, screen right (cropped/zoomed); 1080x1080 = headline top, screen below; Story = headline top, tall screen (Overtime full capture) below the safe area. Place the screen inside a device or browser frame drawn with palette colors; keep product UI in its own Roboto/`--br-*` styling.
+- Known flaws inherited from the product designs (do not "fix" or highlight): the Attendance side menu highlights "Action Center", and the notification badge is clipped at the top.
+
+## Checklist before handing off
+
+- [ ] Name follows `{emoji} {Vertical} — {Topic} — {Format} {WxH}`; all required formats exported at 1:1 (screens at 2x).
+- [ ] Every line traced to blueroster.com, an approved library line, or an approved stat (keep a source table).
+- [ ] Only the vertical's own approved stat, or none. No quotes, testimonials, prices or "free".
+- [ ] No real names, old dates or lorem ipsum in screens.
+- [ ] Text contrast ≥ 4.5:1 on every layer; minimum sizes checked per format; orange only with Navy text.
+- [ ] Family rotation respected for the week; no two solids adjacent in the IG grid.
+- [ ] Link planned for the first comment; hashtags within the channel range.
+- [ ] Art-direction review before anything is uploaded or published.
+
+# marketing/references/README.md
+
+# Marketing references
+
+Approved examples to match when building marketing output. Files are exports from Figma at 1:1 (screens at 2x). Do not reuse them as data: screen content is role-based sample data.
+
+## System screens (Light, 2x) for screen banners
+
+| File | Size | What |
+|---|---|---|
+| [screens/attendance-today-light@2x.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/screens/attendance-today-light@2x.png) | 2880×1800 | Admin · Attendance Today (desktop 1440), Mon 19 Oct 2026, roles instead of names. Crop below the table. |
+| [screens/my-schedule-day-light@2x.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/screens/my-schedule-day-light@2x.png) | 780×1688 | Employee mobile · My Schedule Day with all 5 event types. |
+| [screens/overtime-cards-full-light@2x.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/screens/overtime-cards-full-light@2x.png) | 780×3020 | Employee mobile · Overtime cards Wed 21–Sun 25 Oct, all 4 cards incl. the locked "Forklift cert." card. |
+
+## Approved banners (one per family)
+
+| File | Family | Notes |
+|---|---|---|
+| [banners/mfg-demand-matching-big-number-light-linkedin-1200x627.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/banners/mfg-demand-matching-big-number-light-linkedin-1200x627.png) | Big Number, light | "<5 min to fill a shift." · Mfg CTA `#064DB7` with White text · `BR-Logo [Day]` |
+| [banners/health-time-off-big-number-navy-linkedin-1200x627.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/banners/health-time-off-big-number-navy-linkedin-1200x627.png) | Big Number, Navy | "<5 min gap filled." · White CTA with Navy text |
+| [banners/logistics-demand-matching-icon-chart-square-1080x1080.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/banners/logistics-demand-matching-icon-chart-square-1080x1080.png) | Icon/Chart | Venn + "18 min vs 22 hrs" tiles · ochre headline highlight on Navy |
+| [banners/health-demand-matching-doc-photo-linkedin-1200x627.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/banners/health-demand-matching-doc-photo-linkedin-1200x627.png) | Documentary photo | Photo + Navy panel · "Zero license compliance gaps" tile |
+| [banners/generic-time-off-doodle-story-1080x1920.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/banners/generic-time-off-doodle-story-1080x1920.png) | Doodle "blue men", Story | Blue Light background · Navy CTA · no orange |
+| [banners/logistics-surge-display-300x250.png](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/references/banners/logistics-surge-display-300x250.png) | Display 300x250 | Text + White CTA on Navy |
+
+Original Figma names follow `{emoji} {Vertical} — {Topic} — {Format} {WxH}` (see [../banners.md](https://raw.githubusercontent.com/jpablomatz/blueroster-design-system/main/marketing/banners.md)); files here are renamed to ASCII for the repo.
+
+# tokens/marketing.css
+
+/* Blue Roster · Marketing foundations (mkt) v0.5 — 19 Oct 2026
+ * Marketing layer only. It does not touch tokens.css (s2d product tokens) or the br-* components.
+ * Figma: Design System Legacy (k05NWBKMjsvo5hEugQc2Tq), page "Marketing · Foundations" (561:21), board 566:80.
+ * Collections: mkt · primitives, mkt (Light / Navy band), mkt · layout (1440/1024/768/390).
+ * Status per value (sourced / derived / proposal / approved) is in tokens/marketing.md.
+ * Approved by István 2026-10-18:
+ *  1. Display 80px at 1440 (mobile 48).
+ *  2. H2 Semi Bold 600; Black only for display and H1; H3/H4 Semi Bold.
+ *  3. No Dark pages. Second mode = "Navy band": wrap content placed on Navy #002458 sections in
+ *     [data-mkt-band="navy"] (or .mkt-band-navy). Light is the default on :root.
+ *  4. Manufacturing buttons use #064DB7 (--mkt-vertical-mfg-accent-strong); #1E75F6 stays the accent for non-text.
+ *  5. Primary buttons inside a Navy band are White #F9F9F9 with Navy #002458 text (14.32:1):
+ *     --mkt-action-primary / --mkt-action-on-primary (and Mfg accent-strong in Navy band).
+ * Every block holds resolved values (no var() chains), so a Navy band nested in a Light page re-resolves correctly.
+ *  6. (Matz, 2026-10-19) Secondary accent orange #F66C1E from Matz's Styleguide "Secondary/Default"
+ *     (ramp #903502 -> #FFCDB1): --mkt-accent-secondary. Text on it is Navy (--mkt-accent-on-secondary,
+ *     5.08:1), never white (2.97:1). Non-text on the page bg (2.82:1 on #F9F9F9): highlights and
+ *     illustration accessories only, not buttons. For orange text use --mkt-orange-900 (7.4:1).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+
+:root {
+  /* primitives (mode-independent) */
+  --mkt-blue-500: #1e75f6; /* sourced */
+  --mkt-blue-700: #064db7; /* sourced */
+  --mkt-blue-200: #8ebafa; /* sourced */
+  --mkt-blue-100: #c7ddfd; /* sourced */
+  --mkt-blue-navy-tint: #063478; /* derived */
+  --mkt-navy-900: #002458; /* sourced */
+  --mkt-navy-raised: #143565; /* derived */
+  --mkt-navy-border: #324f78; /* derived */
+  --mkt-neutral-white: #f9f9f9; /* sourced */
+  --mkt-neutral-pure-white: #ffffff; /* sourced */
+  --mkt-neutral-dark: #111827; /* sourced */
+  --mkt-neutral-gray-300: #d1d5db; /* sourced */
+  --mkt-neutral-gray-600: #535353; /* sourced */
+  --mkt-teal-500: #14b8a6; /* sourced */
+  --mkt-teal-400: #26bdad; /* derived */
+  --mkt-teal-700: #13726e; /* derived */
+  --mkt-teal-100: #cbece8; /* derived */
+  --mkt-teal-navy-tint: #044268; /* derived */
+  --mkt-ochre-500: #ba7517; /* sourced */
+  --mkt-ochre-400: #c89249; /* derived */
+  --mkt-ochre-700: #87591c; /* derived */
+  --mkt-ochre-100: #ecdfcc; /* derived */
+  --mkt-ochre-navy-tint: #25344b; /* derived */
+  --mkt-gray-400: #9ca3af; /* sourced */
+  --mkt-gray-350: #a2a8b3; /* derived */
+  --mkt-gray-700: #5f6673; /* derived */
+  --mkt-gray-100: #e6e8ea; /* derived */
+  --mkt-gray-navy-tint: #1f3d69; /* derived */
+  --mkt-orange-900: #903502; /* sourced · Matz Styleguide */
+  --mkt-orange-500: #f66c1e; /* sourced · Matz Styleguide Secondary/Default */
+  --mkt-orange-100: #ffcdb1; /* sourced · Matz Styleguide */
+}
+
+:root,
+[data-mkt-band="light"] {
+  /* Light page (default) */
+  --mkt-vertical-mfg-accent: #1e75f6;
+  --mkt-vertical-mfg-accent-strong: #064db7;
+  --mkt-vertical-mfg-on-accent: #f9f9f9;
+  --mkt-vertical-mfg-tint: #c7ddfd;
+  --mkt-vertical-mfg-text: #064db7;
+  --mkt-vertical-health-accent: #14b8a6;
+  --mkt-vertical-health-accent-strong: #13726e;
+  --mkt-vertical-health-on-accent: #f9f9f9;
+  --mkt-vertical-health-tint: #cbece8;
+  --mkt-vertical-health-text: #13726e;
+  --mkt-vertical-logistics-accent: #ba7517;
+  --mkt-vertical-logistics-accent-strong: #87591c;
+  --mkt-vertical-logistics-on-accent: #f9f9f9;
+  --mkt-vertical-logistics-tint: #ecdfcc;
+  --mkt-vertical-logistics-text: #87591c;
+  --mkt-vertical-generic-accent: #9ca3af;
+  --mkt-vertical-generic-accent-strong: #5f6673;
+  --mkt-vertical-generic-on-accent: #f9f9f9;
+  --mkt-vertical-generic-tint: #e6e8ea;
+  --mkt-vertical-generic-text: #5f6673;
+  --mkt-surface-page: #f9f9f9;
+  --mkt-surface-raised: #ffffff;
+  --mkt-surface-inverse: #002458;
+  --mkt-text-heading: #002458;
+  --mkt-text-body: #111827;
+  --mkt-text-muted: #535353;
+  --mkt-text-on-inverse: #f9f9f9;
+  --mkt-border-default: #d1d5db;
+  --mkt-action-primary: #064db7;
+  --mkt-action-on-primary: #f9f9f9;
+  --mkt-accent-secondary: #f66c1e;
+  --mkt-accent-on-secondary: #002458;
+}
+
+[data-mkt-band="navy"],
+.mkt-band-navy {
+  /* Navy band: only inside Navy #002458 sections. Not a dark theme. */
+  --mkt-vertical-mfg-accent: #1e75f6;
+  --mkt-vertical-mfg-accent-strong: #f9f9f9;
+  --mkt-vertical-mfg-on-accent: #002458;
+  --mkt-vertical-mfg-tint: #063478;
+  --mkt-vertical-mfg-text: #8ebafa;
+  --mkt-vertical-health-accent: #14b8a6;
+  --mkt-vertical-health-accent-strong: #14b8a6;
+  --mkt-vertical-health-on-accent: #002458;
+  --mkt-vertical-health-tint: #044268;
+  --mkt-vertical-health-text: #26bdad;
+  --mkt-vertical-logistics-accent: #ba7517;
+  --mkt-vertical-logistics-accent-strong: #c89249;
+  --mkt-vertical-logistics-on-accent: #002458;
+  --mkt-vertical-logistics-tint: #25344b;
+  --mkt-vertical-logistics-text: #c89249;
+  --mkt-vertical-generic-accent: #9ca3af;
+  --mkt-vertical-generic-accent-strong: #9ca3af;
+  --mkt-vertical-generic-on-accent: #002458;
+  --mkt-vertical-generic-tint: #1f3d69;
+  --mkt-vertical-generic-text: #a2a8b3;
+  --mkt-surface-page: #002458;
+  --mkt-surface-raised: #143565;
+  --mkt-surface-inverse: #f9f9f9;
+  --mkt-text-heading: #f9f9f9;
+  --mkt-text-body: #c7ddfd;
+  --mkt-text-muted: #8ebafa;
+  --mkt-text-on-inverse: #002458;
+  --mkt-border-default: #324f78;
+  --mkt-action-primary: #f9f9f9;
+  --mkt-action-on-primary: #002458;
+  --mkt-accent-secondary: #f66c1e;
+  --mkt-accent-on-secondary: #002458;
+}
+
+[data-mkt-band="navy"], .mkt-band-navy { background-color: var(--mkt-surface-page); color: var(--mkt-text-body); }
+
+.mkt-button-primary { background-color: var(--mkt-action-primary); color: var(--mkt-action-on-primary); }
+/* Orange accent surface (highlights, badges): Navy text, never white. */
+.mkt-accent-secondary { background-color: var(--mkt-accent-secondary); color: var(--mkt-accent-on-secondary); }
+
+:root {
+  /* layout · 390 base (mobile first) */
+  --mkt-grid-columns: 4;
+  --mkt-grid-gutter: 16px;
+  --mkt-grid-margin: 20px;
+  --mkt-container-max: 1280px;
+  --mkt-content-measure: 350px;
+  --mkt-section-xs: 24px;
+  --mkt-section-sm: 32px;
+  --mkt-section-md: 48px;
+  --mkt-section-lg: 64px;
+  --mkt-section-xl: 80px;
+}
+@media (min-width: 768px) {
+  :root {
+    --mkt-grid-columns: 8;
+    --mkt-grid-gutter: 24px;
+    --mkt-grid-margin: 40px;
+    --mkt-container-max: 1280px;
+    --mkt-content-measure: 688px;
+    --mkt-section-xs: 24px;
+    --mkt-section-sm: 40px;
+    --mkt-section-md: 56px;
+    --mkt-section-lg: 72px;
+    --mkt-section-xl: 96px;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --mkt-grid-columns: 12;
+    --mkt-grid-gutter: 24px;
+    --mkt-grid-margin: 48px;
+    --mkt-container-max: 1280px;
+    --mkt-content-measure: 720px;
+    --mkt-section-xs: 32px;
+    --mkt-section-sm: 48px;
+    --mkt-section-md: 64px;
+    --mkt-section-lg: 80px;
+    --mkt-section-xl: 112px;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --mkt-grid-columns: 12;
+    --mkt-grid-gutter: 24px;
+    --mkt-grid-margin: 80px;
+    --mkt-container-max: 1280px;
+    --mkt-content-measure: 720px;
+    --mkt-section-xs: 32px;
+    --mkt-section-sm: 48px;
+    --mkt-section-md: 64px;
+    --mkt-section-lg: 96px;
+    --mkt-section-xl: 128px;
+  }
+}
+
+:root {
+  --mkt-font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mkt-font-display-weight: 900;
+  --mkt-font-display-size: 48px;
+  --mkt-font-display-line-height: 1.1;
+  --mkt-font-display-letter-spacing: -1.5px;
+  --mkt-font-h1-weight: 900;
+  --mkt-font-h1-size: 36px;
+  --mkt-font-h1-line-height: 1.1;
+  --mkt-font-h1-letter-spacing: -1.5px;
+  --mkt-font-h2-weight: 600;
+  --mkt-font-h2-size: 28px;
+  --mkt-font-h2-line-height: 1.2;
+  --mkt-font-h2-letter-spacing: -1px;
+  --mkt-font-h3-weight: 600;
+  --mkt-font-h3-size: 22px;
+  --mkt-font-h3-line-height: 1.2;
+  --mkt-font-h3-letter-spacing: -0.5px;
+  --mkt-font-h4-weight: 600;
+  --mkt-font-h4-size: 18px;
+  --mkt-font-h4-line-height: 1.3;
+  --mkt-font-h4-letter-spacing: 0px;
+  --mkt-font-eyebrow-weight: 700;
+  --mkt-font-eyebrow-size: 12px;
+  --mkt-font-eyebrow-line-height: 1.4;
+  --mkt-font-eyebrow-letter-spacing: 1.2px;
+  --mkt-font-lead-weight: 400;
+  --mkt-font-lead-size: 18px;
+  --mkt-font-lead-line-height: 1.4;
+  --mkt-font-lead-letter-spacing: 0px;
+  --mkt-font-body-weight: 400;
+  --mkt-font-body-size: 16px;
+  --mkt-font-body-line-height: 1.4;
+  --mkt-font-body-letter-spacing: 0px;
+  --mkt-font-small-weight: 400;
+  --mkt-font-small-size: 14px;
+  --mkt-font-small-line-height: 1.4;
+  --mkt-font-small-letter-spacing: 0px;
+  --mkt-font-button-weight: 700;
+  --mkt-font-button-size: 16px;
+  --mkt-font-button-line-height: 1.25;
+  --mkt-font-button-letter-spacing: 0px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --mkt-font-display-size: 80px;
+    --mkt-font-display-line-height: 1.05;
+    --mkt-font-display-letter-spacing: -2.5px;
+    --mkt-font-h1-size: 44px;
+    --mkt-font-h1-line-height: 1.1;
+    --mkt-font-h1-letter-spacing: -2.5px;
+    --mkt-font-h2-size: 34px;
+    --mkt-font-h2-line-height: 1.15;
+    --mkt-font-h2-letter-spacing: -1.5px;
+    --mkt-font-h3-size: 24px;
+    --mkt-font-h3-line-height: 1.2;
+    --mkt-font-h3-letter-spacing: -0.5px;
+    --mkt-font-h4-size: 20px;
+    --mkt-font-h4-line-height: 1.3;
+    --mkt-font-h4-letter-spacing: 0px;
+    --mkt-font-eyebrow-size: 14px;
+    --mkt-font-eyebrow-line-height: 1.4;
+    --mkt-font-eyebrow-letter-spacing: 1.5px;
+    --mkt-font-lead-size: 22px;
+    --mkt-font-lead-line-height: 1.4;
+    --mkt-font-lead-letter-spacing: 0px;
+    --mkt-font-body-size: 16px;
+    --mkt-font-body-line-height: 1.4;
+    --mkt-font-body-letter-spacing: 0px;
+    --mkt-font-small-size: 14px;
+    --mkt-font-small-line-height: 1.4;
+    --mkt-font-small-letter-spacing: 0px;
+    --mkt-font-button-size: 16px;
+    --mkt-font-button-line-height: 1.25;
+    --mkt-font-button-letter-spacing: 0px;
+  }
+}
+
+.mkt-display { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-display-weight); font-size: var(--mkt-font-display-size); line-height: var(--mkt-font-display-line-height); letter-spacing: var(--mkt-font-display-letter-spacing); }
+.mkt-h1 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h1-weight); font-size: var(--mkt-font-h1-size); line-height: var(--mkt-font-h1-line-height); letter-spacing: var(--mkt-font-h1-letter-spacing); }
+.mkt-h2 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h2-weight); font-size: var(--mkt-font-h2-size); line-height: var(--mkt-font-h2-line-height); letter-spacing: var(--mkt-font-h2-letter-spacing); }
+.mkt-h3 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h3-weight); font-size: var(--mkt-font-h3-size); line-height: var(--mkt-font-h3-line-height); letter-spacing: var(--mkt-font-h3-letter-spacing); }
+.mkt-h4 { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-h4-weight); font-size: var(--mkt-font-h4-size); line-height: var(--mkt-font-h4-line-height); letter-spacing: var(--mkt-font-h4-letter-spacing); }
+.mkt-eyebrow { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-eyebrow-weight); font-size: var(--mkt-font-eyebrow-size); line-height: var(--mkt-font-eyebrow-line-height); letter-spacing: var(--mkt-font-eyebrow-letter-spacing); text-transform: uppercase; }
+.mkt-lead { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-lead-weight); font-size: var(--mkt-font-lead-size); line-height: var(--mkt-font-lead-line-height); letter-spacing: var(--mkt-font-lead-letter-spacing); }
+.mkt-body { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-body-weight); font-size: var(--mkt-font-body-size); line-height: var(--mkt-font-body-line-height); letter-spacing: var(--mkt-font-body-letter-spacing); }
+.mkt-small { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-small-weight); font-size: var(--mkt-font-small-size); line-height: var(--mkt-font-small-line-height); letter-spacing: var(--mkt-font-small-letter-spacing); }
+.mkt-button { font-family: var(--mkt-font-family); font-weight: var(--mkt-font-button-weight); font-size: var(--mkt-font-button-size); line-height: var(--mkt-font-button-line-height); letter-spacing: var(--mkt-font-button-letter-spacing); }
+
+/* container + grid helpers */
+.mkt-container { box-sizing: border-box; width: 100%; max-width: calc(var(--mkt-container-max) + 2 * var(--mkt-grid-margin)); margin-inline: auto; padding-inline: var(--mkt-grid-margin); }
+.mkt-grid { display: grid; grid-template-columns: repeat(var(--mkt-grid-columns), minmax(0, 1fr)); column-gap: var(--mkt-grid-gutter); }
+.mkt-measure { max-width: var(--mkt-content-measure); }
