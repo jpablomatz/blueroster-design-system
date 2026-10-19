@@ -27,7 +27,7 @@ Everything an AI needs to replicate Blue Roster **marketing** output: blueroster
 3. Primary CTA `#064DB7` + White on light; White `#F9F9F9` + Navy text on Navy.
 4. `#1E75F6` and vertical accents are non-text; text uses `text/*` or `vertical/*/text`.
 5. Orange `#F66C1E`: accent only, Navy text on it, never white, never a button.
-6. Text contrast ≥ 4.5:1; check minimum sizes in every format.
+6. Text contrast ≥ 4.5:1. Banner minimum sizes (approved by István 2026-10-19): support/body ≥ 24 px, eyebrows and button text ≥ 20 px on 1080/1200 formats; Display ≥ 12 px. Story safe zone 250 px top and bottom.
 7. Approved stats only, per vertical. Never invent stats, quotes, testimonials, names or prices.
 8. Say "light version" (up to 50 users), never "free". All 3 landing options for everyone.
 9. Headlines verbatim from blueroster.com, sentence case + period. Links in the first comment.

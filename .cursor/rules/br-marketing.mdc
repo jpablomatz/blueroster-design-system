@@ -13,7 +13,7 @@ Follow `marketing/README.md` (local repo), then `marketing/foundations.md`, and 
 - Light page; Navy `#002458` only as a band (`[data-mkt-band="navy"]`). No Dark pages.
 - Buttons: `#064DB7` + White on light (Manufacturing too); White `#F9F9F9` + Navy text in Navy bands. `#1E75F6` is a non-text accent only.
 - Orange `#F66C1E`: accent only. Navy text on it, never white, never a button.
-- Text contrast ≥ 4.5:1; check minimum sizes in every format.
+- Text contrast ≥ 4.5:1. Banner minimum sizes (approved by István 2026-10-19): support/body ≥ 24 px, eyebrows and button text ≥ 20 px on 1080/1200 formats; Display ≥ 12 px. Story safe zone 250 px top and bottom.
 - Approved stats only, per vertical. Never invent stats, quotes, testimonials, names or prices. Say "light version" (up to 50 users), never "free".
 - Headlines verbatim from blueroster.com, sentence case + period. Links go in the first comment. Market: US only.
 - Landing: all 3 next steps for everyone; Country = United States (default) · Other; consent lines exactly as in `marketing/landing.md`.

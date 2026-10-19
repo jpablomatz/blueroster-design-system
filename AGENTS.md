@@ -70,7 +70,7 @@ Requests about **marketing, banners, posts, LinkedIn/Instagram/Story, campaigns,
 - Landing: `marketing/landing.md` (`mkt-button`, `mkt-text-field`, `mkt-progress`, `mkt-option-card`, `mkt-result-card`, `mkt-step`, `mkt-select`, `mkt-checkbox`, flow, copy, Wix notes). Banners: `marketing/banners.md`. Examples: `marketing/references/`.
 - Inter only: Black for display/H1 (and banner headlines), H2–H4 Semi Bold. Light page; Navy `#002458` only as a band (`[data-mkt-band="navy"]`), no Dark pages.
 - Buttons: `#064DB7` + White on light (Manufacturing too); White `#F9F9F9` + Navy text inside Navy bands. `#1E75F6` is a non-text accent only. Orange `#F66C1E` is an accent only: Navy text on it, never white, never a button.
-- Text contrast ≥ 4.5:1; check minimum sizes in every format.
+- Text contrast ≥ 4.5:1. Banner minimum sizes (approved by István 2026-10-19): support/body ≥ 24 px, eyebrows and button text ≥ 20 px on 1080/1200 formats; Display ≥ 12 px. Story safe zone 250 px top and bottom.
 - Approved stats only (per vertical, `marketing/banners.md`); never invent stats, quotes, testimonials, names or prices. Say "light version" (up to 50 users), never "free". Headlines verbatim from blueroster.com, sentence case + period. Links in the first comment. Market: US only.
 - Unknowns stay `TBD`, exactly as for product work.
 

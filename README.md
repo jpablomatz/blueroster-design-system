@@ -24,7 +24,7 @@ Source of truth for AI coding agents (Cursor, Claude Code, Codex) to build Blue 
 | `screens/_TEMPLATE.md` | Template for new specs (anatomy, token table, formats, images). |
 | `assets/` | `br-logo` SVGs (isotype + full, Light/Dark/tokens), avatar-initials and badge specs, reference PNGs. |
 | `fixtures/schedule.json` | Sample shifts, tasks, overtime cards copied from the Figma mockups. Mockups only. |
-| `marketing/` | **Marketing design system (v6):** `foundations.md` (mkt colors, type, grid, spacing, decisions), `landing.md` (questionnaire landing + Wix notes), `banners.md` (campaign banners), `references/` (approved PNGs). |
+| `marketing/` | **Marketing design system (v6.1):** `foundations.md` (mkt colors, type, grid, spacing, decisions), `landing.md` (questionnaire landing + Wix notes), `banners.md` (campaign banners), `references/` (approved PNGs). |
 | `tokens/marketing.css` / `tokens/marketing.md` | Marketing `--mkt-*` tokens v0.5 (Inter, Light page + Navy band, orange `#F66C1E` with Navy on-color). Marketing pages only. |
 | `.cursor/rules/br-marketing.mdc` | Cursor rule for banners, landing and blueroster.com work. |
 | `CHANGELOG.md` | Version history. |

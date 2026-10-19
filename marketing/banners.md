@@ -11,7 +11,7 @@ Figma: banners file `95vgcOmJbHpvSOiLvybtZj`, page **"Asset Library"** (`1055:98
 3. **Copy is verbatim**: headlines and body come from blueroster.com, an existing approved library line, or the approved stat wording. Trims may only drop the end of a sentence. Any new line is marked `NEW COPY — pending approval` and is not shipped.
 4. **Links go in the FIRST COMMENT**, never in the caption or on the creative (a small `blueroster.com/{vertical}` footer URL on the creative is fine).
 5. **No raw product screens**: no old dates, no lorem ipsum, **no real names**. Use roles and role initials.
-6. **Accessibility**: text contrast **≥ 4.5:1** (check every text layer, including chips and footers), meaningful graphics and control edges ≥ 3:1, and check minimum sizes in every format (see table below). Color is never the only signal.
+6. **Accessibility**: text contrast **≥ 4.5:1** (check every text layer, including chips and footers), meaningful graphics and control edges ≥ 3:1, and minimum sizes in every format (support ≥ 24 px, eyebrow/button ≥ 20 px, Display ≥ 12 px; see below). Color is never the only signal.
 7. Posts in English. Tone: direct, non-salesy, **pain → mechanism → proof**. Hashtags: LinkedIn 3–5, Instagram 15–30, Facebook 0–2.
 
 ### Approved stats only
@@ -31,10 +31,10 @@ Each piece carries **only its own vertical's** stat. Never move a stat to anothe
 |---|---|---|
 | LinkedIn feed | **1200x627** | Main format. One LI + one Square per piece minimum. |
 | Square | **1080x1080** | LinkedIn / Instagram / Facebook feed. |
-| Story | **1080x1920** | Instagram / Facebook Story. Keep text clear of the platform UI at the top and bottom (exact safe area: proposal, ~250 px). CTA "↑  Swipe up to learn more". Photos must be native resolution (no upscaled drafts). |
+| Story | **1080x1920** | Instagram / Facebook Story. Keep text and CTA clear of the platform UI: safe zone **250 px top and bottom** (approved by István 2026-10-19). CTA "↑  Swipe up to learn more". Photos must be native resolution (no upscaled drafts). |
 | Display | 300x250 · 728x90 · 300x600 | Library only; text + CTA, no screens. |
 
-Minimum sizes: **check them on every format**. No sizes are approved yet; working **proposal** (flag anything smaller): body/support text ≥ 24 px on 1080/1200 formats, ≥ 12 px on Display; eyebrows/chips ≥ 20 px on 1080/1200; product-screen text inside a mockup must still read at feed size (crop or zoom the screen rather than shrinking it).
+Minimum sizes (**approved by István 2026-10-19**; check them on every format and flag anything smaller): support/body text **≥ 24 px** on 1080/1200 formats (never 16 px); eyebrows/chips and button text **≥ 20 px** on 1080/1200; all text on Display **≥ 12 px**; product-screen text inside a mockup must still read at feed size (crop or zoom the screen rather than shrinking it).
 
 ## Naming and library structure
 
@@ -93,7 +93,7 @@ Screen data rules:
 - **Role-based example data, no real names**: rows and cards show roles (e.g. "Welder · Line 2", Operator, Line Lead, Inspector, RN, CNA) with role initials (OP, LL, QI, RN, CA). No real or realistic person names, no customer names.
 - **Current dates** (the captures use the week of Mon 19 Oct 2026); never old dates or lorem ipsum.
 - Prefer **Light** captures. In Dark, light-blue task blocks with white text have low contrast.
-- Mockup layout per format (**proposal**, pending art direction): LinkedIn 1200x627 = headline left, screen right (cropped/zoomed); 1080x1080 = headline top, screen below; Story = headline top, tall screen (Overtime full capture) below the safe area. Place the screen inside a device or browser frame drawn with palette colors; keep product UI in its own Roboto/`--br-*` styling.
+- Mockup layout per format (**approved by István 2026-10-19**): LinkedIn 1200x627 = headline left, screen right (cropped/zoomed); 1080x1080 = headline top, screen below; Story = headline top, tall screen (Overtime full capture) below the headline, inside the 250 px top/bottom safe zone. Place the screen inside a device or browser frame drawn with palette colors; keep product UI in its own Roboto/`--br-*` styling.
 - Known flaws inherited from the product designs (do not "fix" or highlight): the Attendance side menu highlights "Action Center", and the notification badge is clipped at the top.
 
 ## Checklist before handing off
@@ -102,7 +102,7 @@ Screen data rules:
 - [ ] Every line traced to blueroster.com, an approved library line, or an approved stat (keep a source table).
 - [ ] Only the vertical's own approved stat, or none. No quotes, testimonials, prices or "free".
 - [ ] No real names, old dates or lorem ipsum in screens.
-- [ ] Text contrast ≥ 4.5:1 on every layer; minimum sizes checked per format; orange only with Navy text.
+- [ ] Text contrast ≥ 4.5:1 on every layer; minimum sizes met (support ≥ 24 px, eyebrow/button ≥ 20 px on 1080/1200, Display ≥ 12 px); Story text and CTA inside the 250 px safe zone; orange only with Navy text.
 - [ ] Family rotation respected for the week; no two solids adjacent in the IG grid.
 - [ ] Link planned for the first comment; hashtags within the channel range.
 - [ ] Art-direction review before anything is uploaded or published.

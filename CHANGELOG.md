@@ -1,5 +1,16 @@
 # Changelog
 
+## v6.1 · 2026-10-19 · Approved banner sizes, Story safe zone and mockup layout
+
+István (art direction) approved the banner values that v6 shipped as proposals, with adjustments. The proposal markers are removed and the values are now marked "approved by István 2026-10-19".
+
+**Changed**
+- `marketing/banners.md`: Story safe zone is **250 px top and bottom** (was "proposal, ~250 px"). Minimum sizes approved: support/body text ≥ 24 px on 1080/1200 formats (never 16 px), eyebrows/chips and button text ≥ 20 px on 1080/1200, all Display text ≥ 12 px. Mockup layout per format approved as is. The accessibility rule and the hand-off checklist now state the values.
+- `marketing/README.md` (rule 6), `AGENTS.md` (section 11), `.cursor/rules/br-marketing.mdc`, `skills/BR_Legacy/SKILL.md`, `claude/BR_Legacy/SKILL.md` and `claude/BR_Legacy.zip` (Marketing mode self-check), `gpt/instructions.md`, `gemini/gem-instructions.md` (step 7): same minimum sizes and safe zone.
+- `llms-full.txt`: the embedded `AGENTS.md`, `SKILL.md`, `marketing/README.md` and `marketing/banners.md` updated to match.
+
+**Note:** the 3 screen banners (Attendance, My Schedule, Overtime) in Figma are being updated by Mc Bess to 24 px support lines and 20 px button text in all three formats; they are not in `marketing/references/` yet.
+
 ## v6 · 2026-10-19 · Marketing design system
 
 Adds the Blue Roster **marketing** layer so any AI can replicate the campaign banners and the questionnaire landing. The product (Legacy) kit is unchanged.

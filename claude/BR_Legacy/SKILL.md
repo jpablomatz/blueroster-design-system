@@ -91,7 +91,7 @@ Use this instead of steps 1–6 when the request is about a banner, post, Linked
 3. Inter only (Black for display/H1 and banner headlines; H2–H4 Semi Bold). Light page; Navy `#002458` only as a band. Buttons `#064DB7` + White on light, White `#F9F9F9` + Navy text on Navy. `#1E75F6` is never text. Orange `#F66C1E`: accent only, Navy text on it, never white, never a button.
 4. Copy verbatim from blueroster.com or approved lines; headlines in sentence case + period. Approved stats only, per vertical. No quotes, testimonials, names, prices or "free" (say "light version", up to 50 users). Links in the first comment. Market: US only.
 5. Screen banners: Attendance Today, My Schedule Day, Overtime cards, Light captures at 2x, role-based example data, current dates, no real names.
-6. Self-check: text contrast ≥ 4.5:1 and minimum sizes per format; every line has a source; gaps stay `TBD`. Output: **Based on** (file + reference PNG), the piece, Assumptions, Questions, checklist.
+6. Self-check: text contrast ≥ 4.5:1; minimum sizes (support ≥ 24 px, eyebrow/button ≥ 20 px on 1080/1200, Display ≥ 12 px); Story safe zone 250 px top and bottom; every line has a source; gaps stay `TBD`. Output: **Based on** (file + reference PNG), the piece, Assumptions, Questions, checklist.
 
 ## Output format
 1. **Based on:** spec + starter.
