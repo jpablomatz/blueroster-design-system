@@ -1,5 +1,16 @@
 # Changelog
 
+## v6.2 · 2026-10-19 · Banner layout & alignment rules
+
+From Matz's corrections, approved by István (art direction).
+
+**Added**
+- `marketing/banners.md`: new section "Layout & alignment rules" (8 rules: fixed copy-block spacing and no text overflow; logo x/y LinkedIn 64/56, Square 72/72, Story 72/250; button moves with copy, Story order logo/copy/button ~56 px/device; Square+phone button bottom = phone outer bottom edge; Square+monitor full content width ~48 px below copy, may crop at bottom incl. stand; LinkedIn+monitor copy top = monitor top; glow always with device; Story safe zone applies only to text/button/logo). New checklist item.
+
+**Changed**
+- `.cursor/rules/br-marketing.mdc`, `AGENTS.md`, `marketing/README.md`, `gpt/instructions.md`, `gemini/gem-instructions.md`, `skills/BR_Legacy/SKILL.md`, `claude/BR_Legacy/SKILL.md` + `claude/BR_Legacy.zip`: concise summary of the layout rules.
+- `llms-full.txt`: embedded copies updated to match. `README.md`: v6.2.
+
 ## v6.1 · 2026-10-19 · Approved banner sizes, Story safe zone and mockup layout
 
 István (art direction) approved the banner values that v6 shipped as proposals, with adjustments. The proposal markers are removed and the values are now marked "approved by István 2026-10-19".

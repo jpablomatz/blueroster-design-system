@@ -27,7 +27,7 @@ Everything an AI needs to replicate Blue Roster **marketing** output: blueroster
 3. Primary CTA `#064DB7` + White on light; White `#F9F9F9` + Navy text on Navy.
 4. `#1E75F6` and vertical accents are non-text; text uses `text/*` or `vertical/*/text`.
 5. Orange `#F66C1E`: accent only, Navy text on it, never white, never a button.
-6. Text contrast ≥ 4.5:1. Banner minimum sizes (approved by István 2026-10-19): support/body ≥ 24 px, eyebrows and button text ≥ 20 px on 1080/1200 formats; Display ≥ 12 px. Story safe zone 250 px top and bottom.
+6. Text contrast ≥ 4.5:1. Banner minimum sizes (approved by István 2026-10-19): support/body ≥ 24 px, eyebrows and button text ≥ 20 px on 1080/1200 formats; Display ≥ 12 px. Story safe zone 250 px top and bottom. Layout (v6.2): copy-block spacing fixed (orange line, eyebrow, headline, support, button), no text overflow; logo top-left LinkedIn 64/56, Square 72/72, Story 72/250; button moves with copy (Story: logo, copy, button ~56 px, device); Square+phone: button bottom = phone outer bottom edge; Square+monitor: full content width ~48 px below copy, may crop at bottom; LinkedIn+monitor: copy top = monitor top; glow always with device; safe zone is for text/button/logo only, devices may enter it.
 7. Approved stats only, per vertical. Never invent stats, quotes, testimonials, names or prices.
 8. Say "light version" (up to 50 users), never "free". All 3 landing options for everyone.
 9. Headlines verbatim from blueroster.com, sentence case + period. Links in the first comment.

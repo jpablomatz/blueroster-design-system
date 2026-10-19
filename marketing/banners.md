@@ -77,6 +77,20 @@ Rotation: never the same family twice in one week; doodle about once a month; ea
 - **Logo:** always the `BR-Logo` component (light-on-dark version on Navy, `BR-Logo [Day]` on light). Never typed "Blue Roster.com", never redrawn; no ".com" suffix next to it.
 - **No visible internal labels** ("Week 4", placeholders, notes) on the creative.
 
+## Layout & alignment rules (approved by István 2026-10-19)
+
+From Matz's corrections, approved by art direction. Apply to every banner with a device (phone or monitor).
+
+1. **Copy block spacing is fixed.** Keep the spacing inside the copy block exactly as defined: orange line, eyebrow, headline, supporting text, button. Text must never overflow its text box.
+2. **Logo position:** top-left margin, x/y px: LinkedIn **64/56**, Square **72/72**, Story **72/250**.
+3. **Button moves with the copy block.** Story order: logo, copy, button (~56 px below the copy), then the device.
+4. **Square with phone:** the button's bottom aligns to the phone's outer bottom edge.
+5. **Square with monitor:** the monitor spans the full content width below the copy (~48 px gap) and may be cropped at the bottom, stand included.
+6. **LinkedIn with monitor:** the top of the copy block aligns with the top of the monitor.
+7. **Glow always accompanies the device.**
+8. **Story safe zone** (250 px top and bottom) applies only to text, button and logo; devices and images may enter it.
+9. Text layers in the copy block use fixed width (block width or Fill), never Hug, so they wrap and never overflow their box.
+
 ## Banners with system screens (client priority)
 
 Connect the promotion with the demo by showing real Blue Roster screens. Use the clean captures in Design System Legacy page "Marketing · Banner screens" (copies; originals untouched), exported at **2x**. Light versions are in [`references/screens/`](references/README.md).
@@ -103,6 +117,7 @@ Screen data rules:
 - [ ] Only the vertical's own approved stat, or none. No quotes, testimonials, prices or "free".
 - [ ] No real names, old dates or lorem ipsum in screens.
 - [ ] Text contrast ≥ 4.5:1 on every layer; minimum sizes met (support ≥ 24 px, eyebrow/button ≥ 20 px on 1080/1200, Display ≥ 12 px); Story text and CTA inside the 250 px safe zone; orange only with Navy text.
+- [ ] Layout & alignment rules met: copy block spacing intact and no text overflow; logo at 64/56 (LinkedIn), 72/72 (Square), 72/250 (Story); button aligned per format; glow with the device.
 - [ ] Family rotation respected for the week; no two solids adjacent in the IG grid.
 - [ ] Link planned for the first comment; hashtags within the channel range.
 - [ ] Art-direction review before anything is uploaded or published.
